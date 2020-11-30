@@ -205,7 +205,7 @@ src
 
 [draw.io](https://drive.google.com/file/d/1W8iYQHxMzA-JGkqaQazBEgzBM7tpaOgC/view?usp=sharing)
 
-![Imgur](https://i.imgur.com/ieKnxKO.png)
+![Imgur](https://i.imgur.com/ZGIj7b8.png)
 
 <br>
 
