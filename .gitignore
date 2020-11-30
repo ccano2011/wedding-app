@@ -19,7 +19,8 @@
 !/tmp/pids/.keep
 
 .byebug_history
-.DS_Store
+
+/.DS_Store
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
