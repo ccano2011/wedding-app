@@ -18,9 +18,10 @@
 !/tmp/pids/
 !/tmp/pids/.keep
 
+# Ignore uploaded files in development.
+/storage/*
+!/storage/.keep
 .byebug_history
-
-/.DS_Store
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
