@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  # before_action :authorize_request
   before_action :set_post, only: [:show, :update, :destroy]
 
   # GET /posts
@@ -25,13 +26,13 @@ class PostsController < ApplicationController
   end
 
   # PATCH/PUT /posts/1
-  def update
-    if @post.update(post_params)
-      render json: @post
-    else
-      render json: @post.errors, status: :unprocessable_entity
-    end
-  end
+  # def update
+  #   if @post.update(post_params)
+  #     render json: @post
+  #   else
+  #     render json: @post.errors, status: :unprocessable_entity
+  #   end
+  # end
 
   # DELETE /posts/1
   def destroy
