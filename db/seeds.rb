@@ -7,3 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 @admin = User.create(name: 'admin', email: 'admin@email.com', password: '1234')
+
+# @post = Post.create()
