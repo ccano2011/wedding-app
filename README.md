@@ -96,21 +96,16 @@ src
       |__ images
 |__ components/
       |__ corkboard/
-             |__corkboard.jsx
-             |__registration.jsx
-             |__login.jsx
-             |__editpost.jsx
-             |__createpost.jsx
-      |__ ourstory/
-             |__ourstory.jsx
-      |__ home/
-             |__home.jsx
-      |__ RSVP/
-             |__RSVP.jsx
-      |__ registry/
-             |__registry.jsx
-      |__ photos/
-             |__photos.jsx
+             |__Corkboard.jsx
+             |__Registration.jsx
+             |__Login.jsx
+             |__Editpost.jsx
+             |__Createpost.jsx
+      |__ OurStory.jsx
+      |__ home.jsx
+      |__ RSVP.jsx
+      |__ registry.jsx
+      |__ photos.jsx
 |__ shared/
       |__ Layout.jsx
       |__ Layout.css
@@ -118,36 +113,36 @@ src
       |__ Nav.css
 |__ screens/
       |__ corkboard/
-             |__corkboard.jsx
-             |__corkboard.css
-             |__registration.jsx
-             |__registration.css
-             |__login.jsx
-             |__login.css
-             |__editpost.jsx
-             |__editpost.css
-             |__createpost.jsx
-             |__createpost.css
+             |__Corkboard.jsx
+             |__Corkboard.css
+             |__Registration.jsx
+             |__Registration.css
+             |__Login.jsx
+             |__Login.css
+             |__Editpost.jsx
+             |__Editpost.css
+             |__Createpost.jsx
+             |__Createpost.css
       |__ ourstory/
-             |__ourstory.jsx
-             |__ourstory.css
+             |__OurStory.jsx
+             |__OurStory.css
       |__ home/
-             |__home.jsx
-             |__home.css
+             |__Home.jsx
+             |__Home.css
       |__ RSVP/
              |__RSVP.jsx
              |__RSVP.css
       |__ registry/
-             |__registry.jsx
-             |__registry.css
+             |__Registry.jsx
+             |__Registry.css
       |__ photos/
-             |__photos.jsx
-             |__photos.css
+             |__Photos.jsx
+             |__Photos.css
 |__ services/
       |__ apiConfig.js
       |__ posts.js
       |__ users.js
-      |__ rsvpusers.js
+      |__ auth.js
 |__ App.js
 |__ App.css
 |__ index.js
@@ -178,21 +173,20 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Initialize backend with models for users, posts, and RSVP   |    L     |     2 hrs      |     ? hrs     |    ? hrs    |
-| Create table associations |    H     |     3 hrs      |     ? hrs     |     TBD     |
-| Build out CRUD actions |    H     |     3 hrs      |     ? hrs     |     TBD     |
-| Test CRUD actions & associations on Postman w/debugging|    H     |     1 hr      |     ? hrs     |     TBD     |
-| Initialize React frontend with the proper component heirarchy structure |    H     |     30 min      |     ? hrs     |     TBD     |
+| Initialize backend with models for users, posts, and RSVP   |    L     |     2 hrs      |     1 hr     |    ? hrs    |
+| Create table associations |    H     |     3 hrs      |     3 hrs     |     TBD     |
+| Build out CRUD actions |    H     |     3 hrs      |     30 min    |     TBD     |
+| Test CRUD actions & associations on Postman w/debugging|    H     |     1 hr      |     3 hrs     |     TBD     |
+| Initialize React frontend with the proper component heirarchy structure |    H     |     30 min      |     30 min     |     TBD     |
 | Create the homepage component & screen w/ styling |    H     |     2hrs      |     ? hrs     |     TBD     |
 | Create the Cork board component with the initial CRUD logic |    H     |     4 hrs      |     ? hrs     |     TBD     |
 | Build out the controllers to connect the frontend to the backend |    H     |     4 hrs      |     ? hrs     |     TBD     |
+| Implemment authentication for the Cork board components on frontend |    L     |     3 hrs      |     ? hrs     |     TBD     |
 | Build out the RSVP component with the appropriate CRUD logic & association |    H     |     3 hrs      |     ? hrs     |     TBD     |
 | Build out the remaining components |    H     |     4 hrs      |     ? hrs     |     TBD     |
 | Style those components |    H     |     4 hrs      |     ? hrs     |     TBD     |
 | Create MVP media queries |    H     |     3 hrs      |     ? hrs     |     TBD     |
 | Deploy & Test |    H     |     3 hrs      |     ? hrs     |     TBD     |
-| **POST-MVP** Implemment authentication for the Cork board components on frontend |    L     |     3 hrs      |     ? hrs     |     TBD     |
-| **POST-MVP** Implemment authentication for the Cork board components on frontend |    L     |     3 hrs      |     ? hrs     |     TBD     |
 | TOTAL               |          |     42.5 hrs      |     ? hrs     |     TBD     |
 
 <!-- > _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._ -->
@@ -216,7 +210,7 @@ src
 <!-- > Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation! -->
 - Build out logic that will prevent duplicate RSVPs
 - Use CSS framework to incorporate animations
-- Authentication for the Cork board components
+- Implement Full CRUD to the RSVP component
 
 ***
 
@@ -227,3 +221,13 @@ src
 ## Code Issues & Resolutions
 
 > Use this section to list of all major issues encountered and their resolution.
+
+## Change Log
+
+> Any design changes made to the product
+
+ 12/1/2020:
+       - Added a 'Change Log' to the README
+       - Moved 'Implemment authentication for the Cork board components on frontend' from Post-MVP to the project MVP
+       - Added 'Implement Full CRUD to the RSVP component'
+       - Updated the file structure as reflected in the 'Component Hierarchy'
