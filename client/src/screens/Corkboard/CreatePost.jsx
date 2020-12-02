@@ -8,7 +8,7 @@ function CreatePost(props) {
         if (props.currentUser === null) {
             history.push('/register')
         }
-    }, 100)
+    }, 1)
 
 
     return (
