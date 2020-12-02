@@ -2,13 +2,13 @@ import api from './apiConfig';
 
 //  REFERENCE CODE FROM TASTEVILLE
 
-// export const getAllFlavors = async () => {
-//   const resp = await api.get('/flavors');
-//   return resp.data;
-// }
+export const getAllPosts = async () => {
+    const resp = await api.get('/posts');
+    return resp.data;
+}
 
-// export const addFlavor = async (flavorId, foodId) => {
-//   const resp = await api.put(`/flavors/${flavorId}/foods/${foodId}`);
-//   return resp.data;
-// }
-
+//Is this compatible with the backend association???? Find out next week on Dragonball Z!
+export const createPost = async (postId, userId) => {
+    const resp = await api.put(`/posts/${postId}/user/${userId}`);
+    return resp.data;
+}
