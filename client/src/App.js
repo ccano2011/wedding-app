@@ -12,6 +12,7 @@ import { loginUser, registerUser, removeToken, verifyUser } from './services/aut
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
+  const [updatePost, setPosts] = useState()
   const history = useHistory()
 
   useEffect(() => {
@@ -45,6 +46,14 @@ function App() {
     history.push('/');
   }
 
+  const handleUpdate = async (id, postData) => {
+    const updatedPost = await updatePost(id, postData);
+    setPosts(prevState => prevState.map(post => {
+      return post.id === Number(id) ? updatedPost : post
+    }))
+    history.push('/corkboard');
+  }
+
   return (
     // <Layout
     // currentUser={currentUser}
@@ -57,7 +66,7 @@ function App() {
         <Login handleLogin={handleLogin} />
       </Route>
 
-      <Route path='/register'>
+      <Route path='/registration'>
         {/* register */}
         <Registration handleRegister={handleRegister} />
       </Route>
@@ -65,10 +74,17 @@ function App() {
       <Route path='/create-post'>
         <CreatePost currentUser={currentUser} />
       </Route>
+      {/* 
+      <Route path='/edit-post'>
+        <EditPost
+          currentUser={currentUser}
+          handleUpdate={handleUpdate}
+        />
+      </Route> */}
 
       <Route path='/'>
         {/* container */}
-        <Corkboard currentUser={currentUser} />
+        <Corkboard currentUser={currentUser} handleLogout={handleLogout} />
       </Route>
 
     </Switch>
