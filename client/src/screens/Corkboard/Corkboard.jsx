@@ -24,6 +24,9 @@ function Corkboard(props) {
             <Link to="/create-post">
                 <button>Create Post</button>
             </Link>
+            <Link to="/edit-post">
+                <button>Edit Post</button>
+            </Link>
             {
                 posts.map(post => (
                     <div key={post.id}>

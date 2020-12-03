@@ -74,13 +74,13 @@ function App() {
       <Route path='/create-post'>
         <CreatePost currentUser={currentUser} />
       </Route>
-      {/* 
+
       <Route path='/edit-post'>
         <EditPost
           currentUser={currentUser}
           handleUpdate={handleUpdate}
         />
-      </Route> */}
+      </Route>
 
       <Route path='/'>
         {/* container */}

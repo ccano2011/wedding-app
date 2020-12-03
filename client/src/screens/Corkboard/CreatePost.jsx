@@ -15,7 +15,8 @@ function CreatePost(props) {
 
     const [newPost, setNewPost] = useState({
         content: '',
-        name: ''
+        name: '',
+        id: ''
     })
 
     const handleSubmit = async (e) => {
