@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Switch, Route, useHistory } from 'react-router-dom';
 
 function CreatePost(props) {
     const history = useHistory()
+
     console.log(props.currentUser)
     setTimeout(() => {
         if (props.currentUser === null) {
@@ -10,6 +11,10 @@ function CreatePost(props) {
         }
     }, 1)
 
+    const [post, setPost] = useState({
+        content: '',
+        name: ''
+    })
 
     return (
         <div>
