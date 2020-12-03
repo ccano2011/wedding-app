@@ -24,7 +24,7 @@ function Corkboard(props) {
             <Link to="/create-post">
                 <button>Create Post</button>
             </Link>
-            <Link to="/edit-post">
+            <Link to="/user=post">
                 <button>Edit Post</button>
             </Link>
             {

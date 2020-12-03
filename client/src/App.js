@@ -5,7 +5,7 @@ import './App.css';
 import Corkboard from './screens/Corkboard/Corkboard';
 // import Layout from './layouts/Layout';
 import CreatePost from './screens/Corkboard/CreatePost'
-import EditPost from './screens/Corkboard/EditPost'
+import UserPost from './screens/Corkboard/UserPosts'
 import Login from './screens/Corkboard/Login';
 import Registration from './screens/Corkboard/Registration';
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
@@ -75,8 +75,8 @@ function App() {
         <CreatePost currentUser={currentUser} />
       </Route>
 
-      <Route path='/edit-post'>
-        <EditPost
+      <Route path='/user-post'>
+        <UserPost
           currentUser={currentUser}
           handleUpdate={handleUpdate}
         />

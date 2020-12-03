@@ -60,6 +60,7 @@ function CreatePost(props) {
                 />
                 <button type='submit' className="submit-button">Submit</button>
             </form>
+            <Link to="/corkboard"><button>Cancel</button></Link>
         </div>
     );
 }
