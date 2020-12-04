@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { getAllPosts, destroyPost } from '../../services/posts'
 import { Redirect, Link } from 'react-router-dom';
+import Nav from '../../shared/Nav'
+
 
 function UserPosts(props) {
     const [userPosts, setUserPosts] = useState([])
@@ -36,20 +38,23 @@ function UserPosts(props) {
     };
 
     return (
-        <div>
-            <h2>TESTING USERPOST COMPONENT ROUTE</h2>
-            {
-                userPosts.map(post => (
-                    <div key={post.id}>
-                        <p>{post.content}</p>
-                        <p> - {post.name}</p>
-                        {/* <p>{post.id}</p> */}
-                        <button onClick={() => handleDelete(post.id)}>Delete Post</button>
-                        <Link to={`/edit-post/${post.id}`}><button>Edit Post</button></Link>
-                    </div>
-                ))
-            }
-        </div >
+        <>
+            <Nav />
+            <div>
+                <h2>TESTING USERPOST COMPONENT ROUTE</h2>
+                {
+                    userPosts.map(post => (
+                        <div key={post.id}>
+                            <p>{post.content}</p>
+                            <p> - {post.name}</p>
+                            {/* <p>{post.id}</p> */}
+                            <button onClick={() => handleDelete(post.id)}>Delete Post</button>
+                            <Link to={`/edit-post/${post.id}`}><button>Edit Post</button></Link>
+                        </div>
+                    ))
+                }
+            </div >
+        </>
     )
 }
 export default UserPosts;
