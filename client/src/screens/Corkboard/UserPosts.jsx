@@ -1,17 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { getAllPosts, updatePost } from '../../services/posts'
-import { Route, useHistory } from 'react-router-dom';
+import { getAllPosts, destroyPost } from '../../services/posts'
+import { Link } from 'react-router-dom';
 
 function UserPosts(props) {
-    const history = useHistory()
-    const [formData, setFormData] = useState({
-        name: '',
-        content: ''
-    })
-    const [isUpdated, setUpdated] = useState(false)
     const [userPosts, setUserPosts] = useState([])
+    const [isLoaded, setLoaded] = useState(false)
     // const { id } = useParams();
-
     useEffect(() => {
         const fetchUserPosts = async () => {
             const posts = await getAllPosts();
@@ -19,123 +13,47 @@ function UserPosts(props) {
             const filteredPosts = posts.filter(post =>
                 //make sure post.user_id needs to === props.currentUser.id
                 // post.user_id === Number(props.currentUser.id)
-                post.user_id === props.currentUser.id
+                post.user_id === props.currentUser?.id
             )
             console.log(filteredPosts)
             setUserPosts(filteredPosts)
-
         }
         fetchUserPosts();
-    }, []);
+        // for isLoaded to work to update the component, it must be part of the 
+        // dependency array of my useEffect 
+    }, [props.currentUser, isLoaded]);
 
-    console.log(userPosts)
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData(prevState => ({
-            ...prevState,
-            [name]: value
-        }))
+    if (!userPosts.length) {
+        return <h4>You haven't made any posts yet! Click <Link to="/create-post">HERE</Link> to make one!</h4>
     }
 
-    const handleSubmit = async (event) => {
-        event.preventDefault();
-        let { id } = props.match.params;
-        const updated = await updatePost(id);
-        setUpdated(updated);
-        history.push('/posts')
-    }
+    // console.log(userPosts[0].id)
+    const handleDelete = async (id) => {
+        await destroyPost(id)
+        alert("Post Successfully Deleted")
+        setLoaded(!isLoaded)
+    };
+
+    // const handleDelete = async (id) => {
+    //     await destroyPost(userPosts.id);
+    //     // userPosts.filter(post => post.id !== id)
+    // }
 
     return (
         <div>
-            <h2>TESTING UPDATEPOST COMPONENT ROUTE</h2>
-            <form className="create-form" onSubmit={handleSubmit}>
-                <textarea
-                    className="postBody"
-                    rows={10}
-                    placeholder='Your message to the bride & groom'
-                    value={updatePost.content}
-                    name='content'
-                    required
-                    onChange={handleChange}
-                />
-                <input
-                    className="input-image-link"
-                    placeholder='Your Name'
-                    value={updatePost.name}
-                    name='name'
-                    required
-                    onChange={handleChange}
-                />
-                <button type='submit' className="submit-button">Submit</button>
-            </form>
-        </div>
+            <h2>TESTING USERPOST COMPONENT ROUTE</h2>
+            {
+                userPosts.map(post => (
+                    <div key={post.id}>
+                        <p>{post.content}</p>
+                        <p> - {post.name}</p>
+                        {/* <p>{post.id}</p> */}
+                        <button onClick={() => handleDelete(post.id)}>Delete Post</button>
+                        <Link to={`/edit-post/${post.id}`}><button>Edit Post</button></Link>
+                    </div>
+                ))
+            }
+        </div >
     )
 }
 export default UserPosts;
-// import React, { useState, useEffect } from 'react';
-// import { useHistory, useParams } from 'react-router-dom'
-// import { getOnePost, updatePost } from '../../services/posts'
-// import './EditPost.css'
-// function EditPost(props) {
-//     const [post, setPost] = useState({
-//         name: '',
-//         content: '',
-//         id: ''
-//     });
-//     const history = useHistory();
-//     const [isUpdated, setUpdated] = useState(false);
-//     let { id } = useParams();
-//     useEffect(() => {
-//         const fetchPost = async () => {
-//             const post = await getOnePost(id);
-//             setPost(post);
-//         }
-//         fetchPost();
-//     }, [id]);
-//     const handleChange = (event) => {
-//         const { name, value } = event.target;
-//         setPost({
-//             ...post,
-//             [name]: value
-//         });
-//     }
-//     const handleSubmit = async (event) => {
-//         event.preventDefault();
-//         let { id } = props.match.params;
-//         const updated = await updatePost(id, post);
-//         setUpdated(updated);
-//         history.push('/posts')
-//     }
-//     return (
-//         <div id="edit-post-main-container">
-//             <form onSubmit={handleSubmit}>
-//                 <div id="edit-post-sub-container">
-//                     <h3 id="edit-post-title">Edit Post</h3>
-//                     <div id="edit-post-details-box">
-//                         <div id="edit-title-box">
-//                             <input
-//                                 className="edit-post-input"
-//                                 type='text'
-//                                 name='name'
-//                                 value={post.name}
-//                                 onChange={handleChange}
-//                             />
-//                         </div>
-//                         <div id="edit-content-box">
-//                             <input
-//                                 className="edit-post-input"
-//                                 id="edit-content-input"
-//                                 type='textarea'
-//                                 name='content'
-//                                 value={post.content}
-//                                 onChange={handleChange}
-//                             />
-//                         </div>
-//                     </div>
-//                     <button type="submit" id="edit-post-submit-button">Submit</button>
-//                 </div>
-//             </form>
-//         </div>
-//     )
-// }
-// export default EditPost;

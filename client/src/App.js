@@ -9,6 +9,7 @@ import UserPost from './screens/Corkboard/UserPosts'
 import Login from './screens/Corkboard/Login';
 import Registration from './screens/Corkboard/Registration';
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
+import EditPost from './screens/Corkboard/EditPost';
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -47,7 +48,7 @@ function App() {
   }
 
   const handleUpdate = async (id, postData) => {
-    const updatedPost = await updatePost(id, postData);
+    const updatedPost = await setPosts(id, postData);
     setPosts(prevState => prevState.map(post => {
       return post.id === Number(id) ? updatedPost : post
     }))
@@ -78,8 +79,12 @@ function App() {
       <Route path='/user-post'>
         <UserPost
           currentUser={currentUser}
-          handleUpdate={handleUpdate}
+        // handleUpdate={handleUpdate}
         />
+      </Route>
+
+      <Route path='/edit-post/:id'>
+        <EditPost handleUpdate={handleUpdate} />
       </Route>
 
       <Route path='/'>
