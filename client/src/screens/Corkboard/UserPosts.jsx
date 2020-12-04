@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 function UserPosts(props) {
     const [userPosts, setUserPosts] = useState([])
     const [isLoaded, setLoaded] = useState(false)
-    // const { id } = useParams();
     useEffect(() => {
         const fetchUserPosts = async () => {
             const posts = await getAllPosts();
@@ -27,17 +26,12 @@ function UserPosts(props) {
         return <h4>You haven't made any posts yet! Click <Link to="/create-post">HERE</Link> to make one!</h4>
     }
 
-    // console.log(userPosts[0].id)
     const handleDelete = async (id) => {
         await destroyPost(id)
         alert("Post Successfully Deleted")
+        //The following updates the list of posts made by the user in the useEffect
         setLoaded(!isLoaded)
     };
-
-    // const handleDelete = async (id) => {
-    //     await destroyPost(userPosts.id);
-    //     // userPosts.filter(post => post.id !== id)
-    // }
 
     return (
         <div>

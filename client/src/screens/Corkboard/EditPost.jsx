@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { getOnePost, updatePost } from '../../services/posts'
-import { Route, useHistory, useParams } from 'react-router-dom';
+import { Redirect, useHistory, useParams } from 'react-router-dom';
 
 function EditPost(props) {
     // refer to Tasteville's useParams example
-    const history = useHistory()
+    // const history = useHistory()
     const [updateUserPost, setUpdatePost] = useState({
         content: '',
         name: '',
         id: ''
     })
-    // const [isCreated, setCreated] = useState(false)
+    const [isCreated, setCreated] = useState(false)
     // const [isUpdated, setUpdated] = useState(false)
     // const [userPost, setUserPost] = useState([])
     const { id } = useParams();
@@ -36,16 +36,20 @@ function EditPost(props) {
         }))
     }
 
-    const handleSubmit = async () => {
-        // e.preventDefault()
-        const created = await updatePost(updateUserPost)
-        // setCreated({ created })
+    const handleSubmit = async (id, updateUserPost) => {
+        const created = await updatePost(id, updateUserPost)
+        setCreated({ created })
+    }
+
+    if (isCreated) {
+        return <Redirect to={`/corkboard`} />
     }
 
     return (
         <div>
             <h2>TESTING UPDATEPOST COMPONENT ROUTE</h2>
-            <form className="create-form" onSubmit={() => {
+            <form className="create-form" onSubmit={(e) => {
+                e.preventDefault()
                 handleSubmit(id, updateUserPost)
             }}>
                 <textarea
