@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Registry(props) {
+function Travel(props) {
     return (
         <div>
 
@@ -8,4 +8,4 @@ function Registry(props) {
     );
 }
 
-export default Registry;
+export default Travel;
