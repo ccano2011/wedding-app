@@ -214,11 +214,13 @@ src
 ## Change Log:
 
  12/1/2020:
+
        - Added a 'Change Log' to the README
        - Moved 'Implemment authentication for the Cork board components on frontend' from Post-MVP to the project MVP
        - Added 'Implement Full CRUD to the RSVP component'
        - Updated the file structure as reflected in the 'Component Hierarchy'
 
 12/4/2020:
+
        - Removed unnecessary components; updated the README & Figma to reflect those changes
        - Updated the 'Time Frames' to better predict the development time & path
