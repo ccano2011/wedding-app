@@ -3,8 +3,6 @@ import { getOnePost, updatePost } from '../../services/posts'
 import { Route, useHistory, useParams } from 'react-router-dom';
 
 function EditPost(props) {
-    // const { id } = useParams()
-    // Number(id)
     // refer to Tasteville's useParams example
     const history = useHistory()
     const [updateUserPost, setUpdatePost] = useState({
