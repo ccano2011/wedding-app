@@ -9,8 +9,9 @@ import UserPost from './screens/Corkboard/UserPosts'
 import Login from './screens/Corkboard/Login';
 import Home from './screens/Home/Home';
 import Registration from './screens/Corkboard/Registration';
-import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
 import EditPost from './screens/Corkboard/EditPost';
+// import Nav from './shared/Nav'
+import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
 
 
 function App() {
@@ -54,6 +55,10 @@ function App() {
       <Route path='/'>
         <Home />
       </Route>
+
+      {/* <Route path='/our-story'>
+        <OurStory/>
+      </Route> */}
 
       <Route path='/login'>
         <Login

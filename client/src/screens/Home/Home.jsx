@@ -1,5 +1,5 @@
 import React from 'react';
-// import Nav from '../../shared/nav'
+// import Nav from '../../shared/Nav'
 
 function Home() {
     return (
