@@ -1,12 +1,15 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 export default function Login(props) {
     const [formData, setFormData] = useState({
         email: "",
         password: ""
     })
-
+    if (props.currentUser) {
+        return <Redirect to={`/corkboard`} />
+    }
+    // console.log(props.currentUser)
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData(prevState => ({
