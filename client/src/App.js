@@ -5,13 +5,15 @@ import './App.css';
 import Corkboard from './screens/Corkboard/Corkboard';
 // import Layout from './layouts/Layout';
 import CreatePost from './screens/Corkboard/CreatePost'
-import EditPost from './screens/Corkboard/EditPost'
+import UserPost from './screens/Corkboard/UserPosts'
 import Login from './screens/Corkboard/Login';
 import Registration from './screens/Corkboard/Registration';
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
+import EditPost from './screens/Corkboard/EditPost';
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
+  const [updatePost, setPosts] = useState()
   const history = useHistory()
 
   useEffect(() => {
@@ -45,6 +47,14 @@ function App() {
     history.push('/');
   }
 
+  // const handleUpdate = async (id, formData) => {
+  //   const updatedPost = await setPosts(id, formData);
+  //   setPosts(prevState => prevState.map(post => {
+  //     return post.id === Number(id) ? updatedPost : post
+  //   }))
+  //   history.push('/corkboard');
+  // }
+
   return (
     // <Layout
     // currentUser={currentUser}
@@ -57,7 +67,7 @@ function App() {
         <Login handleLogin={handleLogin} />
       </Route>
 
-      <Route path='/register'>
+      <Route path='/registration'>
         {/* register */}
         <Registration handleRegister={handleRegister} />
       </Route>
@@ -66,9 +76,20 @@ function App() {
         <CreatePost currentUser={currentUser} />
       </Route>
 
+      <Route path='/user-post'>
+        <UserPost
+          currentUser={currentUser}
+        // handleUpdate={handleUpdate}
+        />
+      </Route>
+
+      <Route path='/edit-post/:id'>
+        <EditPost />
+      </Route>
+
       <Route path='/'>
         {/* container */}
-        <Corkboard currentUser={currentUser} />
+        <Corkboard currentUser={currentUser} handleLogout={handleLogout} />
       </Route>
 
     </Switch>

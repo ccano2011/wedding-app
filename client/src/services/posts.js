@@ -7,6 +7,11 @@ export const getAllPosts = async () => {
     return resp.data;
 }
 
+export const getOnePost = async (id) => {
+    const resp = await api.get(`/posts/${id}`);
+    return resp.data;
+}
+
 //Is this compatible with the backend association???? Find out next week on Dragonball Z!
 // export const createPost = async (postId, userId) => {
 //     const resp = await api.put(`/posts/`);
@@ -19,11 +24,11 @@ export const createPost = async (data) => {
 }
 
 export const updatePost = async (id, Data) => {
-    const resp = await api.put(`/post/${id}`, { post: Data });
+    const resp = await api.put(`/posts/${id}`, { post: Data });
     return resp.data;
 }
 
 export const destroyPost = async (id) => {
-    const resp = await api.delete(`/post/${id}`);
+    const resp = await api.delete(`/posts/${id}`);
     return resp;
 }

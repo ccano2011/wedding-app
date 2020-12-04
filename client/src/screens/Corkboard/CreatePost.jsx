@@ -7,7 +7,7 @@ function CreatePost(props) {
     console.log(props.currentUser)
     setTimeout(() => {
         if (props.currentUser === null) {
-            history.push('/register')
+            history.push('/registration')
         }
     }, 1)
 
@@ -15,7 +15,8 @@ function CreatePost(props) {
 
     const [newPost, setNewPost] = useState({
         content: '',
-        name: ''
+        name: '',
+        id: ''
     })
 
     const handleSubmit = async (e) => {
@@ -59,6 +60,7 @@ function CreatePost(props) {
                 />
                 <button type='submit' className="submit-button">Submit</button>
             </form>
+            <Link to="/corkboard"><button>Cancel</button></Link>
         </div>
     );
 }

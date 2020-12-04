@@ -3,7 +3,7 @@ import { getAllPosts } from '../../services/posts'
 import { Switch, Route, Link } from 'react-router-dom';
 
 
-function Corkboard() {
+function Corkboard(props) {
     const [posts, setPosts] = useState([]);
     useEffect(() => {
         const fetchPosts = async () => {
@@ -24,6 +24,9 @@ function Corkboard() {
             <Link to="/create-post">
                 <button>Create Post</button>
             </Link>
+            <Link to="/user-post">
+                <button>Edit Post</button>
+            </Link>
             {
                 posts.map(post => (
                     <div key={post.id}>
@@ -32,6 +35,7 @@ function Corkboard() {
                     </div>
                 ))
             }
+            <button onClick={props.handleLogout}>logout</button>
         </div>
     );
 }
