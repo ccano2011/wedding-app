@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getAllPosts, destroyPost } from '../../services/posts'
-import { Link } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 
 function UserPosts(props) {
     const [userPosts, setUserPosts] = useState([])
@@ -22,7 +22,9 @@ function UserPosts(props) {
         // dependency array of my useEffect 
     }, [props.currentUser, isLoaded]);
 
-    if (!userPosts.length) {
+    if (props.currentUser === null) {
+        return <Redirect to={'/registration'} />
+    } else if (!userPosts.length) {
         return <h4>You haven't made any posts yet! Click <Link to="/create-post">HERE</Link> to make one!</h4>
     }
 

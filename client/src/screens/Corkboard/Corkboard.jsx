@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getAllPosts } from '../../services/posts'
-import { Switch, Route, Link } from 'react-router-dom';
-
+import { Link } from 'react-router-dom';
 
 function Corkboard(props) {
     const [posts, setPosts] = useState([]);
@@ -10,14 +9,9 @@ function Corkboard(props) {
             const postData = await getAllPosts();
             setPosts(postData);
         }
-        // const fetchFoods = async () => {
-        //     const foodData = await getAllFoods();
-        //     setFoods(foodData);
-        // }
         fetchPosts();
-        // fetchFoods();
     }, [])
-    console.log(posts)
+
     return (
         <div>
             <h2>Cork Board</h2>
@@ -25,8 +19,29 @@ function Corkboard(props) {
                 <button>Create Post</button>
             </Link>
             <Link to="/user-post">
-                <button>Edit Post</button>
+                <button>Your Posts</button>
             </Link>
+            {/* Following ternary was from https://stackoverflow.com/questions/60575870/how-to-change-login-button-to-logout-button-in-react */}
+            {
+                props.currentUser
+                    ? (
+                        <button onClick={props.handleLogout}>Logout</button>
+                    ) : (
+                        <Link to="/registration">
+                            <button>Login/Register</button>
+                        </Link>
+                    )
+            }
+            <div>
+                {
+                    props.currentUser
+                        ? (
+                            <h3>Greetings, {props.currentUser.name}</h3>
+                        ) : (
+                            <h3> </h3>
+                        )
+                }
+            </div>
             {
                 posts.map(post => (
                     <div key={post.id}>
@@ -35,8 +50,8 @@ function Corkboard(props) {
                     </div>
                 ))
             }
-            <button onClick={props.handleLogout}>logout</button>
         </div>
+
     );
 }
 

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { getOnePost, updatePost } from '../../services/posts'
-import { Redirect, useHistory, useParams } from 'react-router-dom';
+import { Redirect, useParams } from 'react-router-dom';
 
 function EditPost(props) {
-    // refer to Tasteville's useParams example
-    // const history = useHistory()
+
+
     const [updateUserPost, setUpdatePost] = useState({
         content: '',
         name: '',
@@ -26,7 +26,13 @@ function EditPost(props) {
             }
         }
         fetchUserPost()
-    }, []);
+    }, [id]);
+
+    if (props.currentUser === null) {
+        return <Redirect to={'/registration'} />
+    } else if (isCreated) {
+        return <Redirect to={`/corkboard`} />
+    }
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -39,10 +45,6 @@ function EditPost(props) {
     const handleSubmit = async (id, updateUserPost) => {
         const created = await updatePost(id, updateUserPost)
         setCreated({ created })
-    }
-
-    if (isCreated) {
-        return <Redirect to={`/corkboard`} />
     }
 
     return (
