@@ -9,8 +9,14 @@ import UserPost from './screens/Corkboard/UserPosts'
 import Login from './screens/Corkboard/Login';
 import Home from './screens/Home/Home';
 import Registration from './screens/Corkboard/Registration';
-import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
 import EditPost from './screens/Corkboard/EditPost';
+import OurStory from './screens/OurStory/OurStory'
+import Travel from './screens/Travel/Travel'
+import Photos from './screens/Photos/Photos'
+import Registry from './screens/Registry/Registry'
+import RSVP from './screens/RSVP/RSVP'
+// import Nav from './shared/Nav'
+import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
 
 
 function App() {
@@ -51,8 +57,32 @@ function App() {
 
   return (
     <Switch>
-      <Route path='/'>
+      <Route exact path='/'>
         <Home />
+      </Route>
+
+      <Route path='/corkboard'>
+        <Corkboard currentUser={currentUser} handleLogout={handleLogout} />
+      </Route>
+
+      <Route path='/our-story'>
+        <OurStory />
+      </Route>
+
+      <Route path='/travel'>
+        <Travel />
+      </Route>
+
+      <Route path='/pictures'>
+        <Photos />
+      </Route>
+
+      <Route path='/registry'>
+        <Registry />
+      </Route>
+
+      <Route path='/RSVP'>
+        <RSVP />
       </Route>
 
       <Route path='/login'>
@@ -80,9 +110,7 @@ function App() {
         <EditPost currentUser={currentUser} />
       </Route>
 
-      <Route path='/corkboard'>
-        <Corkboard currentUser={currentUser} handleLogout={handleLogout} />
-      </Route>
+
 
     </Switch>
   );

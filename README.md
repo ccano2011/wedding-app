@@ -82,7 +82,7 @@ _**Happily Ever After** is a full CRUD React web application that will allow for
 
 [Whimsical](https://whimsical.com/p4-component-tree-MNjVHRcoXXYwD4C88fFDC1)
 
-![Imgur](https://i.imgur.com/k9OgIqF.png)
+![Imgur](https://i.imgur.com/oZA9sYy.png)
 
 
 #### Component Hierarchy
@@ -94,18 +94,6 @@ _**Happily Ever After** is a full CRUD React web application that will allow for
 src
 |__ assets/
       |__ images
-|__ components/
-      |__ corkboard/
-             |__Corkboard.jsx
-             |__Registration.jsx
-             |__Login.jsx
-             |__Editpost.jsx
-             |__Createpost.jsx
-      |__ OurStory.jsx
-      |__ home.jsx
-      |__ RSVP.jsx
-      |__ registry.jsx
-      |__ photos.jsx
 |__ shared/
       |__ Layout.jsx
       |__ Layout.css
@@ -181,10 +169,11 @@ src
 | Create the Cork board component with the initial CRUD logic |    H     |     4 hrs      |     9 hrs     |     TBD     |
 | Build out the controllers to connect the frontend to the backend |    H     |     4 hrs      |     30 min     |     TBD     |
 | Implemment authentication for the Cork board components on frontend |    L     |     3 hrs      |     3 hrs     |     TBD     |
+| Create the Navbar component w/ styling |    H     |     2hrs      |     ? hrs     |     TBD     |
+| Create the homepage screen w/ styling |    H     |     2hrs      |     ? hrs     |     TBD     |
 | Build out the RSVP component with the appropriate CRUD logic & association |    H     |     3 hrs      |     ? hrs     |     TBD     |
-| Create the homepage component & screen w/ styling |    H     |     2hrs      |     ? hrs     |     TBD     |
 | Build out the remaining components |    H     |     4 hrs      |     ? hrs     |     TBD     |
-| Style those components |    L     |     4 hrs      |     ? hrs     |     TBD     |
+| Style those components |    L     |     6 hrs      |     ? hrs     |     TBD     |
 | Create MVP media queries |    H     |     3 hrs      |     ? hrs     |     TBD     |
 | Deploy & Test |    H     |     3 hrs      |     ? hrs     |     TBD     |
 | TOTAL               |          |     42.5 hrs      |     ? hrs     |     TBD     |
@@ -224,10 +213,12 @@ src
 
 ## Change Log
 
-> Any design changes made to the product
-
  12/1/2020:
        - Added a 'Change Log' to the README
        - Moved 'Implemment authentication for the Cork board components on frontend' from Post-MVP to the project MVP
        - Added 'Implement Full CRUD to the RSVP component'
        - Updated the file structure as reflected in the 'Component Hierarchy'
+
+12/4/2020:
+       - Removed unnecessary components; updated the README & Figma to reflect those changes
+       - Updated the 'Time Frames' to better predict the development time & path

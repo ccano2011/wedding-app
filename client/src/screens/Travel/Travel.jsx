@@ -2,7 +2,7 @@ import React from 'react';
 import Nav from '../../shared/Nav'
 
 
-function Registry(props) {
+function Travel(props) {
     return (
         <div>
             <Nav />
@@ -10,4 +10,4 @@ function Registry(props) {
     );
 }
 
-export default Registry;
+export default Travel;

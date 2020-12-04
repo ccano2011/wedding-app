@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Nav from '../../shared/Nav'
+
 
 function Registration(props) {
     const [formData, setFormData] = useState({
@@ -17,46 +19,49 @@ function Registration(props) {
     }
 
     return (
-        <div>
-            <form >
-                <h3>Register</h3>
-                <label>Name:
+        <>
+            <Nav />
+            <div>
+                <form >
+                    <h3>Register</h3>
+                    <label>Name:
             <input
-                        type='text'
-                        name='name'
-                        value={formData.name}
-                        onChange={handleChange}
-                    />
-                </label>
-                <br />
-                <label>Email:
+                            type='text'
+                            name='name'
+                            value={formData.name}
+                            onChange={handleChange}
+                        />
+                    </label>
+                    <br />
+                    <label>Email:
             <input
-                        type='text'
-                        name='email'
-                        value={formData.email}
-                        onChange={handleChange}
-                    />
-                </label>
-                <br />
-                <label>Password:
+                            type='text'
+                            name='email'
+                            value={formData.email}
+                            onChange={handleChange}
+                        />
+                    </label>
+                    <br />
+                    <label>Password:
             <input
-                        type='password'
-                        name='password'
-                        value={formData.password}
-                        onChange={handleChange}
-                    />
-                </label>
-                <br />
-                <button onClick={(e) => {
-                    e.preventDefault();
-                    props.handleRegister(formData);
-                }}>Submit</button>
-                <Link to="/corkboard"><button>Cancel</button></Link>
-                <div>
-                    <h5>Already registered? Click <Link to="/login">HERE</Link> to login </h5>
-                </div>
-            </form>
-        </div>
+                            type='password'
+                            name='password'
+                            value={formData.password}
+                            onChange={handleChange}
+                        />
+                    </label>
+                    <br />
+                    <button onClick={(e) => {
+                        e.preventDefault();
+                        props.handleRegister(formData);
+                    }}>Submit</button>
+                    <Link to="/corkboard"><button>Cancel</button></Link>
+                    <div>
+                        <h5>Already registered? Click <Link to="/login">HERE</Link> to login </h5>
+                    </div>
+                </form>
+            </div>
+        </>
     )
 }
 

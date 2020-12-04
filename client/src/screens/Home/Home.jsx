@@ -1,10 +1,10 @@
 import React from 'react';
-// import Nav from '../../shared/nav'
+import Nav from '../../shared/Nav'
 
 function Home() {
     return (
         <>
-            {/* <Nav /> */}
+            <Nav />
             <div>
                 <div className="homeTitle">
                     <h1>We're getting married!</h1>
