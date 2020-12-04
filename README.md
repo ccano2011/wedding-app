@@ -184,7 +184,7 @@ src
 
 ### Server (Back End)
 
-#### ERD Model
+#### ERD Model:
 
 [draw.io](https://drive.google.com/file/d/1W8iYQHxMzA-JGkqaQazBEgzBM7tpaOgC/view?usp=sharing)
 
@@ -194,7 +194,7 @@ src
 
 ***
 
-## Post-MVP
+## Post-MVP:
 
 <!-- > Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation! -->
 - Build out logic that will prevent duplicate RSVPs
@@ -203,15 +203,15 @@ src
 
 ***
 
-## Code Showcase
+## Code Showcase:
 
 > Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
 
-## Code Issues & Resolutions
+## Code Issues & Resolutions:
 
 > Use this section to list of all major issues encountered and their resolution.
 
-## Change Log
+## Change Log:
 
  12/1/2020:
        - Added a 'Change Log' to the README
