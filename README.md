@@ -178,13 +178,13 @@ src
 | Build out CRUD actions |    H     |     3 hrs      |     30 min    |     TBD     |
 | Test CRUD actions & associations on Postman w/debugging|    H     |     1 hr      |     3 hrs     |     TBD     |
 | Initialize React frontend with the proper component heirarchy structure |    H     |     30 min      |     30 min     |     TBD     |
-| Create the homepage component & screen w/ styling |    H     |     2hrs      |     ? hrs     |     TBD     |
-| Create the Cork board component with the initial CRUD logic |    H     |     4 hrs      |     ? hrs     |     TBD     |
-| Build out the controllers to connect the frontend to the backend |    H     |     4 hrs      |     ? hrs     |     TBD     |
-| Implemment authentication for the Cork board components on frontend |    L     |     3 hrs      |     ? hrs     |     TBD     |
+| Create the Cork board component with the initial CRUD logic |    H     |     4 hrs      |     9 hrs     |     TBD     |
+| Build out the controllers to connect the frontend to the backend |    H     |     4 hrs      |     30 min     |     TBD     |
+| Implemment authentication for the Cork board components on frontend |    L     |     3 hrs      |     3 hrs     |     TBD     |
 | Build out the RSVP component with the appropriate CRUD logic & association |    H     |     3 hrs      |     ? hrs     |     TBD     |
+| Create the homepage component & screen w/ styling |    H     |     2hrs      |     ? hrs     |     TBD     |
 | Build out the remaining components |    H     |     4 hrs      |     ? hrs     |     TBD     |
-| Style those components |    H     |     4 hrs      |     ? hrs     |     TBD     |
+| Style those components |    L     |     4 hrs      |     ? hrs     |     TBD     |
 | Create MVP media queries |    H     |     3 hrs      |     ? hrs     |     TBD     |
 | Deploy & Test |    H     |     3 hrs      |     ? hrs     |     TBD     |
 | TOTAL               |          |     42.5 hrs      |     ? hrs     |     TBD     |

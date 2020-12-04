@@ -47,13 +47,13 @@ function App() {
     history.push('/');
   }
 
-  const handleUpdate = async (id, postData) => {
-    const updatedPost = await setPosts(id, postData);
-    setPosts(prevState => prevState.map(post => {
-      return post.id === Number(id) ? updatedPost : post
-    }))
-    history.push('/corkboard');
-  }
+  // const handleUpdate = async (id, formData) => {
+  //   const updatedPost = await setPosts(id, formData);
+  //   setPosts(prevState => prevState.map(post => {
+  //     return post.id === Number(id) ? updatedPost : post
+  //   }))
+  //   history.push('/corkboard');
+  // }
 
   return (
     // <Layout
@@ -84,7 +84,7 @@ function App() {
       </Route>
 
       <Route path='/edit-post/:id'>
-        <EditPost handleUpdate={handleUpdate} />
+        <EditPost />
       </Route>
 
       <Route path='/'>

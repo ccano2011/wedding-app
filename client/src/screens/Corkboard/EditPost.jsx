@@ -1,72 +1,60 @@
 import React, { useEffect, useState } from 'react';
-import { updatePost } from '../../services/posts'
+import { getOnePost, updatePost } from '../../services/posts'
 import { Route, useHistory, useParams } from 'react-router-dom';
 
 function EditPost(props) {
     // const { id } = useParams()
     // Number(id)
     // refer to Tasteville's useParams example
-
-    // const history = useHistory()
-    // const [formData, setFormData] = useState({
-    //     name: '',
-    //     content: ''
-    // })
+    const history = useHistory()
+    const [updateUserPost, setUpdatePost] = useState({
+        content: '',
+        name: '',
+        id: ''
+    })
+    // const [isCreated, setCreated] = useState(false)
     // const [isUpdated, setUpdated] = useState(false)
-    // const [userPosts, setUserPosts] = useState([])
-    // const { id } = useParams();
+    // const [userPost, setUserPost] = useState([])
+    const { id } = useParams();
 
-    // useEffect(() => {
-    //     const prefillForm = () => {
-    //         //Number(id) is the integer equivalent of stringify & JSON.parse/stringify
-    //         const postItem = props.posts.filter(post => post.id === Number(id));
-    //         setFormData({
-    //             name: postItem.name
-    //         })
-    //     }
-    //     if (props.posts) {
-    //         prefillForm();
-    //     }
-    // }, [props.posts])
-    // useEffect(() => {
-    //     const fetchUserPosts = async () => {
-    //         // const posts = await getAllPosts();
-    //         // console.log(posts)
-    //         const filteredPosts = posts.filter(post =>
-    //             //make sure post.user_id needs to === props.currentUser.id
-    //             // post.user_id === Number(props.currentUser.id)
-    //             post.user_id === props.currentUser.id
-    //         )
-    //         if (props.posts.length) {
-    //             fetchUserPosts();
-    //         }
-    //         console.log(filteredPosts)
-    //         setUserPosts(filteredPosts)
-    //     }
-    // }, [props.posts]);
+    console.log(useParams())
+    console.log(id)
+    console.log(updateUserPost)
+    useEffect(() => {
+        const fetchUserPost = async () => {
+            const posts = await getOnePost(id);
+            if (posts) {
+                setUpdatePost(posts);
+            }
+        }
+        fetchUserPost()
+    }, []);
 
-    // console.log(userPosts)
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setUpdatePost(prevState => ({
+            ...prevState,
+            [name]: value
+        }))
+    }
 
-    // const handleChange = (e) => {
-    //     const { name, value } = e.target;
-    //     setFormData(prevState => ({
-    //         ...prevState,
-    //         [name]: value
-    //     }))
-    // }
+    const handleSubmit = async () => {
+        // e.preventDefault()
+        const created = await updatePost(updateUserPost)
+        // setCreated({ created })
+    }
 
     return (
         <div>
             <h2>TESTING UPDATEPOST COMPONENT ROUTE</h2>
-            {/* <form className="create-form" onSubmit={(e) => {
-                e.preventDefault();
-                props.handleUpdate(id, formData)
+            <form className="create-form" onSubmit={() => {
+                handleSubmit(id, updateUserPost)
             }}>
                 <textarea
                     className="postBody"
                     rows={10}
                     placeholder='Your message to the bride & groom'
-                    value={formData.content}
+                    value={updateUserPost.content}
                     name='content'
                     required
                     onChange={handleChange}
@@ -74,13 +62,13 @@ function EditPost(props) {
                 <input
                     className="input-image-link"
                     placeholder='Your Name'
-                    value={formData.name}
+                    value={updateUserPost.name}
                     name='name'
                     required
                     onChange={handleChange}
                 />
                 <button type='submit' className="submit-button">Submit</button>
-            </form> */}
+            </form>
         </div>
     )
 }
