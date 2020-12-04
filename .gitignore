@@ -12,7 +12,8 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
-
+.DS_Store
+.ruby-version
 # Ignore pidfiles, but keep the directory.
 /tmp/pids/*
 !/tmp/pids/
