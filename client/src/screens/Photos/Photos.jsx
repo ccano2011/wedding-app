@@ -4,9 +4,11 @@ import Nav from '../../shared/Nav'
 
 function Photos(props) {
     return (
-        <div>
-            <Nav />
-        </div>
+        <>
+            <div>
+                <Nav />
+            </div>
+        </>
     );
 }
 
