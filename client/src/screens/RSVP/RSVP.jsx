@@ -5,7 +5,6 @@ import { createRSVP } from '../../services/rsvp'
 
 function RSVP(props) {
     const [isCreated, setCreated] = useState(false)
-
     const [newRSVP, setNewRSVP] = useState({
         firstname: '',
         lastname: '',
@@ -30,18 +29,16 @@ function RSVP(props) {
         })
     }
 
-
-
     return (
         <>
             <div>
                 <Nav />
             </div>
-            <div>
-                <div className="bestOfGenre">
+            <div className="rsvp-parent-div">
+                <div className="rsvp">
                     <form className="rsvp-form" onSubmit={handleSubmit}>
                         <input
-                            className="input-image-link"
+                            className="rsvp-name"
                             placeholder='First Name'
                             value={newRSVP.firstname}
                             name='firstname'
@@ -49,7 +46,7 @@ function RSVP(props) {
                             onChange={handleChange}
                         />
                         <input
-                            className="input-image-link"
+                            className="rsvp-name"
                             placeholder='Last Name'
                             value={newRSVP.lastname}
                             name='lastname'
@@ -57,7 +54,7 @@ function RSVP(props) {
                             onChange={handleChange}
                         />
                         {/* This onChange function was inspired by 2 solutions on stack overflow */}
-                        <select id="dropdown"
+                        <select className="rsvp-name" id="rsvp-entree"
                             // My previous handlechange knew how to update, but we had to wrap the prev state so it wouldn't lose the other values.
                             onChange={(e) => setNewRSVP(prevState => (
                                 {
