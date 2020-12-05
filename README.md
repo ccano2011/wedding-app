@@ -169,7 +169,7 @@ src
 | Create the Cork board component with the initial CRUD logic |    H     |     4 hrs      |     9 hrs     |     TBD     |
 | Build out the controllers to connect the frontend to the backend |    H     |     4 hrs      |     30 min     |     TBD     |
 | Implemment authentication for the Cork board components on frontend |    L     |     3 hrs      |     3 hrs     |     TBD     |
-| Create the Navbar component w/ styling |    H     |     2hrs      |     ? hrs     |     TBD     |
+| Create the Navbar component w/ styling |    H     |     2hrs      |     2 hrs     |     TBD     |
 | Create the homepage screen w/ styling |    H     |     2hrs      |     ? hrs     |     TBD     |
 | Build out the RSVP component with the appropriate CRUD logic & association |    H     |     3 hrs      |     30 min     |     TBD     |
 | Build out the remaining components |    H     |     4 hrs      |     ? hrs     |     TBD     |
