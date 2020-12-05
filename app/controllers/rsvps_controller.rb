@@ -25,13 +25,13 @@ class RsvpsController < ApplicationController
   end
 
   # PATCH/PUT /rsvps/1
-  # def update
-  #   if @rsvp.update(rsvp_params)
-  #     render json: @rsvp
-  #   else
-  #     render json: @rsvp.errors, status: :unprocessable_entity
-  #   end
-  # end
+  def update
+    if @rsvp.update(rsvp_params)
+      render json: @rsvp
+    else
+      render json: @rsvp.errors, status: :unprocessable_entity
+    end
+  end
 
   # DELETE /rsvps/1
   def destroy

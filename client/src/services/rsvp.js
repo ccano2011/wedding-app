@@ -2,7 +2,7 @@ import api from './apiConfig';
 
 
 export const createRSVP = async (data) => {
-    const resp = await api.post('/rsvps', { post: data });
+    const resp = await api.post('/rsvps', { rsvp: data });
     return resp.data;
 }
 

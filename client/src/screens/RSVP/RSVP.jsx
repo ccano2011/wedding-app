@@ -3,9 +3,6 @@ import Nav from '../../shared/Nav'
 import { createRSVP } from '../../services/rsvp'
 // import { Redirect, Link, useHistory } from 'react-router-dom';
 
-
-
-
 function RSVP(props) {
     const [isCreated, setCreated] = useState(false)
 
@@ -19,6 +16,10 @@ function RSVP(props) {
         e.preventDefault()
         const created = await createRSVP(newRSVP)
         setCreated({ created })
+        if (isCreated) {
+            alert('RSVP Confirmed')
+            // return <Redirect to={`/corkboard`} />
+        }
     }
 
     const handleChange = (event) => {
@@ -29,14 +30,50 @@ function RSVP(props) {
         })
     }
 
-    if (isCreated) {
-        alert('RSVP Created')
-        // return <Redirect to={`/corkboard`} />
-    }
+
+
     return (
         <>
             <div>
                 <Nav />
+            </div>
+            <div>
+                <div className="bestOfGenre">
+                    <form className="rsvp-form" onSubmit={handleSubmit}>
+                        <input
+                            className="input-image-link"
+                            placeholder='First Name'
+                            value={newRSVP.firstname}
+                            name='firstname'
+                            required
+                            onChange={handleChange}
+                        />
+                        <input
+                            className="input-image-link"
+                            placeholder='Last Name'
+                            value={newRSVP.lastname}
+                            name='lastname'
+                            required
+                            onChange={handleChange}
+                        />
+                        {/* This onChange function was inspired by 2 solutions on stack overflow */}
+                        <select id="dropdown"
+                            // My previous handlechange knew how to update, but we had to wrap the prev state so it wouldn't lose the other values.
+                            onChange={(e) => setNewRSVP(prevState => (
+                                {
+                                    ...prevState, entree: e.target.value
+                                })
+                            )}
+                            value={newRSVP.entree}
+                            required >
+                            <option>Select an Entree</option>
+                            <option value="Steak Option">Steak Option</option>
+                            <option value="Seafood Option">Seafood Option</option>
+                            <option value="Vegan Option">Vegan Option</option>
+                        </select>
+                        <input type="submit" value="Confirm" />
+                    </form>
+                </div>
             </div>
         </>
     );
