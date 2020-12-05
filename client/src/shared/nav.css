@@ -1,4 +1,8 @@
 ul {
+    display:flex;
     text-decoration: none;
     list-style: none;
+    /* display:inline; */
+    padding: 0;
 }
+
