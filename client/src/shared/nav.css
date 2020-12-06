@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Pinyon+Script&family=Rouge+Script&family=Tangerine:wght@700&display=swap');
+
 ul {
     display:flex;
     text-decoration: none;
@@ -5,6 +7,18 @@ ul {
     /* display:inline; */
     padding: 0;
     justify-content: space-around;
+}
 
+.nav-links{
+    text-decoration: none;
+}
+
+.nav-title{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    padding-top: 70px;
+    font-size: calc(50px + 1vw);
+    font-family: 'Rouge Script', cursive;
 }
 
