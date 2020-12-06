@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Pinyon+Script&family=Rouge+Script&family=Tangerine:wght@700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
 ul {
     display:flex;
     text-decoration: none;
@@ -7,18 +7,37 @@ ul {
     /* display:inline; */
     padding: 0;
     justify-content: space-around;
+    color: inherit;
 }
 
 .nav-links{
     text-decoration: none;
+    transition: all .1s ease-in-out; 
+    color: inherit;
+    font-family: 'Pinyon Script', cursive;
+    font-size: 20px;
+}
+
+.nav-links:hover{
+    transform: scale(1.05); 
 }
 
 .nav-title{
     display: flex;
     justify-content: center;
     text-decoration: none;
+    color: inherit;
     padding-top: 70px;
     font-size: calc(50px + 1vw);
     font-family: 'Rouge Script', cursive;
+}
+.nav-title-link{
+    text-decoration: none;
+    color: inherit;
+    transition: all .3s ease-in-out; 
+}
+
+.nav-title-link:hover{
+    transform: scale(1.1);
 }
 

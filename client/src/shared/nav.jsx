@@ -6,7 +6,7 @@ function Nav(props) {
     return (
         <>
             <div className='nav-title'>
-                <Link className='nav-links' to="/">William & Clarissa</Link>
+                <Link className='nav-title-link' to="/">William & Clarissa</Link>
             </div>
             <hr />
             <div className="nav-ul-div">
