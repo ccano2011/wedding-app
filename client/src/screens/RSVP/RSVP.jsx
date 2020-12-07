@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Nav from '../../shared/Nav'
 import { createRSVP } from '../../services/rsvp'
 // import { Redirect, Link, useHistory } from 'react-router-dom';
+import './RSVP.css'
 
 function RSVP(props) {
     const [isCreated, setCreated] = useState(false)
