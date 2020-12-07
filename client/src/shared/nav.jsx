@@ -7,6 +7,17 @@ function Nav(props) {
         <>
             <div className='nav-title'>
                 <Link className='nav-title-link' to="/">William & Clarissa</Link>
+
+            </div>
+            <div className="mobile-nav-ul-div">
+                <ul className='mobile-nav-ul'>
+                    <Link className='mobile-nav-links' to='/our-story'><li>Our Story</li></Link>
+                    <Link className='mobile-nav-links' to='/travel'><li>Travel</li></Link>
+                    <Link className='mobile-nav-links' to='/pictures'><li>Pictures</li></Link>
+                    <Link className='mobile-nav-links' to='/corkboard'><li>Cork Board</li></Link>
+                    <Link className='mobile-nav-links' to='/registry'><li>Registry</li></Link>
+                    <Link className='mobile-nav-links' to='/RSVP'><li>RSVP</li></Link>
+                </ul>
             </div>
             <hr />
             <div className="nav-ul-div">
@@ -19,6 +30,7 @@ function Nav(props) {
                     <Link className='nav-links' to='/RSVP'><li>RSVP</li></Link>
                 </ul>
             </div>
+
         </>
     );
 }

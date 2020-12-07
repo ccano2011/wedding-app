@@ -41,3 +41,43 @@ ul {
     transform: scale(1.1);
 }
 
+.mobile-nav-ul-div{
+    display: none;
+}
+
+.mobile-nav-ul {
+    display: none;
+  }
+
+
+
+@media screen and (max-width:44em) {
+    /* The following CSS was inspired by the CSS-Tricks.com site */
+    Link {
+        text-decoration: none;
+
+    }
+    .nav-ul-div{
+        display: none;
+    }
+    .mobile-nav-ul {
+        display: flex;
+        flex-flow: row wrap;
+      }
+    .mobile-nav-ul-div{
+        display:flex;
+        text-decoration: none;
+        justify-content: center;
+        color: inherit;
+        font-family: 'Pinyon Script', cursive;
+        font-size: 24px;
+
+    }
+    .mobile-nav-links {
+        text-decoration: none;
+        font-size: 25px;
+        display: flex;
+        color: inherit;
+        margin: 0 15px 15px 15px;
+    }
+  }
