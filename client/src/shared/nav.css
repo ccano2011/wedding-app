@@ -51,7 +51,7 @@ ul {
 
 
 
-@media screen and (max-width:44em) {
+@media screen and (max-width:45em) {
     /* The following CSS was inspired by the CSS-Tricks.com site */
     Link {
         text-decoration: none;

@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Pinyon+Script&family=Rouge+Script&family=Tangerine:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
+.homeTitle {
+    font-family: 'Rouge Script', cursive;
+    font-size: xxx-large;
+    margin-left: 5%;
+    display: flex;
+    justify-content: space-between;
+    float:left;
+}
+
+#home{
+background: linear-gradient(#000, #000) no-repeat center/2px 100%;
+}
+
+.weddingInfo{
+    margin-left: 60%;
+    display: grid;
+}
+
+.homeTime, .homeLocation{
+    grid-column: 1;
+    grid-row: 1;
+    font-family: 'Rouge Script', cursive;
+    font-size: xx-large;
+  }
+  
+  .homeTime span{
+    color: #fff;
+    background: #000cf6;
+  }
+
+  .homeLocation{
+    margin-top: 20%;
+  }
+
+@media screen and (max-width:747px) {
+#home{
+    background: none;
+}
+}

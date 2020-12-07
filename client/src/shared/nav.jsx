@@ -30,7 +30,6 @@ function Nav(props) {
                     <Link className='nav-links' to='/RSVP'><li>RSVP</li></Link>
                 </ul>
             </div>
-
         </>
     );
 }
