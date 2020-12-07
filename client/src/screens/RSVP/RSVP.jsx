@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import nav from '../../shared/nav'
+import Nav from '../../shared/nav'
 import { createRSVP } from '../../services/rsvp'
 // import { Redirect, Link, useHistory } from 'react-router-dom';
 import './RSVP.css'
@@ -33,7 +33,7 @@ function RSVP(props) {
     return (
         <>
             <div>
-                <nav />
+                <Nav />
             </div>
             <div className="rsvp-parent-div">
                 <div className="rsvp">

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { getOnePost, updatePost } from '../../services/posts'
 import { Redirect, useParams } from 'react-router-dom';
-import nav from '../../shared/nav'
+import Nav from '../../shared/nav'
 
 function EditPost(props) {
 
@@ -50,7 +50,7 @@ function EditPost(props) {
 
     return (
         <div>
-            <nav />
+            <Nav />
             <h2>TESTING UPDATEPOST COMPONENT ROUTE</h2>
             <form className="create-form" onSubmit={(e) => {
                 e.preventDefault()

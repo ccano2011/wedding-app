@@ -1,12 +1,12 @@
 import React from 'react';
-import nav from '../../shared/nav'
+import Nav from '../../shared/nav'
 
 
 function Photos(props) {
     return (
         <>
             <div>
-                <nav />
+                <Nav />
             </div>
         </>
     );

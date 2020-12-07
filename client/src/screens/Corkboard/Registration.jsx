@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import nav from '../../shared/nav'
+import Nav from '../../shared/nav'
 import './Registration.css'
 
 
@@ -21,7 +21,7 @@ function Registration(props) {
 
     return (
         <>
-            <nav />
+            <Nav />
             <div className="registration">
                 <form >
                     <h3>Register</h3>
