@@ -29,6 +29,8 @@ margin-left: calc(40px + 4vw);
 .ourStoryTitle{
     margin-left: calc(100px + 4vw);
     font-family: 'Pinyon Script', cursive;
+    margin-right: 15px;
+
 
 }
 
@@ -36,6 +38,8 @@ margin-left: calc(40px + 4vw);
     .ourStoryTitle{
         margin-left: calc(200px + 4vw);
         font-size: 20px;
+        margin-right: 15px;
+
     }
 }
 
@@ -55,6 +59,7 @@ margin-left: calc(40px + 4vw);
     .ourStoryTitle{
         margin-left: calc(300px + 4vw);
         font-size: 30px;
+        margin-right: 15px;
     }
     }
 

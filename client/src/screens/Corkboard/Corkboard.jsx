@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { getAllPosts } from '../../services/posts'
 import { Link } from 'react-router-dom';
 import Nav from '../../shared/Nav'
+import './Corkboard.css'
 
 function Corkboard(props) {
     const [posts, setPosts] = useState([]);
@@ -34,24 +35,26 @@ function Corkboard(props) {
                         </Link>
                     )
             }
-            <div>
+            <div className="currentUserDiv">
                 {
                     props.currentUser
                         ? (
-                            <h3>Greetings, {props.currentUser.name}</h3>
+                            <p className="currentUserGreeting">Greetings, {props.currentUser.name}</p>
                         ) : (
-                            <h3> </h3>
+                            <p> </p>
                         )
                 }
             </div>
-            {
-                posts.map(post => (
-                    <div key={post.id}>
-                        <p>{post.content}</p>
-                        <p> - {post.name}</p>
-                    </div>
-                ))
-            }
+            <div className="map">
+                {
+                    posts.map(post => (
+                        <div key={post.id} className="mappedContent">
+                            <p className="postContent">{post.content}</p>
+                            <p className='postName'> - {post.name}</p>
+                        </div>
+                    ))
+                }
+            </div>
         </div>
 
     );
