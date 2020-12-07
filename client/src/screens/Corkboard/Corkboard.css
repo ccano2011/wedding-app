@@ -10,7 +10,12 @@
     margin-right: 10px;
 
   }
-  
+  .corkBoardTitle{
+    font-family: 'Pinyon Script', cursive;
+    font-size: 2em;
+    margin-bottom: 5px;
+    text-align: center;
+  }
   .mappedContent {
     flex: 1;
     justify-content: space-evenly;
@@ -29,6 +34,15 @@
     font-size: 30px;
     margin-bottom: 5px;
     margin-left: 100px;
+  }
+
+  .corkBoardButtons{
+    font-family: 'Pinyon Script', cursive;
+    font-size: 30px;
+    margin-bottom: 5px;
+    /* margin-left: px; */
+    display: flex;
+    justify-content: space-evenly;
   }
 
   .postName{

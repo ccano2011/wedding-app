@@ -17,24 +17,26 @@ function Corkboard(props) {
     return (
         <div>
             <Nav />
-            <h2>Cork Board</h2>
-            <Link to="/create-post">
-                <button>Create Post</button>
-            </Link>
-            <Link to="/user-post">
-                <button>Your Posts</button>
-            </Link>
-            {/* Following ternary was from https://stackoverflow.com/questions/60575870/how-to-change-login-button-to-logout-button-in-react */}
-            {
-                props.currentUser
-                    ? (
-                        <button onClick={props.handleLogout}>Logout</button>
-                    ) : (
-                        <Link to="/registration">
-                            <button>Login/Register</button>
-                        </Link>
-                    )
-            }
+            <h1 className="corkBoardTitle">Cork Board</h1>
+            <div className='corkBoardButtons'>
+                <Link to="/create-post">
+                    <button>Create Post</button>
+                </Link>
+                <Link to="/user-post">
+                    <button>Your Posts</button>
+                </Link>
+                {/* Following ternary was from https://stackoverflow.com/questions/60575870/how-to-change-login-button-to-logout-button-in-react */}
+                {
+                    props.currentUser
+                        ? (
+                            <button onClick={props.handleLogout}>Logout</button>
+                        ) : (
+                            <Link to="/registration">
+                                <button>Login/Register</button>
+                            </Link>
+                        )
+                }
+            </div>
             <div className="currentUserDiv">
                 {
                     props.currentUser
