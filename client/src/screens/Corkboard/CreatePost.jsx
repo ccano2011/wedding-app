@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { createPost } from '../../services/posts'
 import { Redirect, Link, useHistory } from 'react-router-dom';
-import Nav from '../../shared/Nav'
+import nav from '../../shared/nav'
 
 
 function CreatePost(props) {
@@ -41,7 +41,7 @@ function CreatePost(props) {
 
     return (
         <div>
-            <Nav />
+            <nav />
             <h2>TESTING CREATPOST COMPONENT ROUTE</h2>
             <form className="create-form" onSubmit={handleSubmit}>
                 <textarea

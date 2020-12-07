@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { getAllPosts } from '../../services/posts'
 import { Link } from 'react-router-dom';
-import Nav from '../../shared/Nav'
+import nav from '../../shared/nav'
 import './Corkboard.css'
 
 function Corkboard(props) {
@@ -16,7 +16,7 @@ function Corkboard(props) {
 
     return (
         <div>
-            <Nav />
+            <nav />
             <h1 className="corkBoardTitle">Cork Board</h1>
             <div className='corkBoardButtons'>
                 <Link to="/create-post">

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, Redirect } from 'react-router-dom';
-import Nav from '../../shared/Nav'
+import nav from '../../shared/nav'
 
 
 export default function Login(props) {
@@ -22,7 +22,7 @@ export default function Login(props) {
 
     return (
         <>
-            <Nav />
+            <nav />
             <form onSubmit={(e) => {
                 e.preventDefault();
                 props.handleLogin(formData);

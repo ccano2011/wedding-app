@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Nav.css'
+import './nav.css'
 
-function Nav(props) {
+function nav(props) {
     return (
         <>
             <div className='nav-title'>
@@ -34,4 +34,4 @@ function Nav(props) {
     );
 }
 
-export default Nav;
+export default nav;

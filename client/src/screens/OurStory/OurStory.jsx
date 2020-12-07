@@ -1,5 +1,5 @@
 import React from 'react';
-import Nav from '../../shared/Nav'
+import nav from '../../shared/nav'
 import image from "../../Assets/placeholder_img1.jpg"
 import "./OurStory.css"
 
@@ -7,7 +7,7 @@ import "./OurStory.css"
 function OurStory(props) {
     return (
         <div>
-            <Nav />
+            <nav />
             <h1 className="ourStory">Our Story...</h1>
             <div id="home2">
                 <div className="ourStoryBio">

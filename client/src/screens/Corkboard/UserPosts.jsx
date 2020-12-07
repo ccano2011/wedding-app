@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { getAllPosts, destroyPost } from '../../services/posts'
 import { Redirect, Link } from 'react-router-dom';
-import Nav from '../../shared/Nav'
+import nav from '../../shared/nav'
 
 
 function UserPosts(props) {
@@ -39,7 +39,7 @@ function UserPosts(props) {
 
     return (
         <>
-            <Nav />
+            <nav />
             <div>
                 <h2>TESTING USERPOST COMPONENT ROUTE</h2>
                 {

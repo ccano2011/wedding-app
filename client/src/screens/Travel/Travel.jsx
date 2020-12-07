@@ -1,5 +1,5 @@
 import React from 'react';
-import Nav from '../../shared/Nav'
+import nav from '../../shared/nav'
 import './Travel.css'
 import image from '../../Assets/placeholder_img2.jpg'
 
@@ -7,7 +7,7 @@ import image from '../../Assets/placeholder_img2.jpg'
 function Travel(props) {
     return (
         <div>
-            <Nav />
+            <nav />
             <h1 className="ourStory">Travel Information</h1>
             <div id="home2">
                 <div className="ourStoryBio">

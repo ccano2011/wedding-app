@@ -1,11 +1,11 @@
 import React from 'react';
-import Nav from '../../shared/Nav'
+import nav from '../../shared/nav'
 
 
 function Registry(props) {
     return (
         <div>
-            <Nav />
+            <nav />
         </div>
     );
 }
