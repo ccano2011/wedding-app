@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, Redirect } from 'react-router-dom';
-import Nav from '../../shared/Nav'
+import Nav from '../../shared/nav'
 
 
 export default function Login(props) {

@@ -1,5 +1,5 @@
 import React from 'react';
-import Nav from '../../shared/Nav'
+import Nav from '../../shared/nav'
 
 
 function Photos(props) {

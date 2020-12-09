@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { getAllPosts, destroyPost } from '../../services/posts'
 import { Redirect, Link } from 'react-router-dom';
-import Nav from '../../shared/Nav'
+import Nav from '../../shared/nav'
 
 
 function UserPosts(props) {

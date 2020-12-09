@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Pinyon+Script&family=Rouge+Script&family=Tangerine:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
+.map {
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+    flex-wrap: wrap;
+    z-index: -1;
+    margin-left: 10px;
+    margin-right: 10px;
+
+  }
+  .corkBoardTitle{
+    font-family: 'Pinyon Script', cursive;
+    font-size: 2em;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  .mappedContent {
+    flex: 1;
+    justify-content: space-evenly;
+    padding: 25px;
+    margin: 30px;
+    border-radius: 15px;
+    max-width: 30vw;
+    backdrop-filter: blur(8px);
+    background-color: lawngreen;
+    border: 1px solid black;
+    backdrop-filter: blur(8px);
+  }
+
+  .currentUserGreeting {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 30px;
+    margin-bottom: 5px;
+    margin-left: 100px;
+  }
+
+  .corkBoardButtons{
+    font-family: 'Pinyon Script', cursive;
+    font-size: 30px;
+    margin-bottom: 5px;
+    /* margin-left: px; */
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .postName{
+    font-family: 'Rouge Script', cursive;
+    font-size: x-large;
+    padding-left: 3px;
+    margin-left: 10px;
+  }
+
+  .postContent{
+    overflow: auto;
+    min-width: 100px;
+    font-family: 'Rouge Script', cursive;
+    font-size: x-large;
+    padding-left: 3px;
+    /* flex-wrap: wrap; */
+  }
+  @media screen and (max-width:1325px) {
+    .map {
+      margin-left: 100px;
+      margin-right: 100px;
+      flex-direction: row;
+    }
+    .mappedContent {
+        flex: 1;
+        justify-content: space-evenly;
+        padding: 25px;
+        margin: 30px;
+        border-radius: 15px;
+        max-width: 300vw;
+        backdrop-filter: blur(8px);
+        /* min-width: 40px; */
+      }
+    
+  }
+@media screen and (max-width:45em) {
+    .map {
+        display: flex;
+        flex-direction: row;
+        /* overflow: auto; */
+        flex-wrap: wrap;
+        margin-left: 50px;
+        margin-right: 50px;
+        z-index: -1;
+      }
+      .currentUserDiv{
+        margin-left: 0px;
+      }
+      .currentUserGreeting {
+        font-family: 'Pinyon Script', cursive;
+        font-size: 20px;
+        margin-bottom: 5px;
+        /* margin-left: 100px; */
+        text-align: center;
+        max-width: 240px;
+      }
+}

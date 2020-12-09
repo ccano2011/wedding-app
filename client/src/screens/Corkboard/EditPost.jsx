@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { getOnePost, updatePost } from '../../services/posts'
 import { Redirect, useParams } from 'react-router-dom';
-import Nav from '../../shared/Nav'
+import Nav from '../../shared/nav'
 
 function EditPost(props) {
 

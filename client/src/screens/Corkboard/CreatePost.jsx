@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { createPost } from '../../services/posts'
 import { Redirect, Link, useHistory } from 'react-router-dom';
-import Nav from '../../shared/Nav'
+import Nav from '../../shared/nav'
 
 
 function CreatePost(props) {

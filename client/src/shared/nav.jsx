@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Nav.css'
+import './nav.css'
 
 function Nav(props) {
     return (
@@ -30,7 +30,6 @@ function Nav(props) {
                     <Link className='nav-links' to='/RSVP'><li>RSVP</li></Link>
                 </ul>
             </div>
-
         </>
     );
 }

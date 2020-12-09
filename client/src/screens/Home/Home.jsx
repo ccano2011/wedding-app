@@ -1,17 +1,19 @@
 import React from 'react';
-import Nav from '../../shared/Nav'
+import Nav from '../../shared/nav.jsx'
+import './Home.css'
 
 function Home() {
     return (
         <>
             <Nav />
-            <div>
+            <div id="home">
                 <div className="homeTitle">
-                    <h1>We're getting married!</h1>
+                    <p >We're getting married!</p>
                 </div>
-                <div className="homeLocation">
-                    <h1>When: 00/00/0000 at 00:00</h1>
-                    <h1>Where: 1234 Wedding Venue</h1>
+                <div className="weddingInfo">
+                    <p className="homeTime">When: 00/00/0000 at 00:00</p>
+
+                    <p className="homeLocation">Where: 1234 Wedding Venue</p>
                 </div>
             </div>
         </>
