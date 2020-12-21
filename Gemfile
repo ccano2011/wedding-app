@@ -20,6 +20,10 @@ gem 'jwt'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
+#Deployment gems from https://levelup.gitconnected.com/deploying-a-react-rails-app-with-netlify-and-heroku-ed588e122b8d
+gem 'foreman'
+gem 'rails_12factor'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 

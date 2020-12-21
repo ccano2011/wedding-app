@@ -41,4 +41,4 @@ ActiveRecord::Schema.define(version: 2020_12_01_234656) do
   end
 
   add_foreign_key "posts", "users"
-end
+end`
