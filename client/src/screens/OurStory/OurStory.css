@@ -3,9 +3,12 @@
 
 
 #home2{
-background: linear-gradient(#000, #000) no-repeat center/0.5px 100%;
-padding-top: 2%;
-padding-bottom: 20%;
+    background: linear-gradient(#000, #000) no-repeat center/0.5px 100%;
+    padding-top: 8vh;
+    max-width: 3440px;
+    padding-bottom: 1%;
+    display: flex;
+    justify-content: space-around;
 }
 
 .ourStory {
@@ -14,80 +17,24 @@ padding-bottom: 20%;
 }
 
 #ourStoryImg {
-    /* width: 10%; */
-max-width: 300px;
-height: auto;
-/* margin-left: 4vw; */
-margin-left: calc(40px + 4vw);
-}
-
-.ourStoryBio{
-    display: flex;
-    justify-content: space-between;
-}
-
-.ourStoryTitle{
-    margin-left: calc(100px + 4vw);
-    font-family: 'Pinyon Script', cursive;
-    margin-right: 15px;
-
-
-}
-
-@media screen and (min-width:990px) {
-    .ourStoryTitle{
-        margin-left: calc(200px + 4vw);
-        font-size: 20px;
-        margin-right: 15px;
-
-    }
-}
-
-@media screen and (min-width:1290px) {
-    /* #home{
-        background: none;
-        display: flex;
-        flex-direction: column;
-    } */
-    #ourStoryImg {
-        /* width: 10%; */
-    max-width: 400px;
+    max-width: 300px;
     height: auto;
-    /* margin-left: 4vw; */
-    margin-left: calc(65px + 4vw);
-    }
-    .ourStoryTitle{
-        margin-left: calc(300px + 4vw);
-        font-size: 30px;
-        margin-right: 15px;
-    }
-    }
-
-
-@media screen and (max-width:45em) {
-#home2{
-    background: none;
-    
+    /* margin-left: calc(40px + 4vw); */
+    margin-left: 6vw;
 }
-#ourStoryImg {
-    display: flex;
-}
+
 .ourStoryBio{
     display: flex;
-    flex-direction: column;
+    max-width: 1280px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -50px;
 }
-.ourStoryTitle{
-    display: block;
-    text-align: center;
-    margin-top: 50px;
-    margin-left: 5px;
-    margin-right: 5px;
-    font-size: 25px;
-    /* margin: auto; */
+
+.ourStoryTitle {
+    font-family: 'Pinyon Script', cursive;
+    max-width: 700px;
+    margin-left: 25%;
+    line-height: 1.6;
 }
-}
-@media screen and (min-width:1550px) {
-    .ourStoryTitle{
-        margin-left: calc(400px + 4vw);
-    }
-}
+
