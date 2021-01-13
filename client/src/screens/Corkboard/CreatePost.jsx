@@ -47,9 +47,10 @@ function CreatePost(props) {
                 <textarea
                     className="postBody"
                     rows={10}
-                    placeholder='Your message to the bride & groom'
+                    placeholder='Your message to the bride & groom (Max. 500 characters)'
                     value={newPost.content}
                     name='content'
+                    maxLength="500"
                     required
                     onChange={handleChange}
                 />

@@ -1,9 +1,12 @@
+import styled from 'styled-components'
+
+const Map = styled.div`
 @import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Pinyon+Script&family=Rouge+Script&family=Tangerine:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
-.map {
-    /* display: flex; */
-    /* flex-direction: row; */
-  display: grid;
+
+    display: flex;
+    flex-direction: row;
+  /* display: grid; */
   /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
 
     overflow: auto;
@@ -13,7 +16,7 @@
   
     /* margin-left: 100px;
     margin-right: 100px; */
-}
+
   .corkBoardTitle{
     font-family: 'Pinyon Script', cursive;
     font-size: 2em;
@@ -30,7 +33,9 @@
     max-width: 22vw;
     height: fit-content;
     backdrop-filter: blur(8px);
-    background-color: rgb(189, 204, 174);
+    /* background-color: rgb(189, 204, 174); */
+    background-color: ${({ initialVal }) => initialVal ? "red" : "blue"};
+    background-color: ${({ small }) => small ? "red" : "blue"};
     border: 1px solid black;
     backdrop-filter: blur(8px);
   }
@@ -90,7 +95,7 @@
 } */
 
 @media screen and (max-width:45em) {
-    .map {
+    
         display: grid;
         /* flex-direction: row; */
         /* overflow: auto; */
@@ -98,7 +103,7 @@
         margin-left: 0;
         margin-right: 0;
         z-index: -1;
-      }
+      
       .currentUserDiv{
         margin-left: 0px;
       }
@@ -131,8 +136,10 @@
         min-width: 300px;
         max-width: auto;
         backdrop-filter: blur(8px);
-        background-color: rgb(189, 204, 174);
+        /* background-color: rgb(189, 204, 174); */
         border: 1px solid black;
         backdrop-filter: blur(8px);
       }
 }
+`
+export default Map
