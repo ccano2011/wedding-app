@@ -170,13 +170,16 @@ src
 | Build out the controllers to connect the frontend to the backend |    H     |     4 hrs      |     30 min     |     TBD     |
 | Implemment authentication for the Cork board components on frontend |    L     |     3 hrs      |     3 hrs     |     TBD     |
 | Create the Navbar component w/ styling |    H     |     2hrs      |     2 hrs     |     TBD     |
-| Create the homepage screen w/ styling |    H     |     2hrs      |     ? hrs     |     TBD     |
+| Create the homepage screen w/ styling |    H     |     2hrs      |     20 min     |     TBD     |
 | Build out the RSVP component with the appropriate CRUD logic & association |    H     |     3 hrs      |     30 min     |     TBD     |
-| Build out the remaining components |    H     |     4 hrs      |     ? hrs     |     TBD     |
-| Style those components |    L     |     6 hrs      |     ? hrs     |     TBD     |
-| Create MVP media queries |    H     |     3 hrs      |     ? hrs     |     TBD     |
-| Deploy & Test |    H     |     3 hrs      |     ? hrs     |     TBD     |
-| TOTAL               |          |     42.5 hrs      |     ? hrs     |     TBD     |
+| Build out the remaining components |    H     |     4 hrs      |     2 hrs     |     TBD     |
+| Style those components |    L     |     6 hrs      |     6 hrs     |     TBD     |
+| Create MVP media queries |    H     |     3 hrs      |     2 hrs     |     TBD     |
+| POST-MVP Add Animations to the styled components (i.e. Fade-ins, photo gallery, etc.)|    H     |     4 hrs      |     TBD hrs     |     TBD     |
+| Deploy & Test |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Deploy & Test |    H     |     3 hrs      |     1 hrs     |     TBD     |
+
+| TOTAL               |          |     42.5 hrs      |     34.33 hrs     |     TBD     |
 
 <!-- > _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._ -->
 
@@ -197,9 +200,10 @@ src
 ## Post-MVP:
 
 <!-- > Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation! -->
-- Build out logic that will prevent duplicate RSVPs
+<!-- - Build out logic that will prevent duplicate RSVPs -->
 - Use CSS framework to incorporate animations
-- Implement Full CRUD to the RSVP component
+- Add a rotating photo gallery for "Our Story" component
+<!-- - Implement Full CRUD to the RSVP component -->
 
 ***
 
@@ -209,7 +213,10 @@ src
 
 ## Code Issues & Resolutions:
 
-> Use this section to list of all major issues encountered and their resolution.
+Major issue with CORs on the deployed site resolved by doing the following:
+ - added gems 'rails_12factor' and 'foreman' to my gemfile,
+ - specified my rails application cors.rb’s origins to only coming from my deployed netlify & localhost:3001,
+   making a Procfile with the heroku commands ````web: bundle exec rails s ```` & ````release: bundle exec bin/rake db:migrate````.
 
 ## Change Log:
 
@@ -224,3 +231,9 @@ src
 
        - Removed unnecessary components; updated the README & Figma to reflect those changes
        - Updated the 'Time Frames' to better predict the development time & path
+
+01/12/2020:
+
+       - Removed front-end access to the RSVP component; Not needed for this iteration
+       - Refactored all the CSS styling for various components along with the appropriate media queries
+       - Updated 'Post-MVPs' & updated the 'Time Frames' to represent the time and hours spent for each goal

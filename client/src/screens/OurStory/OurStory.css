@@ -29,6 +29,8 @@
     justify-content: space-between;
     align-items: center;
     margin-top: -50px;
+    font-size: x-large;
+
 }
 
 .ourStoryTitle {
@@ -66,13 +68,13 @@
 
 @media screen and (max-width: 45em){
     .ourStoryTitle {
-        max-width: 350px;
-        margin-left: 0;
+        max-width: 390px;
+        margin-left: 15px;
         margin-top: 40px;
         line-height: 1.8;
     }
     #ourStoryImg{
-        max-width: 200px;
+        max-width: 250px;
         border-radius: 10%;
         border:whitesmoke solid 2px;
         border-style: double;
