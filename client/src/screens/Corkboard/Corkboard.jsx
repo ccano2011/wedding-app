@@ -17,7 +17,7 @@ function Corkboard(props) {
     return (
         <div>
             <Nav />
-            <h1 className="corkBoardTitle">Cork Board</h1>
+            {/* <h1 className="corkBoardTitle">Cork Board</h1> */}
             <div className='corkBoardButtons'>
                 <Link to="/create-post">
                     <button>Create Post</button>

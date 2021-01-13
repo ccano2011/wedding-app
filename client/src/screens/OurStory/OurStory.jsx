@@ -8,7 +8,7 @@ function OurStory(props) {
     return (
         <div>
             <Nav />
-            <h1 className="ourStory">Our Story...</h1>
+            {/* <h1 className="ourStory">Our Story...</h1> */}
             <div id="home2">
                 <div className="ourStoryBio">
                     <img id="ourStoryImg" src={image} alt="Bride & Groom" />
