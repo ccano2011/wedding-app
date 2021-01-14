@@ -27,13 +27,6 @@
     box-shadow: 0 0 2px 2px ;
     background-color: bisque;
 } */
-
-button {
-  background-color: white;
-  border: 2px solid black;
-  border-radius: 0.3em;
-}
-
 .map {
     display: flex;
     flex-direction: row;
@@ -74,6 +67,7 @@ button {
   .currentUserGreeting {
     font-family: 'Pinyon Script', cursive;
     font-size: 30px;
+    margin-top: 60px;
     margin-bottom: 5px;
     margin-left: 100px;
   }
@@ -81,7 +75,7 @@ button {
   .corkBoardButtons{
     font-family: 'Pinyon Script', cursive;
     font-size: 30px;
-    margin-bottom: 5px;
+    margin-left: 35px;
     /* margin-left: px; */
     display: flex;
     justify-content: space-evenly;

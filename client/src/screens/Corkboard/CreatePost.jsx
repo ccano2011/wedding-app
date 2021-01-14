@@ -9,7 +9,7 @@ function CreatePost(props) {
     console.log(props.currentUser)
     setTimeout(() => {
         if (props.currentUser === null) {
-            history.push('/registration')
+            history.push('/login')
         }
     }, 1)
 

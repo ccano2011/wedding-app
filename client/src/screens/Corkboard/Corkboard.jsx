@@ -2,6 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { getAllPosts } from '../../services/posts'
 import { Link } from 'react-router-dom';
 import Nav from '../../shared/nav'
+import Button from '@material-ui/core/Button'
+import { styled } from "@material-ui/core/styles";
+import { spacing } from "@material-ui/system";
+import Create from '@material-ui/icons/Create'
+import Assignment from '@material-ui/icons/Assignment'
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import './Corkboard.css'
 
 function Corkboard(props) {
@@ -14,29 +20,14 @@ function Corkboard(props) {
         fetchPosts();
     }, [])
 
+    if (props.currentUser) {
+
+    }
+
     return (
         <div>
             <Nav />
             {/* <h1 className="corkBoardTitle">Cork Board</h1> */}
-            <div className='corkBoardButtons'>
-                <Link to="/create-post">
-                    <button>Create Post</button>
-                </Link>
-                <Link to="/user-post">
-                    <button>Your Posts</button>
-                </Link>
-                {/* Following ternary was from https://stackoverflow.com/questions/60575870/how-to-change-login-button-to-logout-button-in-react */}
-                {
-                    props.currentUser
-                        ? (
-                            <button onClick={props.handleLogout}>Logout</button>
-                        ) : (
-                            <Link to="/registration">
-                                <button>Login/Register</button>
-                            </Link>
-                        )
-                }
-            </div>
             <div className="currentUserDiv">
                 {
                     props.currentUser
@@ -47,6 +38,45 @@ function Corkboard(props) {
                         )
                 }
             </div>
+            <div className='corkboardButtons'>
+                <Link to="/create-post">
+                    <Button
+                        variant="outlined"
+                        size="large"
+                        startIcon={<Create />}
+                    ></Button>
+                </Link>
+                {
+                    props.currentUser
+                        ? (
+                            <Link to="/user-post">
+                                <Button
+                                    variant="outlined"
+                                    size="large"
+                                    startIcon={<Assignment />}
+                                ></Button>
+                            </Link>
+                        ) : (
+                            null
+                        )
+                }
+
+                {/* Following ternary was from https://stackoverflow.com/questions/60575870/how-to-change-login-Button-to-logout-Button-in-react */}
+                {
+                    props.currentUser
+                        ? (
+                            <Button
+                                variant="outlined"
+                                size="large"
+                                startIcon={<ExitToAppIcon />}
+                                onClick={props.handleLogout}
+                            ></Button>
+                        ) : (
+                            null
+                        )
+                }
+            </div>
+
             <div className="map">
                 {
                     posts.map(post => (
