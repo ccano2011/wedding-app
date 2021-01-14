@@ -27,17 +27,16 @@
     box-shadow: 0 0 2px 2px ;
     background-color: bisque;
 } */
+
 .map {
     display: flex;
     flex-direction: row;
   /* display: grid; */
   /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
-
     overflow: auto;
     flex-wrap: wrap;
     justify-content: center;
     z-index: -1;
-  
     /* margin-left: 100px;
     margin-right: 100px; */
 }
@@ -68,17 +67,16 @@
     font-family: 'Pinyon Script', cursive;
     font-size: 30px;
     margin-top: 60px;
-    margin-bottom: 5px;
+    margin-bottom: 25px;
     margin-left: 100px;
   }
 
-  .corkBoardButtons{
+  .corkboardButtons{
     font-family: 'Pinyon Script', cursive;
-    font-size: 30px;
-    margin-left: 35px;
-    /* margin-left: px; */
     display: flex;
     justify-content: space-evenly;
+    max-width: 300px;
+    margin-left: 6%;
   }
 
   .postName{
@@ -141,6 +139,13 @@
         /* margin-left: 100px; */
         /* text-align: center; */
         /* max-width: 240px; */
+      }
+      .corkboardButtons{
+        font-family: 'Pinyon Script', cursive;
+        display: flex;
+        justify-content: space-evenly;
+        max-width: 100%;
+        margin-left: 0;
       }
       .postContent{
         overflow: auto;
