@@ -3,8 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 // import './nav.css'
 import styled from 'styled-components'
 
-function Nav(props) {
-    const Nav = styled.div`
+const Navi = styled.div`
     @import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Pinyon+Script&family=Rouge+Script&family=Tangerine:wght@700&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
 ul {
@@ -134,16 +133,16 @@ li{
     }
   
   }
-    `
+  `
+function Nav(props) {
 
     const { pathname } = useLocation()
 
     return (
 
-        <Nav pathname={pathname}>
+        <Navi pathname={pathname}>
             <div className='nav-title'>
                 <Link className='nav-title-link' to="/">William & Clarissa</Link>
-
             </div>
             <div className="mobile-nav-ul-div">
                 <ul className='mobile-nav-ul'>
@@ -167,7 +166,7 @@ li{
                 </ul>
             </div>
 
-        </Nav>
+        </Navi>
     );
 }
 

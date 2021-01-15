@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import Nav from '../../shared/nav'
+// import "./Login.css"
 
 
 export default function Login(props) {
@@ -20,35 +21,43 @@ export default function Login(props) {
         }))
     }
 
+
     return (
-        <>
+        <div className="login-page-home">
             <Nav />
-            <form onSubmit={(e) => {
+            <form className="login-form-home" onSubmit={(e) => {
                 e.preventDefault();
                 props.handleLogin(formData);
             }}>
-                <h3>Login</h3>
-                <label>Email:
-        <input
-                        type='text'
-                        name='email'
-                        value={formData.email}
-                        onChange={handleChange}
-                    />
-                </label>
+                <div className='input-div'>
+                    <label htmlFor='username'><p className='login-label'>Email:</p></label>
+                </div>
+
+                <input
+                    className="username-home-input"
+                    type='text'
+                    name='email'
+                    value={formData.email}
+                    onChange={handleChange}
+                />
+                <div className='input-div'>
+                    <label htmlFor="password"><p className='login-label'>Password:</p></label>
+                </div>
+                <input
+                    className="username-home-input"
+                    type='password'
+                    name='password'
+                    value={formData.password}
+                    onChange={handleChange}
+                />
                 <br />
-                <label>Password:
-        <input
-                        type='password'
-                        name='password'
-                        value={formData.password}
-                        onChange={handleChange}
-                    />
-                </label>
-                <br />
-                <Link to='/registration'>Register</Link>
-                <button>Submit</button>
+
+                <div className="buttons-home">
+                    <button className='login-button' type="submit">Log In</button>
+
+                    <Link to='/registration' className='signup-btn'><button className='signup-btn'>Register</button></Link>
+                </div>
             </form>
-        </>
+        </div>
     )
 }

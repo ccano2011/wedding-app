@@ -4,7 +4,6 @@ ul {
     display:flex;
     text-decoration: none;
     list-style: none;
-    /* display:inline; */
     padding: 0;
     justify-content: space-around;
     color: inherit;
@@ -50,21 +49,12 @@ ul {
   }
 
   @media screen and (min-width:1440px) {
-    /* #home{
-        background: none;
-        display: flex;
-        flex-direction: column;
-    } */
     .nav-links{
         text-decoration: none;
         transition: all .1s ease-in-out; 
         color: inherit;
         font-family: 'Pinyon Script', cursive;
-    }
-li{
-    font-size: 35px;
-
-}    
+    }   
     }
 
 

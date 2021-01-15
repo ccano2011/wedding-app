@@ -1,0 +1,109 @@
+/* 
+
+class DynamicComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.Component = require(`./components/${this.props.name}`).default;
+  }
+  render() {
+    return <this.Component />;
+  }
+};
+
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
+
+/* .login-page-home {
+    position: fixed;
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  } */
+
+.login-form-home{
+    margin: 0 auto;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Dosis', sans-serif;
+    background-color: rgb(247, 247, 247);
+    width: 360px;
+    height: 340px;
+    padding-top: 20px;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding-bottom: 30px;
+}
+
+.buttons-home {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.username-home-input {
+    font-family: 'Dosis', sans-serif;
+    font-size: 24px !important;
+    font-weight: 500 !important;
+    height: 35px !important;
+    background-color: rgb(197, 197, 197) !important;
+    border: 1px solid black;
+    border-radius: 25px !important;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: -10px;
+}
+
+.login-label {
+    font-family: 'Dosis', sans-serif !important;
+    text-align: left;
+    margin-top: -2px;
+    margin-left: 50px;
+    font-size: 22px;
+}
+
+.input-div {
+    /* background-color: tomato; */
+    height: 50px;
+    padding-top: 10px;
+}
+
+.login-button {
+    font-family: 'Dosis', sans-serif;
+    background-color: #061540;
+    color: white;
+    border: 1px solid black;
+    font-size: 24px;
+    font-weight: 600;
+    height: 70px;
+    width: 250px;
+    border-radius: 14px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.login-button:hover {
+    background-color: #0d2568 !important;
+}
+
+.signup-btn {
+    margin-top: 30px;
+}
+
