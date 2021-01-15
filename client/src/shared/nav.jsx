@@ -11,12 +11,13 @@ ul {
     display:flex;
     text-decoration: none;
     list-style: none;
-    /* display:inline; */
     padding: 0;
     justify-content: space-around;
     color: inherit;
 }
-
+li{
+    font-size: 35px;
+} 
 .nav-links{
     text-decoration: none;
     transition: all .1s ease-in-out; 
@@ -29,7 +30,7 @@ ul {
     transform: scale(1.05); 
     color: #404040 !important;
     font-weight: 700 ;
-    letter-spacing: 1px;
+    /* letter-spacing: 1px; */
     background: none;
     transition: all 0.1s ease 0s;
 }
@@ -68,22 +69,22 @@ ul {
   
   .travel {
       text-shadow: ${(props) => props.pathname.match(/^\/travel/) ? "9px 9px 9px #ccc7c7" : "none"};
-      font-weight: ${(props) => props.pathname.match(/^\/travel/) ? "600" : "none"};
+      font-weight: ${(props) => props.pathname.match(/^\/travel/) ? "bold" : "none"};
   }
   
   .pictures {
       text-shadow: ${(props) => props.pathname.match(/^\/pictures/) ? "9px 9px 9px #ccc7c7" : "none"};
-      font-weight: ${(props) => props.pathname.match(/^\/pictures/) ? "600" : "none"};
+      font-weight: ${(props) => props.pathname.match(/^\/pictures/) ? "bold" : "none"};
   }
   
   .corkboard {
       text-shadow: ${(props) => props.pathname.match(/^\/corkboard/) ? "9px 9px 9px #ccc7c7" : "none"};
-      font-weight: ${(props) => props.pathname.match(/^\/corkboard/) ? "600" : "none"};
+      font-weight: ${(props) => props.pathname.match(/^\/corkboard/) ? "bold" : "none"};
   }
   
   .registery {
       text-shadow: ${(props) => props.pathname.match(/^\/registry/) ? "9px 9px 9px #ccc7c7" : "none"};
-      font-weight: ${(props) => props.pathname.match(/^\/registry/) ? "600" : "none"};
+      font-weight: ${(props) => props.pathname.match(/^\/registry/) ? "bold" : "none"};
   }
 /* 
   .RSVP {
@@ -93,22 +94,13 @@ ul {
   } */
 
   @media screen and (min-width:1440px) {
-    /* #home{
-        background: none;
-        display: flex;
-        flex-direction: column;
-    } */
     .nav-links{
         text-decoration: none;
         transition: all .1s ease-in-out; 
         color: inherit;
         font-family: 'Pinyon Script', cursive;
     }
-li{
-    font-size: 35px;
-
-}    
-    }
+}
 
 
 @media screen and (max-width:45em) {

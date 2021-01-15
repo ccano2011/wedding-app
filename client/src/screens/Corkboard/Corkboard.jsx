@@ -80,7 +80,7 @@ function Corkboard(props) {
                             <p className="postContent">{post.content}</p>
                             <p className='postName'> - {post.name}</p>
                         </div>
-                    ))
+                    )).reverse()
                 }
             </div>
         </div>
