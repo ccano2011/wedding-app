@@ -83,6 +83,7 @@
 
   .postName{
     font-family: 'Rouge Script', cursive;
+    /* font-family: 'Dosis', sans-serif !important; */
     font-size: x-large;
     padding-left: 3px;
     margin-left: 10px;
@@ -92,6 +93,7 @@
     overflow: auto;
     min-width: 100px;
     /* font-family: 'Rouge Script', cursive; */
+    font-family: 'Dosis', sans-serif !important;
     /* line-height: 100%; */
     font-size: large;
     padding-left: 3px;

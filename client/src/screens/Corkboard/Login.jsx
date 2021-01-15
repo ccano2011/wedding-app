@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import Nav from '../../shared/nav'
-// import "./Login.css"
+import "./Login.css"
 
 
 export default function Login(props) {
@@ -55,7 +55,7 @@ export default function Login(props) {
                 <div className="buttons-home">
                     <button className='login-button' type="submit">Log In</button>
 
-                    <Link to='/registration' className='signup-btn'><button className='signup-btn'>Register</button></Link>
+                    <Link to='/registration' className='signup-btn'><button className='signup-btn'>First-Time User? Register Here!</button></Link>
                 </div>
             </form>
         </div>
