@@ -26,7 +26,10 @@ function UserPosts(props) {
     }, [props.currentUser, isLoaded]);
 
     if (!userPosts.length) {
-        return <h4>You haven't made any posts yet! Click <Link to="/create-post">HERE</Link> to make one!</h4>
+        return <>
+            <Nav />
+            <h2 className="no-posts">You haven't made any posts yet! Click <Link to="/create-post">HERE</Link> to make one!</h2>
+        </>
     }
     // if (props.currentUser === null) {
     //     return <Redirect to={'/corkboard'} />

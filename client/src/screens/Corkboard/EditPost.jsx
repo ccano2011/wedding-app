@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { getOnePost, updatePost } from '../../services/posts'
-import { Redirect, useParams } from 'react-router-dom';
+import { Link, Redirect, useParams } from 'react-router-dom';
 import Nav from '../../shared/nav'
+import './CreatePost.css'
+
 
 function EditPost(props) {
 
@@ -51,7 +53,6 @@ function EditPost(props) {
     return (
         <div>
             <Nav />
-            <h2>TESTING UPDATEPOST COMPONENT ROUTE</h2>
             <form className="create-form" onSubmit={(e) => {
                 e.preventDefault()
                 handleSubmit(id, updateUserPost)
@@ -73,8 +74,14 @@ function EditPost(props) {
                     required
                     onChange={handleChange}
                 />
-                <button type='submit' className="submit-button">Submit</button>
             </form>
+            <div className='buttons-create'>
+                <button type='submit' onClick={(e) => {
+                    e.preventDefault()
+                    handleSubmit(id, updateUserPost)
+                }} className="submit-button">Submit</button>
+                <Link to="/corkboard"><button className="cancel-button">Cancel</button></Link>
+            </div>
         </div>
     )
 }

@@ -16,18 +16,22 @@
   .input-image-link {
     display: flex;
     flex-direction: column;
-    margin-bottom: 40px;
-    padding: 30px;
+    margin-bottom: 15px;
+    padding: 20px;
     text-align: center;
     font-size: x-large;
   }
 
   .postBody{
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     font-size: x-large;
     font-family: inherit;
     resize: none;
   }
+  .buttons-create {
+    display: flex;
+    justify-content: center;
+}
 
   .confirmed{
     text-align: center;
@@ -35,6 +39,38 @@
     margin-top: 200px;
     margin-bottom: 100px;
   }
+  .submit-button {
+    font-family: 'Dosis', sans-serif;
+    border: 1px solid black;
+    font-size: x-large;
+    font-weight: 600;
+    border-radius: 9px;
+    height: 80px;
+    width: 170px;
+    /* margin: 0 auto; */
+    /* margin-top: 15px; */
+}
+
+.submit-button:hover {
+    background-color: palegreen !important;
+}
+
+.cancel-button {
+    font-family: 'Dosis', sans-serif;
+    border: 1px solid black;
+    font-size: x-large;
+    font-weight: 600;
+    height: 80px;
+    width: 170px;
+    border-radius: 9px;
+    margin: 0 auto;
+    /* margin-top: 15px; */
+    margin-left: 50px;
+}
+
+.cancel-button:hover {
+    background-color: tomato ;
+}
 
   @media screen and (max-width:990px) {
     .create-form {
@@ -55,14 +91,30 @@
   .input-image-link {
     display: flex;
     flex-direction: column;
-    margin-bottom: 40px;
-    padding: 30px;
+    margin-bottom: 15px;
+    padding: 10px;
     text-align: center;
     font-size: large;
   }
 
+  .buttons-create {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cancel-button {
+    margin-top: 15px;
+    margin-left: 0px;
+    height: 50px;
+}
+
+.submit-button {
+    height: 50px;
+}
+
   .postBody{
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     font-size: large;
     font-family: inherit;
     resize: none;

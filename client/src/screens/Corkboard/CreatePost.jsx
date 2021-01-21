@@ -61,9 +61,11 @@ function CreatePost(props) {
                     required
                     onChange={handleChange}
                 />
-                <button type='submit' className="submit-button">Submit</button>
             </form>
-            <Link to="/corkboard"><button>Cancel</button></Link>
+            <div className='buttons-create'>
+                <button type='submit' onClick={handleSubmit} className="submit-button">Submit</button>
+                <Link to="/corkboard"><button className="cancel-button">Cancel</button></Link>
+            </div>
         </div>
     );
 }
