@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { createPost } from '../../services/posts'
 import { Redirect, Link, useHistory } from 'react-router-dom';
 import Nav from '../../shared/nav'
+import './CreatePost.css'
 
 
 function CreatePost(props) {
@@ -42,7 +43,6 @@ function CreatePost(props) {
     return (
         <div>
             <Nav />
-            <h2>TESTING CREATPOST COMPONENT ROUTE</h2>
             <form className="create-form" onSubmit={handleSubmit}>
                 <textarea
                     className="postBody"

@@ -29,24 +29,27 @@ export default function Login(props) {
                 e.preventDefault();
                 props.handleLogin(formData);
             }}>
-                <div className='input-div'>
+                <h3 className="login-text">Login to Post</h3>
+                {/* <div className='input-div'>
                     <label htmlFor='username'><p className='login-label'>Email:</p></label>
-                </div>
+                </div> */}
 
                 <input
                     className="username-home-input"
                     type='text'
                     name='email'
+                    placeholder='Email'
                     value={formData.email}
                     onChange={handleChange}
                 />
-                <div className='input-div'>
+                {/* <div className='input-div'>
                     <label htmlFor="password"><p className='login-label'>Password:</p></label>
-                </div>
+                </div> */}
                 <input
                     className="username-home-input"
                     type='password'
                     name='password'
+                    placeholder='Password'
                     value={formData.password}
                     onChange={handleChange}
                 />
@@ -54,8 +57,8 @@ export default function Login(props) {
 
                 <div className="buttons-home">
                     <button className='login-button' type="submit">Log In</button>
-
-                    <Link to='/registration' className='signup-btn'><button className='signup-btn'>First-Time User? Register Here!</button></Link>
+                    <h3 className="registration-text">First-Time User? Register Below!</h3>
+                    <Link to='/registration' className='signup-btn'><button className='signup-btn'>Register</button></Link>
                 </div>
             </form>
         </div>

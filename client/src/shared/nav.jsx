@@ -62,27 +62,37 @@ li{
   }
 
   .story {
-      text-shadow: ${(props) => props.pathname.match(/^\/our-story/) ? "9px 9px 9px #ccc7c7" : "none"};
+      /* text-shadow: ${(props) => props.pathname.match(/^\/our-story/) ? "9px 9px 9px #ccc7c7" : "none"}; */
       font-weight: ${(props) => props.pathname.match(/^\/our-story/) ? "bold" : "none"};
   }
   
   .travel {
-      text-shadow: ${(props) => props.pathname.match(/^\/travel/) ? "9px 9px 9px #ccc7c7" : "none"};
+      /* text-shadow: ${(props) => props.pathname.match(/^\/travel/) ? "9px 9px 9px #ccc7c7" : "none"}; */
       font-weight: ${(props) => props.pathname.match(/^\/travel/) ? "bold" : "none"};
   }
   
   .pictures {
-      text-shadow: ${(props) => props.pathname.match(/^\/pictures/) ? "9px 9px 9px #ccc7c7" : "none"};
+      /* text-shadow: ${(props) => props.pathname.match(/^\/pictures/) ? "9px 9px 9px #ccc7c7" : "none"}; */
       font-weight: ${(props) => props.pathname.match(/^\/pictures/) ? "bold" : "none"};
   }
   
   .corkboard {
-      text-shadow: ${(props) => props.pathname.match(/^\/corkboard/) ? "9px 9px 9px #ccc7c7" : "none"};
+      /* text-shadow: ${(props) => props.pathname.match(/^\/corkboard/) ? "9px 9px 9px #ccc7c7" : "none"}; */
       font-weight: ${(props) => props.pathname.match(/^\/corkboard/) ? "bold" : "none"};
+      /* text-shadow: ${(props) => props.pathname.match(/^\/registration/) ? "9px 9px 9px #ccc7c7" : "none"}; */
+      font-weight: ${(props) => props.pathname.match(/^\/registration/) ? "bold" : "none"};
+      /* text-shadow: ${(props) => props.pathname.match(/^\/login/) ? "9px 9px 9px #ccc7c7" : "none"}; */
+      font-weight: ${(props) => props.pathname.match(/^\/login/) ? "bold" : "none"};
+      /* text-shadow: ${(props) => props.pathname.match(/^\/create-post/) ? "9px 9px 9px #ccc7c7" : "none"}; */
+      font-weight: ${(props) => props.pathname.match(/^\/create-post/) ? "bold" : "none"};
+      /* text-shadow: ${(props) => props.pathname.match(/^\/edit-post/) ? "9px 9px 9px #ccc7c7" : "none"}; */
+      font-weight: ${(props) => props.pathname.match(/^\/edit-post/) ? "bold" : "none"};
+      /* text-shadow: ${(props) => props.pathname.match(/^\/user-post/) ? "9px 9px 9px #ccc7c7" : "none"}; */
+      font-weight: ${(props) => props.pathname.match(/^\/user-post/) ? "bold" : "none"};
   }
   
   .registery {
-      text-shadow: ${(props) => props.pathname.match(/^\/registry/) ? "9px 9px 9px #ccc7c7" : "none"};
+      /* text-shadow: ${(props) => props.pathname.match(/^\/registry/) ? "9px 9px 9px #ccc7c7" : "none"}; */
       font-weight: ${(props) => props.pathname.match(/^\/registry/) ? "bold" : "none"};
   }
 /* 

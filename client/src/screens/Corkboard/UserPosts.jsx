@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { getAllPosts, destroyPost } from '../../services/posts'
-import { Redirect, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Nav from '../../shared/nav'
+import './UserPost.css'
 
 
 function UserPosts(props) {
@@ -24,11 +25,12 @@ function UserPosts(props) {
         // dependency array of my useEffect 
     }, [props.currentUser, isLoaded]);
 
-    if (props.currentUser === null) {
-        return <Redirect to={'/registration'} />
-    } else if (!userPosts.length) {
+    if (!userPosts.length) {
         return <h4>You haven't made any posts yet! Click <Link to="/create-post">HERE</Link> to make one!</h4>
     }
+    // if (props.currentUser === null) {
+    //     return <Redirect to={'/corkboard'} />
+    // } else 
 
     const handleDelete = async (id) => {
         await destroyPost(id)
@@ -40,18 +42,19 @@ function UserPosts(props) {
     return (
         <>
             <Nav />
-            <div>
-                <h2>TESTING USERPOST COMPONENT ROUTE</h2>
+            <div className="map">
                 {
                     userPosts.map(post => (
-                        <div key={post.id}>
-                            <p>{post.content}</p>
-                            <p> - {post.name}</p>
+                        <div key={post.id} className="mappedContent">
+                            <p className="postContent">{post.content}</p>
+                            <p className='postName'> - {post.name}</p>
                             {/* <p>{post.id}</p> */}
-                            <button onClick={() => handleDelete(post.id)}>Delete Post</button>
-                            <Link to={`/edit-post/${post.id}`}><button>Edit Post</button></Link>
+                            <div className="buttons">
+                                <button className='delete-button' onClick={() => handleDelete(post.id)}>Delete Post</button>
+                                <Link to={`/edit-post/${post.id}`}><button className='edit-btn'>Edit Post</button></Link>
+                            </div>
                         </div>
-                    ))
+                    )).reverse()
                 }
             </div >
         </>

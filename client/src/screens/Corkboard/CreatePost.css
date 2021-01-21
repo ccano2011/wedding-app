@@ -1,0 +1,70 @@
+.create-form {
+    background-color: CEE0DC;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 60px;
+    max-width: 500px;
+    margin: auto;
+    margin-top: 75px;
+  }
+
+  .input-image-link {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    padding: 30px;
+    text-align: center;
+    font-size: x-large;
+  }
+
+  .postBody{
+    margin-bottom: 50px;
+    font-size: x-large;
+    font-family: inherit;
+    resize: none;
+  }
+
+  .confirmed{
+    text-align: center;
+    font-size: xx-large;
+    margin-top: 200px;
+    margin-bottom: 100px;
+  }
+
+  @media screen and (max-width:990px) {
+    .create-form {
+    background-color: CEE0DC;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 60px;
+    max-width: 300px;
+    margin: auto;
+    margin-top: 5px;
+  }
+
+  .input-image-link {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    padding: 30px;
+    text-align: center;
+    font-size: large;
+  }
+
+  .postBody{
+    margin-bottom: 50px;
+    font-size: large;
+    font-family: inherit;
+    resize: none;
+  }
+}
