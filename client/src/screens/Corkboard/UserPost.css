@@ -83,7 +83,6 @@
     text-align: center;
   }
  
-  
   .mappedContent {
     /* flex: 1 1; */
     justify-content: space-evenly;
@@ -106,7 +105,7 @@
   .currentUserGreeting {
     font-family: 'Pinyon Script', cursive;
     font-size: 30px;
-    margin-top: 60px;
+    margin-top: 0;
     margin-bottom: 25px;
     margin-left: 100px;
   }
@@ -157,8 +156,28 @@
 } */
 .no-posts{
   text-align: center;
-  margin-top: 15%;
+  margin-top: 10%;
 }
+
+.no-post-button {
+  font-family: 'Dosis', sans-serif;
+  border: 1px solid black;
+  font-size: x-large;
+  font-weight: 600;
+  border-radius: 9px;
+  height: 80px;
+  width: 170px;
+}
+
+.no-post-button:hover {
+  background-color: bisque !important;
+}
+
+.no-post-div{
+  display: flex;
+  justify-content: center;
+}
+
 @media screen and (max-width:45em) {
     .map {
         /* display: grid; */
@@ -167,21 +186,30 @@
         margin-right: 0;
         z-index: -1;
       }
+
+      .buttons {
+        display: flex;
+        justify-content: center;
+    }
+
       .currentUserDiv{
         margin-left: 0px;
       }
+
       .currentUserGreeting {
         font-family: 'Pinyon Script', cursive;
         margin-left: 0px;
         text-align: center;
         font-size: 25px;
       }
+
       .corkboardButtons{
         font-family: 'Pinyon Script', cursive;
         display: flex;
         justify-content: space-evenly;
         max-width: 100%;
       }
+
       .postContent {
         overflow: auto;
         min-width: 100px;
@@ -191,6 +219,7 @@
         padding-left: 3px;
         /* max-height: 35vh; */
     }
+
       .mappedContent {
         flex: 1;
         justify-content: space-evenly;

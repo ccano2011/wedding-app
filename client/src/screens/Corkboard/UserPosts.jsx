@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getAllPosts, destroyPost } from '../../services/posts'
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import Nav from '../../shared/nav'
 import './UserPost.css'
 
@@ -8,6 +8,7 @@ import './UserPost.css'
 function UserPosts(props) {
     const [userPosts, setUserPosts] = useState([])
     const [isLoaded, setLoaded] = useState(false)
+    const history = useHistory();
     useEffect(() => {
         const fetchUserPosts = async () => {
             const posts = await getAllPosts();
@@ -25,10 +26,17 @@ function UserPosts(props) {
         // dependency array of my useEffect 
     }, [props.currentUser, isLoaded]);
 
+    const handleClick = () => {
+        history.push('/create-post')
+    }
+
     if (!userPosts.length) {
         return <>
             <Nav />
-            <h2 className="no-posts">You haven't made any posts yet! Click <Link to="/create-post">HERE</Link> to make one!</h2>
+            <h2 className="no-posts">You haven't made any posts yet!</h2>
+            <div className='no-post-div'>
+                <button onClick={handleClick} className="no-post-button">Click here to make one!</button>
+            </div>
         </>
     }
     // if (props.currentUser === null) {

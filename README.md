@@ -73,7 +73,7 @@ _**Happily Ever After** is a full CRUD React web application that will allow for
 
 [Figma](https://www.figma.com/file/oj5H3dZqVwdhIxLanP6Cxi/wedding-app?node-id=0%3A1)
 
-![Imgur](https://i.imgur.com/EECx6o0.png)
+![Imgur](https://i.imgur.com/M74tRMc.png)
 
 
 #### Component Tree
@@ -82,7 +82,7 @@ _**Happily Ever After** is a full CRUD React web application that will allow for
 
 [Whimsical](https://whimsical.com/p4-component-tree-MNjVHRcoXXYwD4C88fFDC1)
 
-![Imgur](https://i.imgur.com/oZA9sYy.png)
+![Imgur](https://i.imgur.com/XWuxFyt.png)
 
 
 #### Component Hierarchy

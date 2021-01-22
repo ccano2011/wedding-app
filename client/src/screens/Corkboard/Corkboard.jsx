@@ -56,7 +56,6 @@ function Corkboard(props) {
                             null
                         )
                 }
-
                 {/* Following ternary was from https://stackoverflow.com/questions/60575870/how-to-change-login-Button-to-logout-Button-in-react */}
                 {
                     props.currentUser
