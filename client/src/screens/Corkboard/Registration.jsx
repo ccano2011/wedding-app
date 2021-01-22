@@ -22,43 +22,51 @@ function Registration(props) {
     return (
         <>
             <Nav />
-            <div className="registration">
-                <form >
-                    <h3>Register</h3>
-                    <label>Name:
-            <input
-                            type='text'
-                            name='name'
-                            value={formData.name}
-                            onChange={handleChange}
-                        />
-                    </label>
+            <div className="registration-div">
+                <form className="login-form-home">
+                    <h3 className="login-text">Register to Post!</h3>
+                    {/* <label>Name: */}
+                    <input
+                        className="username-home-input"
+                        type='text'
+                        placeholder='Name'
+                        name='name'
+                        value={formData.name}
+                        onChange={handleChange}
+                    />
+                    {/* </label> */}
                     <br />
-                    <label>Email:
-            <input
-                            type='text'
-                            name='email'
-                            value={formData.email}
-                            onChange={handleChange}
-                        />
-                    </label>
+                    {/* <label>Email: */}
+                    <input
+                        type='text'
+                        name='email'
+                        className="username-home-input"
+                        placeholder="Email"
+                        value={formData.email}
+                        onChange={handleChange}
+                    />
+                    {/* </label> */}
                     <br />
-                    <label>Password:
-            <input
-                            type='password'
-                            name='password'
-                            value={formData.password}
-                            onChange={handleChange}
-                        />
-                    </label>
+                    {/* <label>Password: */}
+                    <input
+                        className="username-home-input"
+                        type='password'
+                        placeholder='Password'
+                        name='password'
+                        value={formData.password}
+                        onChange={handleChange}
+                    />
+                    {/* </label> */}
                     <br />
-                    <button onClick={(e) => {
-                        e.preventDefault();
-                        props.handleRegister(formData);
-                    }}>Submit</button>
-                    <Link to="/corkboard"><button>Cancel</button></Link>
+                    <div className="buttons-home">
+                        <button className='login-button' onClick={(e) => {
+                            e.preventDefault();
+                            props.handleRegister(formData);
+                        }}>Submit</button>
+                        <Link to="/corkboard"><button className='cancel-btn'>Cancel</button></Link>
+                    </div>
                     <div>
-                        <h5>Already registered? Click <Link to="/login">HERE</Link> to login </h5>
+                        <h5 className='registration-text'>Already registered? Click <Link to="/login">HERE</Link> to login </h5>
                     </div>
                 </form>
             </div>

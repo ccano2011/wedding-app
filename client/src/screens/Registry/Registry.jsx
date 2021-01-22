@@ -11,13 +11,13 @@ function Registry() {
             <Nav />
             <div className="registry-div">
                 <div className="registry-container" id='reg1'>
-                    <img className='reg' src={photo1} alt="Placeholder 1" />
+                    <a href='https://www.amazon.com/registry' alt='Link to Amazon' target="_blank" rel="noreferrer"><img className='reg' src={photo1} alt="Placeholder 1" /></a>
                 </div>
                 <div className="registry-container" id='reg2'>
-                    <img className='reg' src={photo2} alt="Placeholder 2" />
+                    <a href='https://www.potterybarn.com/registry' alt='Link to Pottery Barn' target="_blank" rel="noreferrer"><img className='reg' src={photo2} alt="Placeholder 2" /></a>
                 </div>
             </div>
-        </div>
+        </div >
     );
 }
 

@@ -1,3 +1,23 @@
 .registration{
     text-align: center;
 }
+
+.cancel-btn {
+    font-family: 'Dosis', sans-serif;
+    /* background-color: #061540; */
+    /* color: white; */
+    /* border: 1px solid black; */
+    font-size: large;
+    font-weight: 600;
+    height: 50px;
+    width: 150px;
+    border-radius: 9px;
+    margin: 0 auto;
+    display: block;
+    text-decoration: none;
+    margin-top: 15px;
+}
+
+.cancel-btn:hover {
+    background-color: bisque !important;
+}
