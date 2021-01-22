@@ -102,14 +102,6 @@
     /* backdrop-filter: blur(8px); */
 }
 
-  .currentUserGreeting {
-    font-family: 'Pinyon Script', cursive;
-    font-size: 30px;
-    margin-top: 0;
-    margin-bottom: 25px;
-    margin-left: 100px;
-  }
-
   .corkboardButtons{
     font-family: 'Pinyon Script', cursive;
     display: flex;
@@ -191,17 +183,6 @@
         display: flex;
         justify-content: center;
     }
-
-      .currentUserDiv{
-        margin-left: 0px;
-      }
-
-      .currentUserGreeting {
-        font-family: 'Pinyon Script', cursive;
-        margin-left: 0px;
-        text-align: center;
-        font-size: 25px;
-      }
 
       .corkboardButtons{
         font-family: 'Pinyon Script', cursive;

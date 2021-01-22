@@ -142,6 +142,7 @@
         margin-left: 0px;
         text-align: center;
         font-size: 35px;
+        margin-top: revert;
       }
       .corkboardButtons{
         font-family: 'Pinyon Script', cursive;
