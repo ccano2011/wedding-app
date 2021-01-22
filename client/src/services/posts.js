@@ -12,12 +12,6 @@ export const getOnePost = async (id) => {
     return resp.data;
 }
 
-//Is this compatible with the backend association???? Find out next week on Dragonball Z!
-// export const createPost = async (postId, userId) => {
-//     const resp = await api.put(`/posts/`);
-//     return resp.data;
-// }
-
 export const createPost = async (data) => {
     const resp = await api.post('/posts', { post: data });
     return resp.data;

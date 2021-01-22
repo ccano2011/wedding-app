@@ -95,8 +95,6 @@ src
 |__ assets/
       |__ images
 |__ shared/
-      |__ Layout.jsx
-      |__ Layout.css
       |__ Nav.jsx
       |__ Nav.css
 |__ screens/
@@ -111,6 +109,8 @@ src
              |__Editpost.css
              |__Createpost.jsx
              |__Createpost.css
+             |__Userpost.jsx
+             |__Userpost.css
       |__ ourstory/
              |__OurStory.jsx
              |__OurStory.css
@@ -126,6 +126,9 @@ src
       |__ photos/
              |__Photos.jsx
              |__Photos.css
+      |__ travel/
+             |__Travel.jsx
+             |__Travel.css
 |__ services/
       |__ apiConfig.js
       |__ posts.js
@@ -173,13 +176,13 @@ src
 | Create the homepage screen w/ styling |    H     |     2hrs      |     20 min     |     TBD     |
 | Build out the RSVP component with the appropriate CRUD logic & association |    H     |     3 hrs      |     30 min     |     TBD     |
 | Build out the remaining components |    H     |     4 hrs      |     2 hrs     |     TBD     |
-| Style those components |    L     |     6 hrs      |     6 hrs     |     TBD     |
-| Create MVP media queries |    H     |     3 hrs      |     2 hrs     |     TBD     |
-| POST-MVP Add Animations to the styled components (i.e. Fade-ins, photo gallery, etc.)|    H     |     4 hrs      |     TBD hrs     |     TBD     |
+| Style those components |    L     |     6 hrs      |     10 hrs     |     TBD     |
+| Create MVP media queries |    H     |     3 hrs      |     6 hrs     |     TBD     |
+| POST-MVP Add Animations to the styled components (i.e. Fade-ins, photo gallery, etc.)|    H     |     10 hrs      |     TBD hrs     |     TBD     |
 | Deploy & Test |    H     |     3 hrs      |     1 hrs     |     TBD     |
 | Deploy & Test |    H     |     3 hrs      |     1 hrs     |     TBD     |
 
-| TOTAL               |          |     42.5 hrs      |     34.33 hrs     |     TBD     |
+| TOTAL               |          |     48.5 hrs      |     42.33 hrs     |     TBD     |
 
 <!-- > _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._ -->
 
@@ -232,8 +235,17 @@ Major issue with CORs on the deployed site resolved by doing the following:
        - Removed unnecessary components; updated the README & Figma to reflect those changes
        - Updated the 'Time Frames' to better predict the development time & path
 
-01/12/2020:
+01/12/2021:
 
        - Removed front-end access to the RSVP component; Not needed for this iteration
        - Refactored all the CSS styling for various components along with the appropriate media queries
        - Updated 'Post-MVPs' & updated the 'Time Frames' to represent the time and hours spent for each goal
+
+01/21/2021:
+
+       - Removed front-end service & apiConfig to the RSVP table on the back-end; Not needed for this iteration
+       - Refactored all the CSS styling for various components along with the appropriate media queries
+       - Updated 'Post-MVPs' & updated the 'Time Frames' to represent the time and hours spent for each goal
+       - Updated Figma & Whimsical to represent the current vision of the Project
+       - Completed all the first iteration stylings for all the components/screens of the project
+

@@ -1,0 +1,43 @@
+.registry-div {
+    display: flex;
+    /* grid-template-rows: min-content auto min-content; */
+    /* text-align: center; */
+    justify-content: center;
+ }
+  
+/* for beautification purpose */
+
+.reg {
+    height: 200px;
+    max-width: 290px;
+    padding: 10px;
+    flex: 1 auto;
+    border: 1px black solid;
+    transition: all .2s ease-in-out
+ }
+
+ .reg:hover {
+    transform: scale(1.05);
+ }
+  
+ .registry-container{
+    display: flex;
+    overflow: auto;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+ }
+
+ #reg2 {
+     max-width: fit-content;
+ }
+
+ @media screen and (max-width:45em) {
+    .registry-div {
+        display: flex;
+        flex-direction: column;
+        /* grid-template-rows: min-content auto min-content; */
+        /* text-align: center; */
+        align-items: center;
+     }
+}
