@@ -180,7 +180,6 @@ src
 | Create MVP media queries |    H     |     3 hrs      |     6 hrs     |     TBD     |
 | POST-MVP Add Animations to the styled components (i.e. Fade-ins, photo gallery, etc.)|    H     |     10 hrs      |     TBD hrs     |     TBD     |
 | Deploy & Test |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| Deploy & Test |    H     |     3 hrs      |     1 hrs     |     TBD     |
 
 | TOTAL               |          |     48.5 hrs      |     42.33 hrs     |     TBD     |
 
@@ -249,3 +248,7 @@ Major issue with CORs on the deployed site resolved by doing the following:
        - Updated Figma & Whimsical to represent the current vision of the Project
        - Completed all the first iteration stylings for all the components/screens of the project
 
+01/26/2021:
+
+       - Added alerts for incorrect login & registration errors. 
+       - Also fixed a routing error that wouldn't allow a user to login if they leave the login screen & return to it
