@@ -39,13 +39,13 @@ function App() {
   const handleLogin = async (loginData) => {
     const userData = await loginUser(loginData);
     setCurrentUser(userData);
-    history.push('/corkboard');
+    // history.push('/corkboard');
   }
 
   const handleRegister = async (registerData) => {
     const userData = await registerUser(registerData);
     setCurrentUser(userData);
-    history.push('/corkboard');
+    // history.push('/corkboard');
   }
 
   const handleLogout = () => {
@@ -93,7 +93,10 @@ function App() {
       </Route>
 
       <Route path='/registration'>
-        <Registration handleRegister={handleRegister} />
+        <Registration
+          handleRegister={handleRegister}
+          currentUser={currentUser}
+        />
       </Route>
 
       <Route path='/create-post'>

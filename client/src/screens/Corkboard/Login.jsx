@@ -11,7 +11,20 @@ export default function Login(props) {
     })
     if (props.currentUser) {
         return <Redirect to={`/corkboard`} />
+        // console.log("Here's Johnny")
     }
+
+    // fetch("http://localhost:3001/auth/login")
+    //     .then(function (response) {
+    //         if (response.status !== 200) {
+    //             throw new Error(response.status)
+    //         }
+    //     })
+    //     .catch(function (error) {
+    //         if (error.status === 401) {
+    //             alert("eat my butt")
+    //         }
+    //     })
     // console.log(props.currentUser)
     const handleChange = (e) => {
         const { name, value } = e.target;

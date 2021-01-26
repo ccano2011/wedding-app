@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import Nav from '../../shared/nav'
 import './Registration.css'
 
@@ -10,6 +10,10 @@ function Registration(props) {
         email: "",
         password: ""
     })
+    if (props.currentUser) {
+        return <Redirect to={`/corkboard`} />
+        // console.log("Here's Johnny")
+    }
 
     const handleChange = (e) => {
         const { name, value } = e.target;

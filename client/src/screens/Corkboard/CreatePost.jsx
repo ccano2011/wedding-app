@@ -12,6 +12,9 @@ function CreatePost(props) {
         if (props.currentUser === null) {
             history.push('/login')
         }
+        if (props.currentUser === undefined) {
+            history.push('/login')
+        }
     }, 1)
 
     const [isCreated, setCreated] = useState(false)
