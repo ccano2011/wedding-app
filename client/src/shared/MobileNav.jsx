@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components';
 
 const Ul = styled.ul`
-.mobile-nav-links {
+  .mobile-nav-links {
         display:none;
     }
+
   @media (max-width: 625px) {
     flex-flow: column nowrap;
     background-color: floralwhite;
@@ -42,11 +43,11 @@ const MobileNav = ({ open }) => {
     return (
         <Ul open={open} >
             <div></div>
-            <Link className='mobile-nav-links' to='/our-story'><li className="mobile-nav-links">Our Story</li></Link>
-            <Link className='mobile-nav-links' to='/travel'><li className="mobile-nav-links">Travel</li></Link>
-            <Link className='mobile-nav-links' to='/pictures'><li className="mobile-nav-links">Pictures</li></Link>
-            <Link className='mobile-nav-links' to='/corkboard'><li className="mobile-nav-links">Cork Board</li></Link>
-            <Link className='mobile-nav-links' to='/registry'><li className="mobile-nav-links" id="bottom-link">Registry</li></Link>
+            <li className="mobile-nav-links"><Link className='mobile-nav-links' to='/our-story'>Our Story</Link></li>
+            <li className="mobile-nav-links"><Link className='mobile-nav-links' to='/travel'>Travel</Link></li>
+            <li className="mobile-nav-links"><Link className='mobile-nav-links' to='/pictures'>Pictures</Link></li>
+            <li className="mobile-nav-links"><Link className='mobile-nav-links' to='/corkboard'>Cork Board</Link></li>
+            <li className="mobile-nav-links" id="bottom-link"><Link className='mobile-nav-links' to='/registry'>Registry</Link></li>
         </Ul>
     );
 }

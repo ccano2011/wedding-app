@@ -52,10 +52,10 @@ li{
 .nav-title-link:hover{
     transform: scale(1.1);
 }
-.home{
+/* .home{ */
       /* text-shadow: ${(props) => props.pathname.match(/^\/our-story/) ? "9px 9px 9px #ccc7c7" : "none"}; */
-    font-weight: ${(props) => props.pathname.match(/^\//) ? "bold" : "none"};
-}
+    /* font-weight: ${(props) => props.pathname.match(/^\//) ? "bold" : "none"}; */
+/* } */
   .story {
       /* text-shadow: ${(props) => props.pathname.match(/^\/our-story/) ? "9px 9px 9px #ccc7c7" : "none"}; */
       font-weight: ${(props) => props.pathname.match(/^\/our-story/) ? "bold" : "none"};

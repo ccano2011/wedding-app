@@ -13,25 +13,17 @@ import OurStory from './screens/OurStory/OurStory';
 import Travel from './screens/Travel/Travel';
 import Photos from './screens/Photos/Photos';
 import Registry from './screens/Registry/Registry';
-// import Nav from './shared/nav.jsx'
-// import Burger from './shared/Burger.jsx'
-// import MobileNav from './shared/MobileNav.jsx'
-// import RSVP from './screens/RSVP/RSVP'
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
 
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
-  // const [updatePost, setPosts] = useState()
   const history = useHistory()
 
   useEffect(() => {
     const handleVerify = async () => {
       const userData = await verifyUser();
       setCurrentUser(userData);
-      // if (!userData) {
-      //   history.push('/corkboard')
-      // }
     }
     handleVerify();
   }, [])
@@ -58,9 +50,6 @@ function App() {
 
   return (
     <>
-      {/* <Nav />
-      <Burger />
-      <MobileNav /> */}
       <Switch>
         <Route exact path='/'>
           <Home />
@@ -117,8 +106,6 @@ function App() {
         <Route path='/edit-post/:id'>
           <EditPost currentUser={currentUser} />
         </Route>
-
-
 
       </Switch>
     </>
