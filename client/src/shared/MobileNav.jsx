@@ -3,10 +3,7 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components';
 
 const Ul = styled.ul`
-  @import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Pinyon+Script&family=Rouge+Script&family=Tangerine:wght@700&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
-    @media (max-width: 625px) {
-    
+  @media (max-width: 625px) {
     flex-flow: column nowrap;
     background-color: floralwhite;
     position: fixed;
@@ -40,7 +37,6 @@ const MobileNav = ({ open }) => {
     return (
         <Ul open={open} >
             <div></div>
-            {/* <Link className='mobile-nav-links home' to='/'><li className="mobile-nav-links">Home</li></Link> */}
             <Link className='mobile-nav-links story' to='/our-story'><li className="mobile-nav-links">Our Story</li></Link>
             <Link className='mobile-nav-links travel' to='/travel'><li className="mobile-nav-links">Travel</li></Link>
             <Link className='mobile-nav-links pictures' to='/pictures'><li className="mobile-nav-links">Pictures</li></Link>

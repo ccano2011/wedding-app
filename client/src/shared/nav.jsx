@@ -2,7 +2,6 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 // import './nav.css'
 import styled from 'styled-components';
-// import MobileNav from './MobileNav'
 import Burger from './Burger'
 
 const Navi = styled.div`
