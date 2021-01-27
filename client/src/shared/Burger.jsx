@@ -17,7 +17,7 @@ const StyledBurger = styled.div`
     flex-flow: column nowrap;
   }
 
-  .burger-div {
+ div {
     width: 2rem;
     height: 0.25rem;
     background-color: ${({ open }) => open ? '#ccc' : '#333'};
@@ -41,18 +41,18 @@ const StyledBurger = styled.div`
 `;
 
 const Burger = () => {
-    const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false)
 
-    return (
-        <>
-            <StyledBurger open={open} onClick={() => setOpen(!open)}>
-                <div className="burger-div" />
-                <div className="burger-div" />
-                <div className="burger-div" />
-            </StyledBurger>
-            <MobileNav open={open} />
-        </>
-    )
+  return (
+    <>
+      <StyledBurger open={open} onClick={() => setOpen(!open)}>
+        <div />
+        <div />
+        <div />
+      </StyledBurger>
+      <MobileNav open={open} />
+    </>
+  )
 }
 
 export default Burger

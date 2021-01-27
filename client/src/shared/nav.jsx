@@ -120,11 +120,12 @@ li{
         flex-flow: row wrap;
         margin: 5px 15px 1px 15px;
     }
+    
     .nav-title {
         padding-top:20px;
     }
-    
   }
+
 @media screen and (max-width:475px) {
     .nav-title{
         display:none;
@@ -150,9 +151,6 @@ function Nav(props) {
                 <span className='nav-title'><Link to="/" className='nav-title-link'>William & Clarissa</Link></span>
                 <span className='short-nav-title'><Link to="/" className='nav-title-link'>W & C</Link></span>
             </div>
-            {/* <input type="checkbox" id="menu" />
-            <label for="menu" onclick></label> */}
-            {/* <MobileNav /> */}
             <Burger />
             <hr />
             <div className="nav-ul-div">

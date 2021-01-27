@@ -15,7 +15,6 @@ import Travel from './screens/Travel/Travel'
 import Photos from './screens/Photos/Photos'
 import Registry from './screens/Registry/Registry'
 // import RSVP from './screens/RSVP/RSVP'
-// import Nav from './shared/Nav'
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
 
 
