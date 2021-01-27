@@ -6,7 +6,10 @@ const Ul = styled.ul`
   .mobile-nav-links {
         display:none;
     }
-
+.link-class {
+    text-decoration: none;
+    color: black;
+}
   @media (max-width: 625px) {
     flex-flow: column nowrap;
     background-color: floralwhite;
@@ -43,11 +46,11 @@ const MobileNav = ({ open }) => {
     return (
         <Ul open={open} >
             <div></div>
-            <li className="mobile-nav-links"><Link className='mobile-nav-links' to='/our-story'>Our Story</Link></li>
-            <li className="mobile-nav-links"><Link className='mobile-nav-links' to='/travel'>Travel</Link></li>
-            <li className="mobile-nav-links"><Link className='mobile-nav-links' to='/pictures'>Pictures</Link></li>
-            <li className="mobile-nav-links"><Link className='mobile-nav-links' to='/corkboard'>Cork Board</Link></li>
-            <li className="mobile-nav-links" id="bottom-link"><Link className='mobile-nav-links' to='/registry'>Registry</Link></li>
+            <li className="mobile-nav-links"><Link className="link-class" to='/our-story'>Our Story</Link></li>
+            <li className="mobile-nav-links"><Link className="link-class" to='/travel'>Travel</Link></li>
+            <li className="mobile-nav-links"><Link className="link-class" to='/pictures'>Pictures</Link></li>
+            <li className="mobile-nav-links"><Link className="link-class" to='/corkboard'>Cork Board</Link></li>
+            <li className="mobile-nav-links" id="bottom-link"><Link className="link-class" to='/registry'>Registry</Link></li>
         </Ul>
     );
 }
