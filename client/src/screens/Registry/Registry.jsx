@@ -8,7 +8,7 @@ import photo2 from '../../Assets/potterybarn_wedding.png'
 function Registry() {
     return (
         <div>
-            {/* <Nav /> */}
+            <Nav />
             <div className="registry-div">
                 <div className="registry-container" id='reg1'>
                     <a href='https://www.amazon.com/registry' alt='Link to Amazon' target="_blank" rel="noreferrer"><img className='reg' src={photo1} alt="Placeholder 1" /></a>

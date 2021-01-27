@@ -13,9 +13,9 @@ import OurStory from './screens/OurStory/OurStory';
 import Travel from './screens/Travel/Travel';
 import Photos from './screens/Photos/Photos';
 import Registry from './screens/Registry/Registry';
-import Nav from './shared/nav.jsx'
-import Burger from './shared/Burger.jsx'
-import MobileNav from './shared/MobileNav.jsx'
+// import Nav from './shared/nav.jsx'
+// import Burger from './shared/Burger.jsx'
+// import MobileNav from './shared/MobileNav.jsx'
 // import RSVP from './screens/RSVP/RSVP'
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
 
@@ -58,9 +58,9 @@ function App() {
 
   return (
     <>
-      <Nav />
+      {/* <Nav />
       <Burger />
-      <MobileNav />
+      <MobileNav /> */}
       <Switch>
         <Route exact path='/'>
           <Home />

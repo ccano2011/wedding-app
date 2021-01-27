@@ -5,7 +5,7 @@ import './Home.css'
 function Home() {
     return (
         <>
-            {/* <Nav /> */}
+            <Nav />
             <div id="home">
                 <div className="homeTitle">
                     <p >We're getting married!</p>

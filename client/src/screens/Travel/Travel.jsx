@@ -7,7 +7,7 @@ import image from '../../Assets/placeholder_img2.jpg'
 function Travel(props) {
     return (
         <div>
-            {/* <Nav /> */}
+            <Nav />
             {/* <h1 className="ourStory">Travel Information</h1> */}
             <div id="home2">
                 <div className="ourStoryBio">

@@ -45,7 +45,7 @@ function CreatePost(props) {
 
     return (
         <div>
-            {/* <Nav /> */}
+            <Nav />
             <form className="create-form" onSubmit={handleSubmit}>
                 <textarea
                     className="postBody"

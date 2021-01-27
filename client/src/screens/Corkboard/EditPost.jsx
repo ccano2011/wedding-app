@@ -52,7 +52,7 @@ function EditPost(props) {
 
     return (
         <div>
-            {/* <Nav /> */}
+            <Nav />
             <form className="create-form" onSubmit={(e) => {
                 e.preventDefault()
                 handleSubmit(id, updateUserPost)

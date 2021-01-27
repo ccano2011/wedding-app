@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 // import './nav.css'
 import styled from 'styled-components';
-// import Burger from './Burger'
+import Burger from './Burger'
 
 const Navi = styled.div`
 
@@ -147,7 +147,7 @@ function Nav(props) {
                 <span className='nav-title'><Link to="/" className='nav-title-link'>William & Clarissa</Link></span>
                 <span className='short-nav-title'><Link to="/" className='nav-title-link'>W & C</Link></span>
             </div>
-            {/* <Burger /> */}
+            <Burger />
             <hr />
             <div className="nav-ul-div">
                 <ul className='nav-ul'>

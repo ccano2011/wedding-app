@@ -22,7 +22,7 @@ function Corkboard(props) {
 
     return (
         <div>
-            {/* <Nav /> */}
+            <Nav />
             {/* <h1 className="corkBoardTitle">Cork Board</h1> */}
             <div className="currentUserDiv">
                 {
