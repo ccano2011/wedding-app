@@ -27,7 +27,7 @@ const Ul = styled.ul`
       text-decoration:none;
       font-family: 'Pinyon Script', cursive;
       font-size: 40px;
-      margin-left: 0px;
+      margin-left: 10px;
       margin-top: 35px;
     }
 
