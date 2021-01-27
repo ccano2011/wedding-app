@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components';
 
 const Ul = styled.ul`
-  @media (max-width: 625px) {
     flex-flow: column nowrap;
     background-color: floralwhite;
     position: fixed;
@@ -29,8 +28,6 @@ const Ul = styled.ul`
     #bottom-link{
         padding-bottom: 20vh;
     }
-
-}
 `;
 
 const MobileNav = ({ open }) => {
