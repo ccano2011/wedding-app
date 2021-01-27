@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const Ul = styled.ul`
   @import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Pinyon+Script&family=Rouge+Script&family=Tangerine:wght@700&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
     @media (max-width: 625px) {
     
     flex-flow: column nowrap;
