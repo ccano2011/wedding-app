@@ -25,7 +25,7 @@ function Registration(props) {
 
     return (
         <>
-            <Nav />
+            {/* <Nav /> */}
             <div className="registration-div">
                 <form className="login-form-home">
                     <h3 className="login-text">Register to Post!</h3>

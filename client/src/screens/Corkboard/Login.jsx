@@ -37,7 +37,7 @@ export default function Login(props) {
 
     return (
         <div className="login-page-home">
-            <Nav />
+            {/* <Nav /> */}
             <form className="login-form-home" onSubmit={(e) => {
                 e.preventDefault();
                 props.handleLogin(formData);

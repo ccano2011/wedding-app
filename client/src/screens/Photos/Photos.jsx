@@ -13,7 +13,7 @@ import './Photos.css'
 function Photos(props) {
     return (
         <div className='body'>
-            <Nav />
+            {/* <Nav /> */}
             <div className="div-container">
                 <div className="photo-container" id='photo1'>
                     <img className='fit' src={photo1} alt="Placeholder 1" />

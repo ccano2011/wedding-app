@@ -32,7 +32,7 @@ function UserPosts(props) {
 
     if (!userPosts.length) {
         return <>
-            <Nav />
+            {/* <Nav /> */}
             <h2 className="no-posts">You haven't made any posts yet!</h2>
             <div className='no-post-div'>
                 <button onClick={handleClick} className="no-post-button">Click here to make one!</button>

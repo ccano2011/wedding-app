@@ -7,7 +7,7 @@ import "./OurStory.css"
 function OurStory(props) {
     return (
         <div>
-            <Nav />
+            {/* <Nav /> */}
             {/* <h1 className="ourStory">Our Story...</h1> */}
             <div id="home2">
                 <div className="ourStoryBio">
