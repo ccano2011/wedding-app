@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Pinyon+Script&family=Rouge+Script&family=Tangerine:wght@700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Pinyon+Script&family=Rouge+Script&family=Tangerine:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
 ul {
     display:flex;
@@ -56,11 +56,11 @@ ul {
         font-family: 'Pinyon Script', cursive;
     }   
     }
+ */
 
-
-@media screen and (max-width:45em) {
+/* @media screen and (max-width:45em) { */
     /* The following CSS was inspired by the CSS-Tricks.com site */
-    Link {
+    /* Link {
         text-decoration: none;
 
     }
@@ -87,4 +87,4 @@ ul {
         color: inherit;
         margin: 0 15px 15px 15px;
     }
-  }
+  } */

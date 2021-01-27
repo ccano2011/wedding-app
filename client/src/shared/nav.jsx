@@ -1,11 +1,16 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 // import './nav.css'
-import styled from 'styled-components'
+import styled from 'styled-components';
+// import MobileNav from './MobileNav'
+import Burger from './Burger'
 
 const Navi = styled.div`
     @import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Pinyon+Script&family=Rouge+Script&family=Tangerine:wght@700&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
+    .mobile-nav-links {
+        display:none;
+    }
 ul {
     display:flex;
     text-decoration: none;
@@ -52,15 +57,10 @@ li{
 .nav-title-link:hover{
     transform: scale(1.1);
 }
-
-.mobile-nav-ul-div{
-    display: none;
+.home{
+      /* text-shadow: ${(props) => props.pathname.match(/^\/our-story/) ? "9px 9px 9px #ccc7c7" : "none"}; */
+    font-weight: ${(props) => props.pathname.match(/^\//) ? "bold" : "none"};
 }
-
-.mobile-nav-ul {
-    display: none;
-  }
-
   .story {
       /* text-shadow: ${(props) => props.pathname.match(/^\/our-story/) ? "9px 9px 9px #ccc7c7" : "none"}; */
       font-weight: ${(props) => props.pathname.match(/^\/our-story/) ? "bold" : "none"};
@@ -101,69 +101,60 @@ li{
       font-weight: ${(props) => props.pathname.match(/^\/our-story/) ? "600" : "none"};
 
   } */
-
-  @media screen and (min-width:1440px) {
-    .nav-links{
-        text-decoration: none;
-        transition: all .1s ease-in-out; 
-        color: inherit;
-        font-family: 'Pinyon Script', cursive;
-    }
-}
-
-
-@media screen and (max-width:45em) {
-    /* The following CSS was inspired by the CSS-Tricks.com site */
-    Link {
-        text-decoration: none;
-
-    }
-    .nav-ul-div{
-        display: none;
-    }
-    .mobile-nav-ul {
-        display: flex;
-        flex-flow: row wrap;
-      }
-    .mobile-nav-ul-div{
-        display:flex;
-        text-decoration: none;
-        justify-content: center;
-        color: inherit;
-        font-family: 'Pinyon Script', cursive;
-        font-size: 24px;
-
-    }
-    .mobile-nav-links {
-        text-decoration: none;
-        font-size: 25px;
-        display: flex;
-        color: inherit;
-        margin: 0 15px 15px 15px;
-    }
-  
+  .short-nav-title{
+      display:none;
   }
+
+@media screen and (max-width:625px) {
+    /* The following CSS was inspired by the CSS-Tricks.com site */
+    .mobile-nav-links {
+        display:flex;
+        justify-content:left;
+    }
+    
+    .nav-ul-div{
+        display:none;
+        text-decoration: none;
+        color: inherit;
+        font-family: 'Pinyon Script', cursive;
+        font-size: 13px;
+        flex-flow: row wrap;
+        margin: 5px 15px 1px 15px;
+    }
+    .nav-title {
+        padding-top:20px;
+    }
+    
+  }
+@media screen and (max-width:475px) {
+    .nav-title{
+        display:none;
+    }
+    .short-nav-title{
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        color: inherit;
+        padding-top: 20px;
+        font-size: calc(50px + 1vw);
+        font-family: 'Rouge Script', cursive;
+    }
+    
+}
   `
+
 function Nav(props) {
-
     const { pathname } = useLocation()
-
     return (
-
         <Navi pathname={pathname}>
-            <div className='nav-title'>
-                <Link className='nav-title-link' to="/">William & Clarissa</Link>
+            <div>
+                <span className='nav-title'><Link to="/" className='nav-title-link'>William & Clarissa</Link></span>
+                <span className='short-nav-title'><Link to="/" className='nav-title-link'>W & C</Link></span>
             </div>
-            <div className="mobile-nav-ul-div">
-                <ul className='mobile-nav-ul'>
-                    <Link className='mobile-nav-links story' to='/our-story'><li>Our Story</li></Link>
-                    <Link className='mobile-nav-links travel' to='/travel'><li>Travel</li></Link>
-                    <Link className='mobile-nav-links pictures' to='/pictures'><li>Pictures</li></Link>
-                    <Link className='mobile-nav-links corkboard' to='/corkboard'><li>Cork Board</li></Link>
-                    <Link className='mobile-nav-links registery' to='/registry'><li>Registry</li></Link>
-                    {/* <Link className='mobile-nav-links RSVP' to='/RSVP'><li>RSVP</li></Link> */}
-                </ul>
-            </div>
+            {/* <input type="checkbox" id="menu" />
+            <label for="menu" onclick></label> */}
+            {/* <MobileNav /> */}
+            <Burger />
             <hr />
             <div className="nav-ul-div">
                 <ul className='nav-ul'>
@@ -176,7 +167,7 @@ function Nav(props) {
                 </ul>
             </div>
 
-        </Navi>
+        </Navi >
     );
 }
 
