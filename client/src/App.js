@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { Switch, Route, useHistory } from 'react-router-dom';
-
 import './App.css';
 import Corkboard from './screens/Corkboard/Corkboard';
 import CreatePost from './screens/Corkboard/CreatePost'
@@ -14,7 +13,6 @@ import Travel from './screens/Travel/Travel';
 import Photos from './screens/Photos/Photos';
 import Registry from './screens/Registry/Registry';
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
-
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);

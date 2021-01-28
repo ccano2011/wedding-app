@@ -178,6 +178,7 @@ src
 | Build out the remaining components |    H     |     4 hrs      |     2 hrs     |     TBD     |
 | Style those components |    L     |     6 hrs      |     10 hrs     |     TBD     |
 | Create MVP media queries |    H     |     3 hrs      |     6 hrs     |     TBD     |
+| POST-MVP EventListener w/ mobile refactor |    H     |     3 hrs      |     TBD     |     TBD     |
 | POST-MVP Add Animations to the styled components (i.e. Fade-ins, photo gallery, etc.)|    H     |     10 hrs      |     TBD hrs     |     TBD     |
 | Deploy & Test |    H     |     3 hrs      |     1 hrs     |     TBD     |
 
@@ -252,3 +253,4 @@ Major issue with CORs on the deployed site resolved by doing the following:
 
        - Added alerts for incorrect login & registration errors. 
        - Also fixed a routing error that wouldn't allow a user to login if they leave the login screen & return to it
+       - Fixed any and all mobile styling issues

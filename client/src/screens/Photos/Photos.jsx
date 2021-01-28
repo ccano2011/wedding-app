@@ -9,7 +9,6 @@ import photo6 from '../../Assets/placeholder_img6.jpg'
 import photo7 from '../../Assets/placeholder_img7.jpg'
 import './Photos.css'
 
-
 function Photos(props) {
     return (
         <div className='body'>
