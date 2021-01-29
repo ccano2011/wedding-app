@@ -5,7 +5,13 @@ box-sizing:border-box;
 }
 html {
     background-color: floralwhite;
+    padding-top: 30vh;
 }
 a {
     text-decoration: none;
+}
+@media (max-width: 625px) {
+html {
+    padding-top: 10vh;
+}
 }

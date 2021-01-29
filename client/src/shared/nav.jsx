@@ -14,9 +14,11 @@ ul {
     justify-content: space-around;
     color: inherit;
 }
+
 li{
     font-size: 35px;
 } 
+
 .nav-links{
     text-decoration: none;
     transition: all .1s ease-in-out; 
@@ -39,10 +41,20 @@ li{
     justify-content: center;
     text-decoration: none;
     color: inherit;
-    padding-top: 70px;
+    /* padding-top: 70px; */
     font-size: calc(50px + 1vw);
     font-family: 'Rouge Script', cursive;
 }
+
+.nav-bar{
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    padding-top: 70px;
+    background-color: floralwhite;
+    z-index: 10;
+}
+
 .nav-title-link{
     text-decoration: none;
     color: inherit;
@@ -106,6 +118,7 @@ li{
         display:flex;
         justify-content:left;
     }
+
     
     .nav-ul-div{
         display:none;
@@ -118,7 +131,7 @@ li{
     }
 
     .nav-title {
-        padding-top:20px;
+        margin-top: -50px;
     }
   }
 
@@ -134,6 +147,7 @@ li{
         padding-top: 20px;
         font-size: calc(50px + 1vw);
         font-family: 'Rouge Script', cursive;
+        margin-top: -70px;
     }
     
 }
@@ -143,22 +157,24 @@ function Nav(props) {
     const { pathname } = useLocation()
     return (
         <Navi pathname={pathname}>
-            <div>
+            <div className='nav-bar'>
                 <span className='nav-title'><Link to="/" className='nav-title-link'>William & Clarissa</Link></span>
                 <span className='short-nav-title'><Link to="/" className='nav-title-link'>W & C</Link></span>
+                <Burger />
+                <hr />
+
+                <div className="nav-ul-div">
+                    <ul className='nav-ul'>
+                        <Link className='nav-links story' to='/our-story'><li>Our Story</li></Link>
+                        <Link className='nav-links travel' to='/travel'><li>Travel</li></Link>
+                        <Link className='nav-links pictures' to='/pictures'><li>Pictures</li></Link>
+                        <Link className='nav-links corkboard' to='/corkboard'><li>Cork Board</li></Link>
+                        <Link className='nav-links registery' to='/registry'><li>Registry</li></Link>
+                        {/* <Link className='nav-links RSVP' to='/RSVP'><li>RSVP</li></Link> */}
+                    </ul>
+                </div>
             </div>
-            <Burger />
-            <hr />
-            <div className="nav-ul-div">
-                <ul className='nav-ul'>
-                    <Link className='nav-links story' to='/our-story'><li>Our Story</li></Link>
-                    <Link className='nav-links travel' to='/travel'><li>Travel</li></Link>
-                    <Link className='nav-links pictures' to='/pictures'><li>Pictures</li></Link>
-                    <Link className='nav-links corkboard' to='/corkboard'><li>Cork Board</li></Link>
-                    <Link className='nav-links registery' to='/registry'><li>Registry</li></Link>
-                    {/* <Link className='nav-links RSVP' to='/RSVP'><li>RSVP</li></Link> */}
-                </ul>
-            </div>
+
 
         </Navi >
     );

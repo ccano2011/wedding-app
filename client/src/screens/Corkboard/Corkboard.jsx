@@ -18,8 +18,6 @@ function Corkboard(props) {
         fetchPosts();
     }, [])
 
-
-
     return (
         <div>
             <Nav />

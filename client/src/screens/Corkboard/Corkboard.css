@@ -37,6 +37,7 @@
     flex-wrap: wrap;
     justify-content: center;
     z-index: -1;
+    position: relative;
     /* margin-left: 100px;
     margin-right: 100px; */
 }
@@ -45,11 +46,14 @@
     font-size: 2em;
     margin-bottom: 5px;
     text-align: center;
+    position: relative;
+
   }
  
   .currentUserDiv{
     display: flex;
     margin-left: 10%;
+    position: relative;
   }
   
   .mappedContent {
@@ -83,6 +87,8 @@
     font-family: 'Pinyon Script', cursive;
     display: flex;
     justify-content: space-evenly;
+    position: relative;
+    z-index: 1;
   }
 
   .postName{
