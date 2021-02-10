@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, Redirect } from 'react-router-dom';
-import Nav from '../../shared/nav'
+import Layout from '../../shared/nav'
 import "./Login.css"
 
 
@@ -37,7 +37,7 @@ export default function Login(props) {
 
     return (
         <div className="login-page-home">
-            <Nav />
+            {/* <Layout /> */}
             <form className="login-form-home" onSubmit={(e) => {
                 e.preventDefault();
                 props.handleLogin(formData);

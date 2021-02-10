@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link, Redirect } from 'react-router-dom';
-import Nav from '../../shared/nav'
 import './Registration.css'
 
 
@@ -25,7 +24,7 @@ function Registration(props) {
 
     return (
         <>
-            <Nav />
+            {/* <Layout /> */}
             <div className="registration-div">
                 <form className="login-form-home">
                     <h3 className="login-text">Register to Post!</h3>

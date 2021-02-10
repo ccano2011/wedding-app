@@ -19,6 +19,9 @@
 - [Post-MVP](#post-mvp)
 - [Code Showcase](#code-showcase)
 - [Code Issues & Resolutions](#code-issues--resolutions)
+- [Change-Log](#change-log)
+- [Special Thanks](#special-thanks)
+
 
 <br>
 
@@ -251,6 +254,12 @@ Major issue with CORs on the deployed site resolved by doing the following:
 
 01/26/2021:
 
-       - Added alerts for incorrect login & registration errors. 
+       - Added alerts for incorrect login & registration errors 
        - Also fixed a routing error that wouldn't allow a user to login if they leave the login screen & return to it
        - Fixed any and all mobile styling issues
+
+
+## Special Thanks:
+
+       A BIG thank you to <a href="https://github.com/DannyMichaels" target="_blank">Daniel Micheal</a> for taking the time to help me debug and introducing me to Styled Components! Also another shout-out to 
+       <a href="https://github.com/laport14" target="_blank">Geoff LaPorte</a> for remininding me about try/catch errors that helped me add alerts for login/registration errors.

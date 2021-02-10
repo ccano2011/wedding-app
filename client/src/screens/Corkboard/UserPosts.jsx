@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { getAllPosts, destroyPost } from '../../services/posts'
 import { Link, useHistory } from 'react-router-dom';
-import Nav from '../../shared/nav'
+import Layout from '../../shared/nav'
 import './UserPost.css'
 
 
@@ -32,7 +32,7 @@ function UserPosts(props) {
 
     if (!userPosts.length) {
         return <>
-            <Nav />
+            {/* <Layout /> */}
             <h2 className="no-posts">You haven't made any posts yet!</h2>
             <div className='no-post-div'>
                 <button onClick={handleClick} className="no-post-button">Click here to make one!</button>
@@ -52,7 +52,7 @@ function UserPosts(props) {
 
     return (
         <>
-            <Nav />
+            {/* <Layout /> */}
             <div className="map">
                 {
                     userPosts.map(post => (

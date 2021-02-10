@@ -5,13 +5,14 @@ box-sizing:border-box;
 }
 html {
     background-color: floralwhite;
-    padding-top: 30vh;
+    /* padding-top: 30vh; */
+    /* margin-top: 15px; */
 }
 a {
     text-decoration: none;
 }
 @media (max-width: 625px) {
 html {
-    padding-top: 10vh;
+    /* padding-top: 10vh; */
 }
 }

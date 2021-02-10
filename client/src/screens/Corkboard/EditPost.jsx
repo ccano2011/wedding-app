@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { getOnePost, updatePost } from '../../services/posts'
 import { Link, Redirect, useParams } from 'react-router-dom';
-import Nav from '../../shared/nav'
+import Layout from '../../shared/nav'
 import './CreatePost.css'
 
 
@@ -52,7 +52,7 @@ function EditPost(props) {
 
     return (
         <div>
-            <Nav />
+            {/* <Layout /> */}
             <form className="create-form" onSubmit={(e) => {
                 e.preventDefault()
                 handleSubmit(id, updateUserPost)

@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import MobileNav from './MobileNav';
 
-const StyledBurger = styled.div`
+export const StyledBurger = styled.div`
   width: 2rem;
   height: 2rem;
   position: fixed;
@@ -10,8 +10,8 @@ const StyledBurger = styled.div`
   left: 20px;
   z-index: 990;
   display: none;
-
   @media (max-width: 625px) {
+    cursor: pointer; 
     display: flex;
     justify-content: space-around;
     flex-flow: column nowrap;
@@ -40,19 +40,30 @@ const StyledBurger = styled.div`
   }
 `;
 
-const Burger = () => {
-  const [open, setOpen] = useState(false)
+const Burger = ({ handleClick, isBurgerClick, open, setOpen }) => {
+  // const [open, setOpen] = useState(false);
+  // const [isBurgerClick, setBurgerClick] = useState(false);
+
+  // const handleClick = () => {
+  //   setBurgerClick(true)
+
+  //   if (isBurgerClick) {
+  //     setOpen(!open)
+  //     setBurgerClick(false)
+  //   }
+
+  // }
 
   return (
     <>
-      <StyledBurger open={open} onClick={() => setOpen(!open)}>
+      <StyledBurger open={open} onClick={handleClick}>
         <div />
         <div />
         <div />
       </StyledBurger>
-      <MobileNav open={open} />
+      <MobileNav isBurgerClick={isBurgerClick} open={open} setOpen={setOpen} />
     </>
   )
 }
 
-export default Burger
+export default Burger;

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getAllPosts } from '../../services/posts'
 import { Link } from 'react-router-dom';
-import Nav from '../../shared/nav'
 import Button from '@material-ui/core/Button'
 import Create from '@material-ui/icons/Create'
 import Assignment from '@material-ui/icons/Assignment'
@@ -20,7 +19,7 @@ function Corkboard(props) {
 
     return (
         <div>
-            <Nav />
+            {/* <Layout /> */}
             {/* <h1 className="corkBoardTitle">Cork Board</h1> */}
             <div className="currentUserDiv">
                 {

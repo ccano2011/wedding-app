@@ -1,5 +1,5 @@
 import React from 'react';
-import Nav from '../../shared/nav';
+import Layout from '../../shared/nav';
 import photo1 from '../../Assets/placeholder_img1.jpg'
 import photo2 from '../../Assets/placeholder_img2.jpg'
 import photo3 from '../../Assets/placeholder_img3.jpg'
@@ -12,7 +12,7 @@ import './Photos.css'
 function Photos(props) {
     return (
         <div className='body'>
-            <Nav />
+            {/* <Layout /> */}
             <div className="div-container">
                 <div className="photo-container" id='photo1'>
                     <img className='fit' src={photo1} alt="Placeholder 1" />

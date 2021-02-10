@@ -13,6 +13,7 @@ import Travel from './screens/Travel/Travel';
 import Photos from './screens/Photos/Photos';
 import Registry from './screens/Registry/Registry';
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
+import Layout from './shared/nav';
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -47,7 +48,7 @@ function App() {
   }
 
   return (
-    <>
+    <Layout>
       <Switch>
         <Route exact path='/'>
           <Home />
@@ -106,7 +107,7 @@ function App() {
         </Route>
 
       </Switch>
-    </>
+    </Layout>
   );
 }
 
