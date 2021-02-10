@@ -264,6 +264,7 @@ Major issue with CORs on the deployed site resolved by doing the following:
        - Removed all unused code and cleaned up the formatting
        - Refactored 'nav.jsx'
        - Added a 'Special Thanks' to the README to thank those who took their time to help debug and teach me a thing or two along the way
+       - Deleted the controller for RSVP & the RSVP component itself
 
 ## Special Thanks:
 

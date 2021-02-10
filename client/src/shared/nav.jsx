@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Burger from './Burger'
 
 const Navi = styled.div`
-
+//This is functionally the same as a Layout.jsx
 ul {
     display:flex;
     text-decoration: none;
@@ -103,7 +103,7 @@ li{
   .layout-children {
     margin-top: 260px;
     @media screen and (max-width: 625px) {
-    margin-top: 90px;
+    margin-top: 120px;
     min-height: 98vh;
   }
 }
