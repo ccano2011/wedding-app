@@ -1,5 +1,4 @@
 import React from 'react';
-import Layout from '../../shared/nav'
 import './Registry.css'
 import photo1 from '../../Assets/amazon_wedding.jpg'
 import photo2 from '../../Assets/potterybarn_wedding.png'
@@ -8,7 +7,6 @@ import photo2 from '../../Assets/potterybarn_wedding.png'
 function Registry() {
     return (
         <div>
-            {/* <Layout /> */}
             <div className="registry-div">
                 <div className="registry-container" id='reg1'>
                     <a href='https://www.amazon.com/registry' alt='Link to Amazon' target="_blank" rel="noreferrer"><img className='reg' src={photo1} alt="Placeholder 1" /></a>

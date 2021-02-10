@@ -19,8 +19,6 @@ function Corkboard(props) {
 
     return (
         <div>
-            {/* <Layout /> */}
-            {/* <h1 className="corkBoardTitle">Cork Board</h1> */}
             <div className="currentUserDiv">
                 {
                     props.currentUser
@@ -68,7 +66,6 @@ function Corkboard(props) {
                         )
                 }
             </div>
-
             <div className="map">
                 {
                     posts.map(post => (

@@ -1,5 +1,4 @@
 import React from 'react';
-import Layout from '../../shared/nav'
 import image from "../../Assets/placeholder_img1.jpg"
 import "./OurStory.css"
 
@@ -7,8 +6,6 @@ import "./OurStory.css"
 function OurStory(props) {
     return (
         <div>
-            {/* <Layout /> */}
-            {/* <h1 className="ourStory">Our Story...</h1> */}
             <div id="home2">
                 <div className="ourStoryBio">
                     <img id="ourStoryImg" src={image} alt="Bride & Groom" />

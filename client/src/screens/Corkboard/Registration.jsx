@@ -11,7 +11,6 @@ function Registration(props) {
     })
     if (props.currentUser) {
         return <Redirect to={`/corkboard`} />
-        // console.log("Here's Johnny")
     }
 
     const handleChange = (e) => {
@@ -24,11 +23,9 @@ function Registration(props) {
 
     return (
         <>
-            {/* <Layout /> */}
             <div className="registration-div">
                 <form className="login-form-home">
                     <h3 className="login-text">Register to Post!</h3>
-                    {/* <label>Name: */}
                     <input
                         className="username-home-input"
                         type='text'
@@ -37,9 +34,7 @@ function Registration(props) {
                         value={formData.name}
                         onChange={handleChange}
                     />
-                    {/* </label> */}
                     <br />
-                    {/* <label>Email: */}
                     <input
                         type='text'
                         name='email'
@@ -48,9 +43,7 @@ function Registration(props) {
                         value={formData.email}
                         onChange={handleChange}
                     />
-                    {/* </label> */}
                     <br />
-                    {/* <label>Password: */}
                     <input
                         className="username-home-input"
                         type='password'
@@ -59,7 +52,6 @@ function Registration(props) {
                         value={formData.password}
                         onChange={handleChange}
                     />
-                    {/* </label> */}
                     <br />
                     <div className="buttons-home">
                         <button className='login-button' onClick={(e) => {

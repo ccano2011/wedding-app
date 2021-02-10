@@ -41,19 +41,6 @@ export const StyledBurger = styled.div`
 `;
 
 const Burger = ({ handleClick, isBurgerClick, open, setOpen }) => {
-  // const [open, setOpen] = useState(false);
-  // const [isBurgerClick, setBurgerClick] = useState(false);
-
-  // const handleClick = () => {
-  //   setBurgerClick(true)
-
-  //   if (isBurgerClick) {
-  //     setOpen(!open)
-  //     setBurgerClick(false)
-  //   }
-
-  // }
-
   return (
     <>
       <StyledBurger open={open} onClick={handleClick}>

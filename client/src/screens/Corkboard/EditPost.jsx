@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getOnePost, updatePost } from '../../services/posts'
 import { Link, Redirect, useParams } from 'react-router-dom';
-import Layout from '../../shared/nav'
 import './CreatePost.css'
 
 
@@ -14,8 +13,6 @@ function EditPost(props) {
         id: ''
     })
     const [isCreated, setCreated] = useState(false)
-    // const [isUpdated, setUpdated] = useState(false)
-    // const [userPost, setUserPost] = useState([])
     const { id } = useParams();
 
     console.log(useParams())
@@ -52,7 +49,6 @@ function EditPost(props) {
 
     return (
         <div>
-            {/* <Layout /> */}
             <form className="create-form" onSubmit={(e) => {
                 e.preventDefault()
                 handleSubmit(id, updateUserPost)

@@ -31,13 +31,11 @@ function App() {
   const handleLogin = async (loginData) => {
     const userData = await loginUser(loginData);
     setCurrentUser(userData);
-    // history.push('/corkboard');
   }
 
   const handleRegister = async (registerData) => {
     const userData = await registerUser(registerData);
     setCurrentUser(userData);
-    // history.push('/corkboard');
   }
 
   const handleLogout = () => {
@@ -73,10 +71,6 @@ function App() {
         <Route path='/registry'>
           <Registry />
         </Route>
-
-        {/* <Route path='/RSVP'> */}
-        {/* <RSVP /> */}
-        {/* </Route> */}
 
         <Route path='/login'>
           <Login

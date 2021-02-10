@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-// import './nav.css'
 import styled from 'styled-components';
 import Burger from './Burger'
 
@@ -31,7 +30,6 @@ li{
     transform: scale(1.05); 
     color: #404040 !important;
     font-weight: 700 ;
-    /* letter-spacing: 1px; */
     background: none;
     transition: all 0.1s ease 0s;
 }
@@ -41,7 +39,6 @@ li{
     justify-content: center;
     text-decoration: none;
     color: inherit;
-    /* padding-top: 70px; */
     font-size: calc(50px + 1vw);
     font-family: 'Rouge Script', cursive;
 }
@@ -64,10 +61,6 @@ li{
 .nav-title-link:hover{
     transform: scale(1.1);
 }
-/* .home{ */
-      /* text-shadow: ${(props) => props.pathname.match(/^\/our-story/) ? "9px 9px 9px #ccc7c7" : "none"}; */
-    /* font-weight: ${(props) => props.pathname.match(/^\//) ? "bold" : "none"}; */
-/* } */
   .our-story {
       /* text-shadow: ${(props) => props.pathname.match(/^\/our-story/) ? "9px 9px 9px #ccc7c7" : "none"}; */
       font-weight: ${(props) => props.pathname.match(/^\/our-story/) ? "bold" : "none"};
@@ -102,25 +95,16 @@ li{
       /* text-shadow: ${(props) => props.pathname.match(/^\/registry/) ? "9px 9px 9px #ccc7c7" : "none"}; */
       font-weight: ${(props) => props.pathname.match(/^\/registry/) ? "bold" : "none"};
   }
-/* 
-  .RSVP {
-      text-shadow: ${(props) => props.pathname.match(/^\/RSVP/) ? "2px 2px 2px #999" : "none"}
-      font-weight: ${(props) => props.pathname.match(/^\/our-story/) ? "600" : "none"};
-
-  } */
   
   .short-nav-title{
       display:none;
   }
 
   .layout-children {
-    padding-top: 30vh;
-    margin-top: 15px;
+    margin-top: 260px;
     @media screen and (max-width: 625px) {
+    margin-top: 90px;
     min-height: 98vh;
-    /* flex-grow: 1; */
-    padding-top: 10vh;
-
   }
 }
 
@@ -130,7 +114,6 @@ li{
         display:flex;
         justify-content:left;
     }
-
     
     .nav-ul-div{
         display:none;
@@ -163,20 +146,14 @@ li{
     }
     
 }
-  `
-
+`
 function Layout({ children }) {
     const { pathname } = useLocation()
     const [open, setOpen] = useState(false);
     const [isBurgerClick] = useState(false);
 
     const handleClick = () => {
-        // setBurgerClick(true)
-
-        // if (isBurgerClick) {
         setOpen(!open)
-        // setBurgerClick(false)
-
     }
 
     const handleBodyClickClose = () => {
@@ -201,7 +178,6 @@ function Layout({ children }) {
                             <Link className='nav-links pictures' to='/pictures'><li>Pictures</li></Link>
                             <Link className='nav-links cork-board' to='/corkboard'><li>Cork Board</li></Link>
                             <Link className='nav-links registery' to='/registry'><li>Registry</li></Link>
-                            {/* <Link className='nav-links RSVP' to='/RSVP'><li>RSVP</li></Link> */}
                         </ul>
                     </div>
                 </div>

@@ -181,11 +181,11 @@ src
 | Build out the remaining components |    H     |     4 hrs      |     2 hrs     |     TBD     |
 | Style those components |    L     |     6 hrs      |     10 hrs     |     TBD     |
 | Create MVP media queries |    H     |     3 hrs      |     6 hrs     |     TBD     |
-| POST-MVP EventListener w/ mobile refactor |    H     |     3 hrs      |     TBD     |     TBD     |
+| POST-MVP EventListener w/ mobile refactor |    H     |     3 hrs      |     4TBD     |     TBD     |
 | POST-MVP Add Animations to the styled components (i.e. Fade-ins, photo gallery, etc.)|    H     |     10 hrs      |     TBD hrs     |     TBD     |
 | Deploy & Test |    H     |     3 hrs      |     1 hrs     |     TBD     |
 
-| TOTAL               |          |     48.5 hrs      |     42.33 hrs     |     TBD     |
+| TOTAL               |          |     48.5 hrs      |     46.33 hrs     |     TBD     |
 
 <!-- > _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._ -->
 
@@ -258,8 +258,13 @@ Major issue with CORs on the deployed site resolved by doing the following:
        - Also fixed a routing error that wouldn't allow a user to login if they leave the login screen & return to it
        - Fixed any and all mobile styling issues
 
+02/09/2021:
+
+       - Made the mobile nav functionality more user friendly & seamless
+       - Removed all unused code and cleaned up the formatting
+       - Refactored 'nav.jsx'
+       - Added a 'Special Thanks' to the README to thank those who took their time to help debug and teach me a thing or two along the way
 
 ## Special Thanks:
 
-       A BIG thank you to <a href="https://github.com/DannyMichaels" target="_blank">Daniel Micheal</a> for taking the time to help me debug and introducing me to Styled Components! Also another shout-out to 
-       <a href="https://github.com/laport14" target="_blank">Geoff LaPorte</a> for remininding me about try/catch errors that helped me add alerts for login/registration errors.
+A BIG thank you to <a href="https://github.com/DannyMichaels" target="_blank">Daniel Micheal</a> for taking the time to help me debug and introducing me to Styled Components! Also another shout-out to <a href="https://github.com/laport14" target="_blank">Geoff LaPorte</a> for remininding me about try/catch errors that helped me add alerts for login/registration errors.

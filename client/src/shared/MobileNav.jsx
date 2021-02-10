@@ -43,23 +43,6 @@ const Ul = styled.ul`
 }
 `;
 const MobileNav = ({ open, setOpen, isBurgerClick }) => {
-    // The following was my original code to close the mobile menu when tapping outside the component
-    // const ref = useRef(null);
-    // useEffect((event) => {
-    //     !isBurgerClick && document.addEventListener('click', handleClickOutside, true);
-    //     return () => {
-    //         document.removeEventListener('click', handleClickOutside, true);
-    //     };
-    // });
-
-    // const handleClickOutside = (event) => {
-    //     if (ref.current && !ref.current.contains(event.target)) {
-    //         setOpen(false);
-    //     }
-    // };
-
-
-    // The following object was inspired by a YouTube tutorial
     const routes = [
         {
             title: "Our Story",
@@ -84,17 +67,9 @@ const MobileNav = ({ open, setOpen, isBurgerClick }) => {
             id: "bottom-link"
         }
     ]
-    /* const { pathname } = useLocation()*/
     return (
         <Ul className='mobile-menu' open={open} >
             <div></div>
-            {/* The following is old code */}
-            {/* <li className="mobile-nav-links"><Link className="link-class" onClick={() => setOpen(!open)} to='/our-story'>Our Story</Link></li> */}
-            {/* <li className="mobile-nav-links"><Link className="link-class" onClick={() => setOpen(!open)} to='/travel'>Travel</Link></li>
-            <li className="mobile-nav-links"><Link className="link-class" onClick={() => setOpen(!open)} to='/pictures'>Pictures</Link></li>
-            <li className="mobile-nav-links"><Link className="link-class" onClick={() => setOpen(!open)} to='/corkboard'>Cork Board</Link></li>
-            <li className="mobile-nav-links" id="bottom-link"><Link className="link-class" onClick={() => setOpen(!open)} to='/registry'>Registry</Link></li> */}
-            {/* The following was shown to me courtesy of Daniel. */}
             {routes.map((route, idx) => (
                 <li
                     aria-label={`mobile-link ${idx}`}

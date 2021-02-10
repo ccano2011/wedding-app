@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Link, Redirect } from 'react-router-dom';
-import Layout from '../../shared/nav'
 import "./Login.css"
 
 
@@ -11,21 +10,7 @@ export default function Login(props) {
     })
     if (props.currentUser) {
         return <Redirect to={`/corkboard`} />
-        // console.log("Here's Johnny")
     }
-
-    // fetch("http://localhost:3001/auth/login")
-    //     .then(function (response) {
-    //         if (response.status !== 200) {
-    //             throw new Error(response.status)
-    //         }
-    //     })
-    //     .catch(function (error) {
-    //         if (error.status === 401) {
-    //             alert("eat my butt")
-    //         }
-    //     })
-    // console.log(props.currentUser)
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData(prevState => ({
@@ -37,15 +22,11 @@ export default function Login(props) {
 
     return (
         <div className="login-page-home">
-            {/* <Layout /> */}
             <form className="login-form-home" onSubmit={(e) => {
                 e.preventDefault();
                 props.handleLogin(formData);
             }}>
                 <h3 className="login-text">Login to Post</h3>
-                {/* <div className='input-div'>
-                    <label htmlFor='username'><p className='login-label'>Email:</p></label>
-                </div> */}
 
                 <input
                     className="username-home-input"
@@ -55,9 +36,6 @@ export default function Login(props) {
                     value={formData.email}
                     onChange={handleChange}
                 />
-                {/* <div className='input-div'>
-                    <label htmlFor="password"><p className='login-label'>Password:</p></label>
-                </div> */}
                 <input
                     className="username-home-input"
                     type='password'

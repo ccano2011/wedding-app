@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { createPost } from '../../services/posts'
 import { Redirect, Link, useHistory } from 'react-router-dom';
-import Layout from '../../shared/nav'
 import './CreatePost.css'
 
 
@@ -44,8 +43,7 @@ function CreatePost(props) {
     }
 
     return (
-        <Layout>
-
+        <>
             <form className="create-form" onSubmit={handleSubmit}>
                 <textarea
                     className="postBody"
@@ -69,7 +67,7 @@ function CreatePost(props) {
                 <button type='submit' onClick={handleSubmit} className="submit-button">Submit</button>
                 <Link to="/corkboard"><button className="cancel-button">Cancel</button></Link>
             </div>
-        </Layout>
+        </>
     );
 }
 

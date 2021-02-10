@@ -1,13 +1,10 @@
 import React from 'react';
-import './Travel.css'
 import image from '../../Assets/placeholder_img2.jpg'
 
 
-function Travel(props) {
+function Travel() {
     return (
         <div>
-            {/* <Layout /> */}
-            {/* <h1 className="ourStory">Travel Information</h1> */}
             <div id="home2">
                 <div className="ourStoryBio">
                     <img id="ourStoryImg" src={image} alt="Bride & Groom" />

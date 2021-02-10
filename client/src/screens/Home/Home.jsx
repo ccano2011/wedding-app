@@ -4,7 +4,6 @@ import './Home.css'
 function Home() {
     return (
         <>
-            {/* <Layout /> */}
             <div id="home">
                 <div className="homeTitle">
                     <p >We're getting married!</p>
