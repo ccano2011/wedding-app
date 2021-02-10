@@ -99,7 +99,8 @@ src
       |__ images
 |__ shared/
       |__ Nav.jsx
-      |__ Nav.css
+      |__ Burger.jsx
+      |__ MobileNav.jsx
 |__ screens/
       |__ corkboard/
              |__Corkboard.jsx
@@ -131,7 +132,6 @@ src
              |__Photos.css
       |__ travel/
              |__Travel.jsx
-             |__Travel.css
 |__ services/
       |__ apiConfig.js
       |__ posts.js
@@ -181,7 +181,7 @@ src
 | Build out the remaining components |    H     |     4 hrs      |     2 hrs     |     TBD     |
 | Style those components |    L     |     6 hrs      |     10 hrs     |     TBD     |
 | Create MVP media queries |    H     |     3 hrs      |     6 hrs     |     TBD     |
-| POST-MVP EventListener w/ mobile refactor |    H     |     3 hrs      |     4TBD     |     TBD     |
+| POST-MVP EventListener w/ mobile refactor |    H     |     3 hrs      |     TBD     |     TBD     |
 | POST-MVP Add Animations to the styled components (i.e. Fade-ins, photo gallery, etc.)|    H     |     10 hrs      |     TBD hrs     |     TBD     |
 | Deploy & Test |    H     |     3 hrs      |     1 hrs     |     TBD     |
 
