@@ -8,7 +8,7 @@ export const StyledBurger = styled.div`
   position: fixed;
   top: 35px;
   left: 20px;
-  z-index: 990;
+  z-index: 11;
   display: none;
   @media (max-width: 625px) {
     cursor: pointer; 
