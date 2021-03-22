@@ -37,12 +37,12 @@ _**Happily Ever After** is a full CRUD React web application that will allow for
 
 <!-- _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._ -->
 
-- Build a functional **Ruby-on-Rails** backend with a database that will utilize CRUD with 3 tables; (User, Food, & Posts)
-- Set up one association between the 3 tables (1:m)
+- Build a functional **Ruby-on-Rails** backend with a database that will utilize CRUD with 2 tables; (User & Posts)
+- Set up one association between the 2 tables (1:m)
 - Build a feature complete **React** frontend with CRUD 
 - Build out the 10 screens (Our Story, Photos, RSVP, Cork Board for Posting, Resgistration, Login, Create post, edit post, registry, Home, & Travel) with the apropriate number of components to manage the screens
 - Build out the controllers that will allow the frontend to display and update data from the backend
-- Style using CSS & Flexbox with 3 media queries 
+- Style using Styled Components & React-Scroll
 
 <br>
 
@@ -63,6 +63,7 @@ _**Happily Ever After** is a full CRUD React web application that will allow for
 |      React       | _Used for the frontend._ |
 |   React Router   | _Used for client-side routing._ |
 | Axios | _Make axois calls to the backend from the frontend._ |
+|     Styled Components      | _Better organize my CSS & improve overall code structure._ |
 |     Rails      | _The framework used to operate the backend._ |
 |  PostgreSQL  | _Relational management between the databases/tables._ |
 
@@ -181,11 +182,12 @@ src
 | Build out the remaining components |    H     |     4 hrs      |     2 hrs     |     TBD     |
 | Style those components |    L     |     6 hrs      |     10 hrs     |     TBD     |
 | Create MVP media queries |    H     |     3 hrs      |     6 hrs     |     TBD     |
-| POST-MVP EventListener w/ mobile refactor |    H     |     3 hrs      |     TBD     |     TBD     |
+| POST-MVP EventListener w/ mobile refactor |    H     |     3 hrs      |     8hrs     |     TBD     |
+| POST-MVP Refactor the application using Styled-Components to improve code legibility & maintainance|    H     |     3 hrs      |     TBD hrs     |     TBD     |
 | POST-MVP Add Animations to the styled components (i.e. Fade-ins, photo gallery, etc.)|    H     |     10 hrs      |     TBD hrs     |     TBD     |
 | Deploy & Test |    H     |     3 hrs      |     1 hrs     |     TBD     |
 
-| TOTAL               |          |     48.5 hrs      |     46.33 hrs     |     TBD     |
+| TOTAL               |          |     51.5 hrs      |     54.33 hrs     |     TBD     |
 
 <!-- > _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._ -->
 
@@ -207,6 +209,7 @@ src
 
 <!-- > Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation! -->
 <!-- - Build out logic that will prevent duplicate RSVPs -->
+- Refactor the application using Styled-Components to improve code legibility & maintainance
 - Use CSS framework to incorporate animations
 - Add a rotating photo gallery for "Our Story" component
 <!-- - Implement Full CRUD to the RSVP component -->
@@ -265,6 +268,10 @@ Major issue with CORs on the deployed site resolved by doing the following:
        - Refactored 'nav.jsx'
        - Added a 'Special Thanks' to the README to thank those who took their time to help debug and teach me a thing or two along the way
        - Deleted the controller for RSVP & the RSVP component itself
+
+03/22/2021:
+
+       - Updated the README & added new MVP goals for refactoring and better code management
 
 ## Special Thanks:
 

@@ -48,7 +48,7 @@ li{
     width: 100vw;
     top: 0;
     padding-top: 70px;
-    background-color: floralwhite;
+    /* background-color: floralwhite; */
     z-index: 10;
 }
 
