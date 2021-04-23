@@ -13,6 +13,7 @@ import Travel from './screens/Travel/Travel';
 import Photos from './screens/Photos/Photos';
 import Registry from './screens/Registry/Registry';
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
+import Background from "./Assets/SiteBackdrop.jpeg"
 import Layout from './shared/nav';
 
 function App() {

@@ -4,10 +4,6 @@
 
 #home2{
     background: linear-gradient(#000, #000) no-repeat center/0.5px 100%;
-    padding-top: 8vh;
-    padding-bottom: 1%;
-    display: flex;
-    justify-content: space-around;
 }
 
 .ourStory {
@@ -18,26 +14,34 @@
 #ourStoryImg {
     max-width: 300px;
     height: auto;
+    margin-left: 200px;
 }
 
 .ourStoryBio{
     display: flex;
-    max-width: 1280px;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: -50px;
-    font-size: x-large;
+    justify-content: space-around;
+    margin: 0 auto;
+    margin-top: 30vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
 
+.imgDiv{
+    /* margin:auto; */
+}
+
+.ourStoryDiv{
+    /* margin:auto; */
 }
 
 .ourStoryTitle {
     font-family: 'Pinyon Script', cursive;
     max-width: 700px;
-    margin-left: 25%;
+    margin-left: 20%;
     line-height: 1.6;
 }
 
-@media screen and (max-width: 1048px){
+@media screen and (max-width: 1305px){
     #home2 {
         background: none;
         display: flex;

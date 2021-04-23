@@ -7,53 +7,79 @@
 }
 
 #home{
-    background: linear-gradient(#000, #000) no-repeat center/0.5px 100%;
-    padding-top: 13vh;
-    padding-bottom: 7%;
-    margin-top: 9vh;
+    /* background: linear-gradient(#000, #000) no-repeat center/0.5px 100%; */
+    background-image: url('../../Assets/placeholder_img5.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* padding-top: 13vh; */
+    /* padding-bottom: 7%; */
+    margin-top: -260px;
     display:flex;
-    justify-content: space-evenly;
-    }
-
-.weddingInfo{
-    display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+    height: 100vh;
+    }
+/* 
+    #HomeImg{
+        -o-object-fit: cover;
+        object-fit: cover;
+        width:100%;
+        height: 91vh;
+        @media screen and (max-width:768px) {
+        height:93vh;
+    }} */
+.HomeInfo{
+    /* margin-top: 30vh; */
+    display: grid;
+    background: pink;
+    /* flex-direction: column; */
 }
 
 .homeTime, .homeLocation{
-    grid-column: 1;
-    grid-row: 1;
+    /* grid-column: 1;
+    grid-row: 1; */
     font-family: 'Rouge Script', cursive;
     font-size: xx-large;
-    padding-top: 10px;
+    /* padding-top: 10px; */
   }
   
-  .homeTime {
-    margin-top: 10px;
-  }
-
-  .homeLocation{
-    margin-top: auto;
-
-  }
-
-@media screen and (max-width:965px) {
-#home{
-    background: none;
-    display: flex;
-    flex-direction: column;
-}
-.homeTitle{
+  .homeTitle{
     margin: auto;
     display: flex;
     justify-content: center;
-    font-size: 55px;
+    line-height: 0;
+    /* font-size: 55px; */
 }
 .weddingInfo{
     margin: auto;
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
     display: flex;
+    line-height: 0;
     flex-direction: column;
 }
+  .homeLocation{
+    /* margin-top: auto; */
+
+  }
+
+  @media screen and (max-width:625px) {
+    #home{
+        margin-top: -120px;
+    }}
+
+@media screen and (max-width:367px) {
+    #home{
+        /* background: none; */
+        display: flex;
+        margin-top: -120px;
+    }
+
+    .homeTitle{
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        font-size: 45px;
+    }
 
 }

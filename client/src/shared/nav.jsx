@@ -47,7 +47,8 @@ li{
     position: fixed;
     width: 100vw;
     top: 0;
-    padding-top: 70px;
+    /* padding-top: 70px; */
+    padding-top: 40px;
     /* background-color: floralwhite; */
     z-index: 10;
 }
@@ -114,7 +115,9 @@ li{
         display:flex;
         justify-content:left;
     }
-    
+    .nav-bar{
+    padding-top: 60px;
+}
     .nav-ul-div{
         display:none;
         text-decoration: none;
@@ -164,8 +167,8 @@ function Layout({ children }) {
         <div className="layout">
             <Navi pathname={pathname}>
                 <div className='nav-bar'>
-                    <span className='nav-title'><Link to="/" className='nav-title-link'>William & Clarissa</Link></span>
                     <span className='short-nav-title'><Link to="/" className='nav-title-link'>W & C</Link></span>
+                    <span className='nav-title'><Link to="/" className='nav-title-link'>William & Clarissa</Link></span>
                     <Burger handleClick={handleClick} open={open}
                         setOpen={setOpen}
                         isBurgerClick={isBurgerClick} />

@@ -1,7 +1,15 @@
+.regComponent{
+height: 100vh;
+   margin-top: -256px;
+}
+
+
 .registry-div {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    /* margin-top: 20px; */
+   /* margin-top: -100px; */
+   padding-top: 300px;
  }
 
 .reg {
