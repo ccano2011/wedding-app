@@ -1,12 +1,86 @@
 import React, { useEffect, useState } from 'react';
 import { getAllPosts } from '../../services/posts'
-import { Link } from 'react-router-dom';
+import { Link as LinkRouter } from 'react-router-dom';
 import Button from '@material-ui/core/Button'
 import Create from '@material-ui/icons/Create'
 import Assignment from '@material-ui/icons/Assignment'
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
-import './Corkboard.css'
+import styled from 'styled-components';
 
+
+const CorkboardStyling = styled.div`
+background-color: #d0c5b3;
+max-width: 1672px;
+margin: auto;
+.map {
+    display: flex;
+    overflow: auto;
+    max-width:100vw;   
+}
+  .corkBoardTitle{
+    font-family: 'Pinyon Script', cursive;
+    font-size: 2em;
+    margin-bottom: 5px;
+    text-align: center;
+    position: relative;
+  }
+ 
+  .currentUserDiv{
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .mappedContent {
+    justify-content: space-evenly;
+    padding: 25px;
+    margin: 30px;
+    border-radius: 15px;
+    width: fit-content;
+    overflow: unset;
+    max-width: 420px;
+    height: -moz-fit-content;
+    height: fit-content;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    background-color: rgb(189, 204, 174);
+    border: 1px solid rgb(129, 129, 129);
+}
+
+  .currentUserGreeting {
+    font-family: 'Fancy';
+    font-size: 40px;
+    padding-top:3vh;
+    margin-bottom: 25px;
+    text-align: center;
+    /* margin-left: 100px; */
+  }
+
+  .corkboardButtons{
+    font-family: 'Pinyon Script', cursive;
+    display: flex;
+    padding-top:3vh;
+    justify-content: space-evenly;
+    position: relative;
+    z-index: 1;
+  }
+
+  .postName{
+    font-family: 'Rouge Script', cursive;
+    font-size: x-large;
+    padding-left: 3px;
+    margin-left: 10px;
+  }
+
+  .postContent {
+    overflow: auto;
+    min-width: 100px;
+    font-family: 'Dosis', sans-serif !important;
+    font-size: large;
+    padding-left: 3px;
+}
+
+`
 function Corkboard(props) {
     const [posts, setPosts] = useState([]);
     useEffect(() => {
@@ -18,35 +92,36 @@ function Corkboard(props) {
     }, [])
 
     return (
-        <div>
+        <CorkboardStyling id='cork-board'>
             <div className="currentUserDiv">
                 {
                     props.currentUser
                         ? (
                             <p className="currentUserGreeting">Greetings, {props.currentUser.name}</p>
                         ) : (
-                            <p> </p>
+                            <p className="currentUserGreeting">Corkboard </p>
                         )
                 }
             </div>
+
             <div className='corkboardButtons'>
-                <Link to="/create-post">
+                <LinkRouter to="/create-post">
                     <Button
                         variant="outlined"
                         size="large"
                         startIcon={<Create />}
                     ></Button>
-                </Link>
+                </LinkRouter>
                 {
                     props.currentUser
                         ? (
-                            <Link to="/user-post">
+                            <LinkRouter to="/user-post">
                                 <Button
                                     variant="outlined"
                                     size="large"
                                     startIcon={<Assignment />}
                                 ></Button>
-                            </Link>
+                            </LinkRouter>
                         ) : (
                             null
                         )
@@ -76,7 +151,7 @@ function Corkboard(props) {
                     )).reverse()
                 }
             </div>
-        </div>
+        </CorkboardStyling >
 
     );
 }

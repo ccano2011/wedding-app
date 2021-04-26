@@ -56,6 +56,7 @@ function UserPosts(props) {
                     )).reverse()
                 }
             </div >
+            <Link to={`/`}><button className='edit-btn'>Head Back</button></Link>
         </>
     )
 }

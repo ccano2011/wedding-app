@@ -1,0 +1,6 @@
+@font-face {
+    /* font-family: 'Nicholia';
+    src: local('Nicholia'), url(./fonts/Nicholia.ttf) format('truetype'); */
+    font-family: 'Fancy';
+    src: local('Fancy'), url(./fonts/fancyfont.woff2) format('truetype');
+  }

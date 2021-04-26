@@ -39,7 +39,7 @@ function CreatePost(props) {
     }
 
     if (isCreated) {
-        return <Redirect to={`/corkboard`} />
+        return <Redirect to={`/`} />
     }
 
     return (
@@ -65,7 +65,7 @@ function CreatePost(props) {
             </form>
             <div className='buttons-create'>
                 <button type='submit' onClick={handleSubmit} className="submit-button">Submit</button>
-                <Link to="/corkboard"><button className="cancel-button">Cancel</button></Link>
+                <Link to="/"><button className="cancel-button">Cancel</button></Link>
             </div>
         </>
     );

@@ -1,197 +1,123 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link as LinkScroll } from 'react-scroll' //This is an alias to workaround { Link } declarations
 import styled from 'styled-components';
-import Burger from './Burger'
+import { FaBars } from 'react-icons/fa'
 
-const Navi = styled.div`
-//This is functionally the same as a Layout.jsx
-ul {
-    display:flex;
-    text-decoration: none;
-    list-style: none;
-    padding: 0;
-    justify-content: space-around;
-    color: inherit;
-}
-
-li{
-    font-size: 35px;
-} 
-
-.nav-links{
-    text-decoration: none;
-    transition: all .1s ease-in-out; 
-    color: inherit;
-    font-family: 'Pinyon Script', cursive;
-    font-size: 20px;
-}
-
-.nav-links:hover{
-    transform: scale(1.05); 
-    color: #404040 !important;
-    font-weight: 700 ;
-    background: none;
-    transition: all 0.1s ease 0s;
-}
-
-.nav-title{
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
-    color: inherit;
-    font-size: calc(50px + 1vw);
-    font-family: 'Rouge Script', cursive;
-}
-
-.nav-bar{
-    position: fixed;
-    width: 100vw;
+const NavComponent = styled.nav`
+    background: ${({ scrollNav }) => (scrollNav ? '#ffffff' : 'transparent')};
+    box-shadow: ${({ scrollNav }) => (scrollNav ? '0 2px 4px 0 rgb(0 0 0 / 7%)' : 'none')};
+    /* margin-top: -80px; */
+    /* height:80px; */
+    padding-bottom:0px;
+    position:fixed;
     top: 0;
-    /* padding-top: 70px; */
-    padding-top: 40px;
-    /* background-color: floralwhite; */
-    z-index: 10;
-}
+    width: 100%;
+    font-size:1rem;
+    top:0;
+    z-index:10;
+    transition:0.8s all ease;
+    @media screen and (max-width:768px) {
+        height: 70px;
+        /* width: 100vw; */
+    }
+`;
+const NavbarContainer = styled.div`
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    z-index:1;
+    padding-top: 0px;
 
-.nav-title-link{
+`;
+const MobileIcon = styled.div`
+display:none;
+@media screen and (max-width:768px){
+    display:block;
+    position:absolute;
+    top:0;
+    right:0;
+    transform: translate(-100%,60%);
+    font-size: 1.8rem;
+    cursor:pointer;
+    color:black;
+}
+`;
+const NavMenu = styled.ul`
+    display: contents;
+    list-style: none;
+    @media screen and (max-width:768px){
+    display:none;
+}
+`;
+
+const NavItem = styled.li`
     text-decoration: none;
+    transition: all .1s ease-in-out;
     color: inherit;
-    transition: all .3s ease-in-out; 
+    font-family: 'Josefin Sans', sans-serif;
+    height:80px;
+`;
+const NavLinks = styled(LinkScroll)`
+font-weight:300;
+display: flex;
+justify-content: space-around;
+align-items: center;
+text-decoration: none;
+padding: 0 1rem;
+height:100%;
+cursor: pointer;
+&.active{
+    font-weight:700;
 }
-
-.nav-title-link:hover{
-    transform: scale(1.1);
-}
-  .our-story {
-      /* text-shadow: ${(props) => props.pathname.match(/^\/our-story/) ? "9px 9px 9px #ccc7c7" : "none"}; */
-      font-weight: ${(props) => props.pathname.match(/^\/our-story/) ? "bold" : "none"};
-  }
-  
-  .travel {
-      /* text-shadow: ${(props) => props.pathname.match(/^\/travel/) ? "9px 9px 9px #ccc7c7" : "none"}; */
-      font-weight: ${(props) => props.pathname.match(/^\/travel/) ? "bold" : "none"};
-  }
-  
-  .pictures {
-      /* text-shadow: ${(props) => props.pathname.match(/^\/pictures/) ? "9px 9px 9px #ccc7c7" : "none"}; */
-      font-weight: ${(props) => props.pathname.match(/^\/pictures/) ? "bold" : "none"};
-  }
-  
-  .cork-board {
-      /* text-shadow: ${(props) => props.pathname.match(/^\/corkboard/) ? "9px 9px 9px #ccc7c7" : "none"}; */
-      font-weight: ${(props) => props.pathname.includes('corkboard') ? "bold" : "none"};
-      /* text-shadow: ${(props) => props.pathname.match(/^\/registration/) ? "9px 9px 9px #ccc7c7" : "none"}; */
-      font-weight: ${(props) => props.pathname.includes('registration') ? "bold" : "none"};
-      /* text-shadow: ${(props) => props.pathname.match(/^\/login/) ? "9px 9px 9px #ccc7c7" : "none"}; */
-      font-weight: ${(props) => props.pathname.includes('login') ? "bold" : "none"};
-      /* text-shadow: ${(props) => props.pathname.match(/^\/create-post/) ? "9px 9px 9px #ccc7c7" : "none"}; */
-      font-weight: ${(props) => props.pathname.includes('create-post') ? "bold" : "none"};
-      /* text-shadow: ${(props) => props.pathname.match(/^\/edit-post/) ? "9px 9px 9px #ccc7c7" : "none"}; */
-      font-weight: ${(props) => props.pathname.includes('edit-post') ? "bold" : "none"};
-      /* text-shadow: ${(props) => props.pathname.match(/^\/user-post/) ? "9px 9px 9px #ccc7c7" : "none"}; */
-      font-weight: ${(props) => props.pathname.includes('user-post') ? "bold" : "none"};
-  }
-  
-  .registry {
-      /* text-shadow: ${(props) => props.pathname.match(/^\/registry/) ? "9px 9px 9px #ccc7c7" : "none"}; */
-      font-weight: ${(props) => props.pathname.match(/^\/registry/) ? "bold" : "none"};
-  }
-  
-  .short-nav-title{
-      display:none;
-  }
-
-  .layout-children {
-    margin-top: 260px;
-    @media screen and (max-width: 625px) {
-    margin-top: 120px;
-    min-height: 98vh;
-  }
-}
-
-@media screen and (max-width:625px) {
-    /* The following CSS was inspired by the CSS-Tricks.com site */
-    .mobile-nav-links {
-        display:flex;
-        justify-content:left;
+`;
+function Layout({ children, toggle }) {
+    const [scrollNav, setScrollNav] = useState(false)
+    const changeNav = () => {
+        if (window.scrollY >= 80) {
+            setScrollNav(true)
+        } else {
+            setScrollNav(false)
+        }
     }
-    .nav-bar{
-    padding-top: 60px;
-}
-    .nav-ul-div{
-        display:none;
-        text-decoration: none;
-        color: inherit;
-        font-family: 'Pinyon Script', cursive;
-        font-size: 13px;
-        flex-flow: row wrap;
-        margin: 5px 15px 1px 15px;
-    }
-
-    .nav-title {
-        margin-top: -50px;
-    }
-  }
-
-@media screen and (max-width:475px) {
-    .nav-title{
-        display:none;
-    }
-    .short-nav-title{
-        display: flex;
-        justify-content: center;
-        text-decoration: none;
-        color: inherit;
-        padding-top: 20px;
-        font-size: calc(50px + 1vw);
-        font-family: 'Rouge Script', cursive;
-        margin-top: -70px;
-    }
-    
-}
-`
-function Layout({ children }) {
-    const { pathname } = useLocation()
-    const [open, setOpen] = useState(false);
-    const [isBurgerClick] = useState(false);
-
-    const handleClick = () => {
-        setOpen(!open)
-    }
-
-    const handleBodyClickClose = () => {
-        open && setOpen(false)
-    }
-
+    useEffect(() => {
+        window.addEventListener('scroll', changeNav)
+    }, [])
     return (
-        <div className="layout">
-            <Navi pathname={pathname}>
-                <div className='nav-bar'>
-                    <span className='short-nav-title'><Link to="/" className='nav-title-link'>W & C</Link></span>
-                    <span className='nav-title'><Link to="/" className='nav-title-link'>William & Clarissa</Link></span>
-                    <Burger handleClick={handleClick} open={open}
-                        setOpen={setOpen}
-                        isBurgerClick={isBurgerClick} />
-                    <hr />
+        <>
+            <NavComponent className="layout" scrollNav={scrollNav} onClick={toggle}>
+                <NavbarContainer>
+                    <MobileIcon>
+                        <FaBars />
+                    </MobileIcon>
+                    <NavMenu>
+                        {/* <NavItem>
+                            <NavLinks to='/'
+                                smooth={true} duration={500} spy={true} exact='true' offset={-80}>Home</NavLinks>
+                        </NavItem>*/}
+                        <NavItem>
+                            <NavLinks to='our-story' smooth={true} duration={500} spy={true} exact='true' offset={-80}>OUR STORY</NavLinks>
+                        </NavItem>
+                        <NavItem>
+                            <NavLinks to='travel' smooth={true} duration={500} spy={true} exact='true' offset={-80}>TRAVEL</NavLinks>
+                        </NavItem>
+                        <NavItem>
+                            <NavLinks to='RSVP' smooth={true} duration={500} spy={true} exact='true' offset={-80}>RSVP</NavLinks>
+                        </NavItem>
+                        <NavItem>
+                            <NavLinks to='registry' smooth={true} duration={500} spy={true} exact='true' offset={-80}>REGISTRY</NavLinks>
+                        </NavItem>
+                        <NavItem>
+                            <NavLinks to='pictures' smooth={true} duration={500} spy={true} exact='true' offset={-80}>PICTURES</NavLinks>
+                        </NavItem>
+                        <NavItem>
+                            <NavLinks to='cork-board' smooth={true} duration={500} spy={true} exact='true' offset={-80}>CORKBOARD</NavLinks>
+                        </NavItem>
 
-                    <div className="nav-ul-div">
-                        <ul className='nav-ul'>
-                            <Link className='nav-links our-story' to='/our-story'><li>Our Story</li></Link>
-                            <Link className='nav-links travel' to='/travel'><li>Travel</li></Link>
-                            <Link className='nav-links pictures' to='/pictures'><li>Pictures</li></Link>
-                            <Link className='nav-links cork-board' to='/corkboard'><li>Cork Board</li></Link>
-                            <Link className='nav-links registery' to='/registry'><li>Registry</li></Link>
-                        </ul>
-                    </div>
-                </div>
-                <div className="layout-children"
-                    onClick={handleBodyClickClose}
-                >
-                    {children}
-                </div>
+                    </NavMenu>
+                </NavbarContainer>
+            </NavComponent>
+            {children} </>
 
-            </Navi >
-        </div>
     );
 }
 

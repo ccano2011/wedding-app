@@ -31,7 +31,7 @@ function EditPost(props) {
     if (props.currentUser === null) {
         return <Redirect to={'/registration'} />
     } else if (isCreated) {
-        return <Redirect to={`/corkboard`} />
+        return <Redirect to={`/`} />
     }
 
     const handleChange = (e) => {
@@ -76,7 +76,7 @@ function EditPost(props) {
                     e.preventDefault()
                     handleSubmit(id, updateUserPost)
                 }} className="submit-button">Submit</button>
-                <Link to="/corkboard"><button className="cancel-button">Cancel</button></Link>
+                <Link to="/"><button className="cancel-button">Cancel</button></Link>
             </div>
         </div>
     )

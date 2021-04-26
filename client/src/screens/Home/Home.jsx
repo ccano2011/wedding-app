@@ -1,25 +1,22 @@
 import React from 'react';
-import './Home.css'
-// import HomeImage from '../../Assets/placeholder_img5.jpg'
+import Corkboard from '../Corkboard/Corkboard';
+import Hero from '../Hero/Hero';
+import OurStory from '../OurStory/OurStory';
+import Travel from '../Travel/Travel';
+import Photos from '../Photos/Photos';
+import Registry from '../Registry/Registry';
+import RSVP from '../RSVP/RSVP';
 
-function Home() {
+function Home(props) {
     return (
         <>
-            <div id="home">
-                {/* <div className="homeBackground">
-                    <img id="HomeImg" src={HomeImage} alt="clarissa & Billy" />
-                </div> */}
-                <div className="HomeInfo">
-                    <div className="homeTitle">
-                        <p >We're getting married!</p>
-                    </div>
-                    <div className="weddingInfo">
-                        <p className="homeTime">When: 00/00/0000 at 00:00</p>
-
-                        <p className="homeLocation">Where: 1234 Wedding Venue</p>
-                    </div>
-                </div>
-            </div>
+            <Hero />
+            <OurStory />
+            <Travel />
+            <RSVP />
+            <Registry />
+            <Photos />
+            <Corkboard currentUser={props.currentUser} handleLogout={props.handleLogout} />
         </>
     );
 }

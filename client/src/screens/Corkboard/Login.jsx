@@ -9,7 +9,7 @@ export default function Login(props) {
         password: ""
     })
     if (props.currentUser) {
-        return <Redirect to={`/corkboard`} />
+        return <Redirect to={`/`} />
     }
     const handleChange = (e) => {
         const { name, value } = e.target;

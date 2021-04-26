@@ -36,7 +36,7 @@
     height: fit-content;
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
-    background-color: rgb(189, 204, 174);
+    background-color: #FBF7F1;
     border: 1px solid rgb(129, 129, 129);
 }
 
@@ -111,7 +111,7 @@
         min-width: 300px;
         max-width: auto;
         backdrop-filter: blur(8px);
-        background-color: rgb(189, 204, 174);
+        background-color: #FBF7F1;
         border: 1px solid black;
         backdrop-filter: blur(8px);
       }

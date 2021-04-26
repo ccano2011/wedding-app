@@ -1,32 +1,23 @@
 import React, { useRef, useEffect } from 'react';
-import image from "../../Assets/honeymoon.jpeg"
+import image2 from "../../Assets/jordanandrewrsvp.jpg"
 import styled from 'styled-components';
 
 
-const RegistryWrapper = styled.div`
-#registry{
+const RSVPWrapper = styled.div`
+#RSVP{
 transition: opacity 250ms ease-in, -webkit-transform 400ms ease-in;
     transition: opacity 250ms ease-in, transform 400ms ease-in;
     transition: opacity 250ms ease-in, transform 400ms ease-in,
     -webkit-transform 400ms ease-in;
     opacity: 0;
     height:100vh;
-/* padding-top:10vh; */
 }
-#registry.appear{
+#RSVP.appear{
     opacity: 1;
 }
+margin-bottom: 40px;
 `
-const TextWrapper = styled.div`
-    position: relative;
-    z-index:2;
-`
-const RegistryDiv = styled.div`
-border: 8px solid #c5b18c;
-    padding: 3vh;
-    backdrop-filter: brightness(0.5);
-`
-const RegistryTitle = styled.div`
+const RSVPTitle = styled.div`
 font-family: 'Fancy';
 font-size:60px;
 padding-top:25vh;
@@ -34,18 +25,24 @@ z-index:3;
 position:absolute;
 align-items: center;
 color: white;
-margin-left:25%;
+margin-left:65%;
 
 @media screen and (max-width:768px) {
-    font-size:45px;
+    font-size:40px;
     padding-top:20vh;
-    margin-left: 5%;
+    margin-left: 0%;
+    width: 100%;
+    margin-left:3vw;
+
+
 }
-@media screen and (max-height: 594px){
+@media screen and (max-height: 790px){
     padding-top: 15vh;
     font-size:40px;
+    width:auto;
 }
-.RegistryDescription{
+
+.RSVPDescription{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     line-height: 1.6;
@@ -53,26 +50,25 @@ margin-left:25%;
 
     @media screen and (max-width:768px) {
         line-height: 1.6;
-        margin-left:auto;
-        margin-right:auto;
+        padding-right:3vw;
         font-size:15px;
-
 }
 @media screen and (max-height: 594px){
-    font-size:15px;
+    padding-top: 1vh;
+    font-size: 15px;
 }
 }
 
 `
-const RegistryContent = styled.div`
-#RegistryImg{
+const RSVPContent = styled.div`
+#RSVPImg{
     -o-object-fit: cover;
     object-fit: cover;
     width:100%;
     height: 100vh;
     @media screen and (max-width:768px) {
     height:93vh;
-
+    filter: brightness(0.5);
 }
     @media only screen 
   and (min-device-width: 375px) 
@@ -82,6 +78,8 @@ const RegistryContent = styled.div`
     height: 130vh;
 }
 }
+
+
 `
 const Button = styled.div`
     display: flex;
@@ -105,7 +103,7 @@ a:hover{
     background-color: aliceblue; 
   }
 `
-function Registry() {
+function RSVP() {
     const elemRef = useRef();
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -125,25 +123,21 @@ function Registry() {
         }
     }, [elemRef]);
     return (
-        <RegistryWrapper ref={elemRef} id='registry'>
-            <TextWrapper>
-                <RegistryTitle>
-                    <RegistryDiv>
-                        Registry...
-                        <div className='RegistryDescription'>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        <RSVPWrapper ref={elemRef} id='RSVP'>
+            <RSVPTitle>
+                RSVP...
+            <div className='RSVPDescription'>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                     <Button>
-                                <a href="https://youtu.be/oHg5SJYRHA0" target="_blank" rel="noopener noreferrer" ><button className="ls-buttons">Visit Site</button></a>
-                            </Button>
-                        </div>
-                    </RegistryDiv>
-                </RegistryTitle>
-            </TextWrapper>
-            <RegistryContent>
-                <img id="RegistryImg" src={image} alt="backdrop" />
-            </RegistryContent>
-        </RegistryWrapper>
+                        <a href="https://youtu.be/oHg5SJYRHA0" target="_blank" rel="noopener noreferrer" ><button className="ls-buttons">Visit Site</button></a>
+                    </Button>
+                </div>
+            </RSVPTitle>
+            <RSVPContent>
+                <img id="RSVPImg" src={image2} alt="backdrop" />
+            </RSVPContent>
+        </RSVPWrapper>
     );
 }
 
-export default Registry;
+export default RSVP;

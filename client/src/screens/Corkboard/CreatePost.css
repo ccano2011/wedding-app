@@ -1,5 +1,5 @@
 .create-form {
-    background-color: CEE0DC;
+    background-color: #CEE0DC;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -73,7 +73,7 @@
 
   @media screen and (max-width:990px) {
     .create-form {
-    background-color: CEE0DC;
+    background-color: #CEE0DC;
     text-align: center;
     display: flex;
     flex-direction: column;

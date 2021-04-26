@@ -1,90 +1,109 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link as LinkScroll } from 'react-scroll' //This is an alias to workaround { Link } declarations
 import styled from 'styled-components';
+import { FaTimes } from 'react-icons/fa';
 
-const Ul = styled.ul`
-  .mobile-nav-links {
-        display:none;
-    }
-.link-class {
-    text-decoration: none;
-    color: black;
+const SidebarContainer = styled.aside` //aside is an HTML element that is meant to be an acutal aside to the text content
+@media screen and (min-width:769px){
+display:none;
 }
-
-  @media (max-width: 625px) {
-    flex-flow: column nowrap;
-    background-color: floralwhite;
-    position: fixed;
-    transform: ${({ open }) => open ? 'translateX(0%)' : 'translateX(-100%)'};
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 240px;
-    padding-top: 10px;
-    margin-top: 0px;
-    transition: transform 0.3s ease-in-out;
-    z-index:10;
-
-    .mobile-nav-links {
-      display:flex;
-      text-align:left;
-      color: black;
-      text-decoration:none;
-      font-family: 'Pinyon Script', cursive;
-      font-size: 40px;
-      margin-left: 25px;
-      margin-top: 35px;
-    }
-
-    #bottom-link{
-        margin-bottom: 20vh;
-    }
-
+position: fixed;
+z-index:999;
+width:100%;
+height: 100vh;
+background:#ffffff;
+display:grid;
+align-items: center;
+top:0;
+left:0;
+transition: 0.3s ease-in-out;
+opacity: ${({ isOpen }) => (isOpen ? '100%' : '0')};
+top:${({ isOpen }) => (isOpen ? '1' : '-100%')};
+`;
+const CloseIcon = styled(FaTimes)`
+color:#d8cbcb;
+`;
+const Icon = styled.div`
+position: absolute;
+top: 1.2rem;
+right: 1.5rem;
+background:transparent;
+font-size:2rem;
+cursor:pointer;
+outline:none;
+`;
+const SidebarWrapper = styled.div`
+display: none;
+@media screen and (max-width:768px){
+    display: grid;
 }
 `;
-const MobileNav = ({ open, setOpen, isBurgerClick }) => {
-    const routes = [
-        {
-            title: "Our Story",
-            path: "/our-story"
-        },
-        {
-            title: "Travel",
-            path: "/travel"
-        },
-        {
-            title: "Pictures",
-            path: '/pictures'
-        },
-        {
-            title: "Cork Board",
-            path: "/corkboard",
+const SidebarMenu = styled.ul`
+display: grid;
+grid-template-columns:1fr;
+grid-template-rows: repeat(6, 100px);
+padding-left:0;
+text-align: center;
+/* background:floralwhite; */
+/* @media screen and (max-width:480px){
+    grid-template-rows: repeat(6, 60px);
+} */
+`;
+const SidebarLink = styled(LinkScroll)`
+display:flex;
+align-items:center;
+justify-content:center;
+font-size: 1.5rem;
+text-decoration: none;
+font-family: 'Josefin Sans', sans-serif;
+font-weight:300;
+list-style: none;
+transition: 0.2s ease-in-out;
+text-decoration:none;
+cursor: pointer;
+&:hover{
+    color: wheat;
+    font-weight:700;
+    transition: 0.2s ease-in-out;
+}
+&.active{
+    font-weight:700;
+}
+`;
 
-        },
-        {
-            title: "Registry",
-            path: "/registry",
-            id: "bottom-link"
-        }
-    ]
+function MobileNav({ children, isOpen, toggle }) {
     return (
-        <Ul className='mobile-menu' open={open} >
-            <div></div>
-            {routes.map((route, idx) => (
-                <li
-                    aria-label={`mobile-link ${idx}`}
-                    key={idx}
-                    className={`mobile-nav-links  ${route.title.toLowerCase().replace(" ", "-")}`}
-                >
-                    <Link
-                        to={route.path}
-                        id={route?.id} //<- Similar to a guard operator; called optional chaining
-                        className="link-class" onClick={() => setOpen(!open)}>{route.title}</Link>
-                </li>
-            )
-            )}
-        </Ul >
+        <>
+            <SidebarContainer isOpen={isOpen} onClick={toggle}>
+                <Icon >
+                    <CloseIcon />
+                </Icon>
+                <SidebarWrapper>
+                    <SidebarMenu>
+                        <SidebarLink to="our-story" onClick={toggle} smooth={true} duration={500} spy={true} offset={-70}>
+                            OUR STORY
+                    </SidebarLink>
+                        <SidebarLink to="travel" onClick={toggle} smooth={true} duration={500} spy={true} offset={-70}>
+                            TRAVEL
+                    </SidebarLink>
+                        <SidebarLink to="RSVP" onClick={toggle} smooth={true} duration={500} spy={true} offset={-70}>
+                            RSVP
+                    </SidebarLink>
+                        <SidebarLink to="registry" onClick={toggle} smooth={true} duration={500} spy={true} offset={-70}>
+                            REGISTRY
+                    </SidebarLink>
+                        <SidebarLink to="pictures" onClick={toggle} smooth={true} duration={500} spy={true} offset={-70}>
+                            PICTURES
+                    </SidebarLink>
+                        <SidebarLink to="cork-board" onClick={toggle} smooth={true} duration={500} spy={true} offset={-70}>
+                            CORKBOARD
+                    </SidebarLink>
+
+                    </SidebarMenu>
+                </SidebarWrapper>
+            </SidebarContainer>
+            {children} </>
+
     );
 }
-
 export default MobileNav;
