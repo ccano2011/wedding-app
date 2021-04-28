@@ -7,8 +7,6 @@ import Burger from './Burger'
 const NavComponent = styled.nav`
     background: ${({ scrollNav }) => (scrollNav ? '#ffffff' : 'transparent')};
     box-shadow: ${({ scrollNav }) => (scrollNav ? '0 2px 4px 0 rgb(0 0 0 / 7%)' : 'none')};
-    /* margin-top: -80px; */
-    /* height:80px; */
     padding-bottom:0px;
     position:fixed;
     top: 0;
@@ -29,7 +27,7 @@ const NavbarContainer = styled.div`
     justify-content: space-around;
     z-index:1;
     padding-top: 0px;
-
+    margin-left: -1vw;
 `;
 // const MobileIcon = styled.div`
 // display:none;
@@ -58,8 +56,11 @@ const NavItem = styled.li`
     /* color: inherit; */
     /* font-family: 'Josefin Sans', sans-serif; */
     font-family: 'Pinyon Script', cursive;
-    font-size: xx-large;
+    font-size: x-large;
     height:80px;
+    @media screen and (max-width:1072px){
+    font-size: 20px;
+}
 `;
 const NavLinks = styled(LinkScroll)`
 font-weight:300;
@@ -67,7 +68,7 @@ display: flex;
 justify-content: space-evenly;
 align-items: center;
 text-decoration: none;
-padding: 0 1rem;
+/* padding: 0 1rem; */
 height:100%;
 cursor: pointer;
 color: inherit;
@@ -79,13 +80,14 @@ color: inherit;
 #home{
     font-size: 60px;
     font-family: 'Rouge Script', cursive;
-
     padding-top: 18px;
+    @media screen and (max-width:1072px){
+    font-size: 40px;
+}
     /* background-color:pink; */
 }
 `;
 function Layout({ children, toggle }) {
-
     const [scrollNav, setScrollNav] = useState(false)
     const [open, setOpen] = useState(false);
     const [isBurgerClick] = useState(false);

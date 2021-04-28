@@ -4,7 +4,7 @@ import MobileNav from './MobileNav';
 
 export const StyledBurger = styled.div`
   display: none;
-  @media (max-width: 625px) {
+  @media (max-width: 768px) {
     width: 2rem;
   height: 2rem;
   position: fixed;
