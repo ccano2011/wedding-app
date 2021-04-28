@@ -40,7 +40,7 @@ _**Happily Ever After** is a full CRUD React web application that will allow for
 - Build a functional **Ruby-on-Rails** backend with a database that will utilize CRUD with 2 tables; (User & Posts)
 - Set up one association between the 2 tables (1:m)
 - Build a feature complete **React** frontend with CRUD 
-- Build out the 10 screens (Our Story, Photos, RSVP, Cork Board for Posting, Resgistration, Login, Create post, edit post, registry, Home, & Travel) with the apropriate number of components to manage the screens
+- Build out the 10 screens (Our Story, Photos, About the Party, Corkboard for Posting, Resgistration, Login, Create post, edit post, registry, Home, & Travel) with the apropriate number of components to manage the screens
 - Build out the controllers that will allow the frontend to display and update data from the backend
 - Style using Styled Components & React-Scroll
 
@@ -86,7 +86,7 @@ _**Happily Ever After** is a full CRUD React web application that will allow for
 
 [Whimsical](https://whimsical.com/p4-component-tree-MNjVHRcoXXYwD4C88fFDC1)
 
-![Imgur](https://i.imgur.com/XWuxFyt.png)
+![Imgur](https://i.imgur.com/EZUuSCg.png)
 
 
 #### Component Hierarchy
@@ -103,7 +103,7 @@ src
       |__ Burger.jsx
       |__ MobileNav.jsx
 |__ screens/
-      |__ corkboard/
+      |__ Corkboard/
              |__Corkboard.jsx
              |__Corkboard.css
              |__Registration.jsx
@@ -116,22 +116,18 @@ src
              |__Createpost.css
              |__Userpost.jsx
              |__Userpost.css
-      |__ ourstory/
+      |__ OurStory/
              |__OurStory.jsx
-             |__OurStory.css
-      |__ home/
-             |__Home.jsx
-             |__Home.css
-      |__ RSVP/
-             |__RSVP.jsx
-             |__RSVP.css
-      |__ registry/
+      |__ Hero/
+             |__Hero.jsx
+      |__ Party/
+             |__Party.jsx
+             |__PartyData.js
+      |__ Registry/
              |__Registry.jsx
-             |__Registry.css
-      |__ photos/
+      |__ Photos/
              |__Photos.jsx
-             |__Photos.css
-      |__ travel/
+      |__ Travel/
              |__Travel.jsx
 |__ services/
       |__ apiConfig.js
@@ -178,16 +174,17 @@ src
 | Implemment authentication for the Cork board components on frontend |    L     |     3 hrs      |     3 hrs     |     TBD     |
 | Create the Navbar component w/ styling |    H     |     2hrs      |     2 hrs     |     TBD     |
 | Create the homepage screen w/ styling |    H     |     2hrs      |     20 min     |     TBD     |
-| Build out the RSVP component with the appropriate CRUD logic & association |    H     |     3 hrs      |     30 min     |     TBD     |
+| Build out the RSVP component with the appropriate CRUD logic & association (REMOVED)|    H     |     3 hrs      |     30 min     |     TBD     |
 | Build out the remaining components |    H     |     4 hrs      |     2 hrs     |     TBD     |
 | Style those components |    L     |     6 hrs      |     10 hrs     |     TBD     |
 | Create MVP media queries |    H     |     3 hrs      |     6 hrs     |     TBD     |
-| POST-MVP EventListener w/ mobile refactor |    H     |     3 hrs      |     8hrs     |     TBD     |
-| POST-MVP Refactor the application using Styled-Components to improve code legibility & maintainance|    H     |     3 hrs      |     TBD hrs     |     TBD     |
-| POST-MVP Add Animations to the styled components (i.e. Fade-ins, photo gallery, etc.)|    H     |     10 hrs      |     TBD hrs     |     TBD     |
+| POST-MVP EventListener w/ mobile refactor |    H     |     3 hrs      |     13hrs     |     TBD     |
+| POST-MVP Refactor the application using Styled-Components to improve code legibility & maintainance|    H     |     3 hrs      |     10 hrs     |     TBD     |
+| POST-MVP Add Animations to the styled components (i.e. Fade-ins, photo gallery, etc.)|    H     |     10 hrs      |     10 hrs     |     TBD     |
+| POST-MVP Add Admin privileges w/ proper associations to the rails back-end |    H     |     10 hrs      |     TBD     |     TBD     |
 | Deploy & Test |    H     |     3 hrs      |     1 hrs     |     TBD     |
 
-| TOTAL               |          |     51.5 hrs      |     54.33 hrs     |     TBD     |
+| TOTAL               |          |     51.5 hrs      |     79.33 hrs     |     TBD     |
 
 <!-- > _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._ -->
 
@@ -212,6 +209,7 @@ src
 - Refactor the application using Styled-Components to improve code legibility & maintainance
 - Use CSS framework to incorporate animations
 - Add a rotating photo gallery for "Our Story" component
+- Add Admin privileges w/ proper Associations to the Rails back-end
 <!-- - Implement Full CRUD to the RSVP component -->
 
 ***
@@ -226,6 +224,7 @@ Major issue with CORs on the deployed site resolved by doing the following:
  - added gems 'rails_12factor' and 'foreman' to my gemfile,
  - specified my rails application cors.rb’s origins to only coming from my deployed netlify & localhost:3001,
    making a Procfile with the heroku commands ````web: bundle exec rails s ```` & ````release: bundle exec bin/rake db:migrate````.
+
 
 ## Change Log:
 
@@ -272,6 +271,15 @@ Major issue with CORs on the deployed site resolved by doing the following:
 03/22/2021:
 
        - Updated the README & added new MVP goals for refactoring and better code management
+
+03/28/2021:
+
+       - Completely refactored 'nav.jsx' & rearranged the layout of 'MobileNav' with added opacity
+       - Updated the codebase for all the static components to reflect the structure of my projects since GA
+       - Added a new component: Party.jsx & PartyData.js to pass in the data for DRY coding practice
+       - Updated Figma & Whimsical
+       - Completely refactored all styling across every component
+       
 
 ## Special Thanks:
 
