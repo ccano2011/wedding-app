@@ -3,8 +3,8 @@ import image2 from "../../Assets/jordanandrewrsvp.jpg"
 import styled from 'styled-components';
 
 
-const RSVPWrapper = styled.div`
-#RSVP{
+const PartyWrapper = styled.div`
+#Party{
 transition: opacity 250ms ease-in, -webkit-transform 400ms ease-in;
     transition: opacity 250ms ease-in, transform 400ms ease-in;
     transition: opacity 250ms ease-in, transform 400ms ease-in,
@@ -12,12 +12,12 @@ transition: opacity 250ms ease-in, -webkit-transform 400ms ease-in;
     opacity: 0;
     height:100vh;
 }
-#RSVP.appear{
+#Party.appear{
     opacity: 1;
 }
 margin-bottom: 40px;
 `
-const RSVPTitle = styled.div`
+const PartyTitle = styled.div`
 font-family: 'Fancy';
 font-size:60px;
 padding-top:25vh;
@@ -42,7 +42,7 @@ margin-left:65%;
     width:auto;
 }
 
-.RSVPDescription{
+.PartyDescription{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     line-height: 1.6;
@@ -60,8 +60,8 @@ margin-left:65%;
 }
 
 `
-const RSVPContent = styled.div`
-#RSVPImg{
+const PartyContent = styled.div`
+#PartyImg{
     -o-object-fit: cover;
     object-fit: cover;
     width:100%;
@@ -103,7 +103,7 @@ a:hover{
     background-color: aliceblue; 
   }
 `
-function RSVP() {
+function Party() {
     const elemRef = useRef();
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -123,21 +123,21 @@ function RSVP() {
         }
     }, [elemRef]);
     return (
-        <RSVPWrapper ref={elemRef} id='RSVP'>
-            <RSVPTitle>
-                RSVP...
-            <div className='RSVPDescription'>
+        <PartyWrapper ref={elemRef} id='Party'>
+            <PartyTitle>
+                Party...
+            <div className='PartyDescription'>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                     <Button>
                         <a href="https://youtu.be/oHg5SJYRHA0" target="_blank" rel="noopener noreferrer" ><button className="ls-buttons">Visit Site</button></a>
                     </Button>
                 </div>
-            </RSVPTitle>
-            <RSVPContent>
-                <img id="RSVPImg" src={image2} alt="backdrop" />
-            </RSVPContent>
-        </RSVPWrapper>
+            </PartyTitle>
+            <PartyContent>
+                <img id="PartyImg" src={image2} alt="backdrop" />
+            </PartyContent>
+        </PartyWrapper>
     );
 }
 
-export default RSVP;
+export default Party;
