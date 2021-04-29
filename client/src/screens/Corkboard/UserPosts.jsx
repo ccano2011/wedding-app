@@ -43,6 +43,7 @@ function UserPosts(props) {
     return (
         <>
             <div className="map">
+                <Link to={`/corkboard`}><button className='edit-btn' id="back">Head Back</button></Link>
                 {
                     userPosts.map(post => (
                         <div key={post.id} className="mappedContent">
@@ -56,7 +57,6 @@ function UserPosts(props) {
                     )).reverse()
                 }
             </div >
-            <Link to={`/`}><button className='edit-btn'>Head Back</button></Link>
         </>
     )
 }

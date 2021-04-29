@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Pinyon+Script&family=Rouge+Script&family=Tangerine:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
 
+#back{
+  display: flex;
+  justify-content: center;
+}
+
 .delete-button {
     font-family: 'Dosis', sans-serif;
     border: 1px solid black;
@@ -38,6 +43,7 @@
 }
 
 .map {
+    /* padding-top: 15vh; */
     display: flex;
     flex-direction: row;
     overflow: auto;

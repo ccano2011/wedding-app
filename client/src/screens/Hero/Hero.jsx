@@ -153,13 +153,13 @@ function Hero() {
             <div className='Hero
         Text' ref={rellaxRef}>
                 <HeroTitle>
-                    William & Clarissa
+                    Happily Ever After
                 </HeroTitle>
                 <MobileHeroTitle>
-                    William<br />&<br /> Clarissa
+                    Happily<br />Ever<br /> After
                 </MobileHeroTitle>
                 <HeroSubtitle>
-                    ARE GETTING MARRIED
+                    A FULL STACK WEDDING APP
                 </HeroSubtitle>
             </div>
         </HeroStyle >

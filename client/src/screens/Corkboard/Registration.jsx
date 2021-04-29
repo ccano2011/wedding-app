@@ -10,7 +10,7 @@ function Registration(props) {
         password: ""
     })
     if (props.currentUser) {
-        return <Redirect to={`/`} />
+        return <Redirect to={`/corkboard`} />
     }
 
     const handleChange = (e) => {
@@ -58,7 +58,7 @@ function Registration(props) {
                             e.preventDefault();
                             props.handleRegister(formData);
                         }}>Submit</button>
-                        <Link to="/"><button className='cancel-btn'>Cancel</button></Link>
+                        <Link to="/corkboard"><button className='cancel-btn'>Cancel</button></Link>
                     </div>
                     <div>
                         <h5 className='registration-text'>Already registered? Click <Link to="/login">HERE</Link> to login </h5>

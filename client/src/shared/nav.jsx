@@ -3,6 +3,8 @@ import { Link as LinkScroll } from 'react-router-dom' //This is an alias to work
 import styled from 'styled-components';
 // import { FaBars } from 'react-icons/fa'
 import Burger from './Burger'
+// import { useLocation } from 'react-router-dom';
+
 
 const NavComponent = styled.nav`
     background: ${({ scrollNav }) => (scrollNav ? '#ffffff' : 'transparent')};
@@ -120,27 +122,26 @@ function Layout({ children, toggle }) {
                         setOpen={setOpen}
                         isBurgerClick={isBurgerClick} />
                     <NavMenu>
-
                         <NavItem>
-                            <NavLinks to='/ourstory' spy={true}>Our Story</NavLinks>
+                            <NavLinks to='/ourstory' >Our Story</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to='/travel' spy={true}>Travel</NavLinks>
+                            <NavLinks to='/travel' >Travel</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to='/party' spy={true}>Meet the Party</NavLinks>
+                            <NavLinks to='/party' >Meet the Party</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to='/' spy={true}><p id="home">W & C</p></NavLinks>
+                            <NavLinks to='/' ><p id="home">W & C</p></NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to='/photos' spy={true}>Pictures</NavLinks>
+                            <NavLinks to='/photos' >Pictures</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to='/registry' spy={true}>Registry</NavLinks>
+                            <NavLinks to='/registry' >Registry</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to='/corkboard' spy={true}>Corkboard</NavLinks>
+                            <NavLinks to='/corkboard' >Corkboard</NavLinks>
                         </NavItem>
 
                     </NavMenu>

@@ -1,7 +1,6 @@
 import React, { useRef, useEffect } from 'react';
-import image2 from "../../Assets/jordanandrewrsvp.jpg"
+import image2 from "../../Assets/party.jpg"
 import styled from 'styled-components';
-
 
 const PartyWrapper = styled.div`
 #Party{
@@ -15,7 +14,6 @@ transition: opacity 250ms ease-in, -webkit-transform 400ms ease-in;
 #Party.appear{
     opacity: 1;
 }
-margin-bottom: 40px;
 `
 const PartyTitle = styled.div`
 font-family: 'Fancy';

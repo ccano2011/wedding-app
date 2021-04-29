@@ -12,6 +12,14 @@ const CorkboardStyling = styled.div`
 background-color: #d0c5b3;
 max-width: 1672px;
 margin: auto;
+height: fit-content;
+padding-top:5vh;
+@media screen and (max-height: 868px){
+    padding-top:10vh;
+}
+@media screen and (max-width: 768px){
+    padding-top :1vh;
+}
 .map {
     display: flex;
     overflow: auto;
