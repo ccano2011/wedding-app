@@ -3,11 +3,12 @@ import image from "../../Assets/jordanandrewourstory.jpg"
 import styled from 'styled-components';
 
 const OurStoryWrapper = styled.div`
-max-height: auto;
+/* max-height: auto; */
 display:flex;
 flex-direction: row-reverse;
 justify-content: space-around;
 max-width:1672px;
+height:100vh;
 margin:auto;
 @media (max-aspect-ratio: 0.79/1){
     flex-direction: column;
@@ -21,7 +22,7 @@ height: auto;
 const OurStoryTitle = styled.div`
 font-family: 'Fancy';
 font-size:60px;
-padding-top:15vh;
+padding-top:30vh;
 margin-left: 3vw;
 @media screen and (max-width: 768px){
     padding-top:0vh;
@@ -48,7 +49,7 @@ margin-left: 3vw;
     font-size:15px;
 }}
 .title{
-    padding-left:3vw;
+    /* padding-left:3vw; */
     @media screen and (max-width: 768px){
         text-align:center;
         margin:auto;
@@ -58,9 +59,9 @@ margin-left: 3vw;
 `
 const OurStoryContent = styled.div`
 #ourStoryImg{
-    margin-top: 10vh;
     margin-bottom: 10vh;
     height: 70vh;
+    margin-top:25vh;
     max-height: 698px;
     transition: opacity 550ms ease-in, -webkit-transform 400ms ease-in;
     transition: opacity 550ms ease-in, transform 400ms ease-in;

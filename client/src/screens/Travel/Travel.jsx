@@ -3,7 +3,7 @@ import image from '../../Assets/travelpic.jpg'
 import styled from 'styled-components';
 
 const TravelWrapper = styled.div`
-max-height: auto;
+height: 100vh;
 display:flex;
 flex-direction: row;
 justify-content: space-around;

@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import backgroundImg from '../../Assets/placeholder-home.jpeg';
 import Rellax from "rellax";
 
-
 const HeroStyle = styled.div`
 display:flex;
 justify-content:center;
@@ -36,15 +35,15 @@ transform-style: preserve-3d;
 }    
 }
 @media screen and (max-width: 768px){
-height: 102vh;
+height: 100vh;
 }
-@media only screen 
+/* @media only screen 
   and (min-device-width: 375px) 
   and (max-device-width: 900px) 
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: landscape) { 
   height: 140vh;
-  }
+  } */
 `
 const HeroBackground = styled.div`
     :before{
@@ -66,7 +65,9 @@ const ImgBg = styled.img`
         left:0;
 `
 const HeroTitle = styled.h1`
-font-family: 'Fancy';
+/* font-family: 'Fancy'; */
+/* font-family: 'Pinyon Script', cursive; */
+font-family: 'Rouge Script', cursive;
 font-weight:100;
 color: white;
 text-shadow: 2px 2px 3px #807777;
@@ -92,7 +93,8 @@ display:none;
     display:flex;
     text-align:center;
     justify-content:center;
-    font-family: 'Fancy';
+    /* font-family: 'Fancy'; */
+    font-family: 'Rouge Script', cursive;
     font-weight:100;
     color: white;
     text-shadow: 2px 2px 3px #807777;
@@ -122,7 +124,6 @@ color: white;
 text-shadow: 2px 2px 3px #807777;
 position: relative;
 background:none;
-margin-top:-40px;
 z-index: 3px;
 @media screen and (max-width:768px) {
     margin-top:0px;
@@ -152,10 +153,10 @@ function Hero() {
             <div className='Hero
         Text' ref={rellaxRef}>
                 <HeroTitle>
-                    Jordan & Andrew
+                    William & Clarissa
                 </HeroTitle>
                 <MobileHeroTitle>
-                    Jordan<br />&<br /> Andrew
+                    William<br />&<br /> Clarissa
                 </MobileHeroTitle>
                 <HeroSubtitle>
                     ARE GETTING MARRIED
