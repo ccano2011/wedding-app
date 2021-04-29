@@ -73,7 +73,7 @@ color: white;
 text-shadow: 2px 2px 3px #807777;
 position: relative;
 background:none;
-margin-top:5vh;
+/* margin-top:5vh; */
 font-size:120px;
 transform: translateZ(0);
 @media screen and (max-width:820px) {

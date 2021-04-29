@@ -10,23 +10,27 @@ justify-content: space-around;
 max-width:1672px;
 margin:auto;
 background-color: #d0c5b3;
-margin-bottom:40px;
+/* margin-bottom:40px; */
 @media screen and (max-width: 844px){
 flex-direction: column;
-height: auto;
+width:100vw;
+
 }
 `
 
 const TravelInfo = styled.div`
 font-family: 'Fancy';
-padding-top:15vh;
+padding-top:30vh;
 font-size:60px;
 background-color: #d0c5b3;
 @media screen and (max-width: 844px){
     padding-top:0vh;
+    font-size:40px;
+width:100vw;
+
 }
-@media screen and (max-height: 594px){
-    padding-top: 1vh;
+@media screen and (max-height: 656px){
+    font-size:40px;
 }
 .travelDetails{
     font-family: Arial, Helvetica, sans-serif;
@@ -38,32 +42,36 @@ background-color: #d0c5b3;
     padding-left:1vw;
     padding-right:3vw;
     background-color: #d0c5b3;
-    @media screen and (max-width:768px) {
+    @media screen and (max-width:844px) {
     font-size:15px;
+    padding-bottom: 0vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
     }
-    @media screen and (max-height: 594px){
-    padding-top: 1vh;
+    @media screen and (max-height: 656px){
     font-size:15px;
 }
 }
 .travelTitle{
 background-color: #d0c5b3;
 @media screen and (max-width: 844px){
-    margin-top: -70px;
+    margin-top: -170px;
     text-align: center;
 }
-@media screen and (max-height: 594px){
-    padding-top: 15vh;
+@media screen and (max-height: 656px){
     font-size:40px;
 }
 }
 `
 const TravelPicture = styled.div`
 background-color: #d0c5b3;
+@media screen and (max-width: 844px){
+width:100vw;
+}
 #travelImg{
-    height: 55vh;
+    height: 70vh;
     margin: auto;
-    margin-top:10vh;
+    margin-top:20vh;
     margin-bottom: 10vh;
     max-height: 761px;
     transition: opacity 550ms ease-in, -webkit-transform 400ms ease-in;
@@ -72,9 +80,10 @@ background-color: #d0c5b3;
     opacity: 0;
     @media screen and (max-width: 844px){
     top:0;
+    height: 48vh;
     margin-top: 5vh;
-    height: auto;
-    max-width: 100vw;
+    margin-bottom: 0vh;
+    width: auto;
     display: flex;
     margin-left: auto;
     margin-right: auto;

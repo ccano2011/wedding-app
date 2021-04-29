@@ -29,7 +29,6 @@ margin-left: 3vw;
     font-size:40px;
 }
 @media screen and (max-height: 594px){
-    padding-top: 10vh;
     font-size:40px;
 }
 
@@ -45,7 +44,7 @@ margin-left: 3vw;
     font-size:16px;
     }
     @media screen and (max-height: 594px){
-    padding-top: 10vh;
+    /* padding-top: 10vh; */
     font-size:15px;
 }}
 .title{
@@ -61,7 +60,7 @@ const OurStoryContent = styled.div`
 #ourStoryImg{
     margin-bottom: 10vh;
     height: 70vh;
-    margin-top:25vh;
+    margin-top:20vh;
     max-height: 698px;
     transition: opacity 550ms ease-in, -webkit-transform 400ms ease-in;
     transition: opacity 550ms ease-in, transform 400ms ease-in;

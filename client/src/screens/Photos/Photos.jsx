@@ -10,6 +10,14 @@ import styled from 'styled-components'
 
 const PhotoGalleryStyling = styled.div`
 /* https://medium.com/better-programming/how-to-use-css-grid-and-flexbox-to-create-an-image-gallery-924f7896d142 */
+height:100vh;
+padding-top:5vh;
+@media screen and (max-height: 868px){
+    padding-top:10vh;
+}
+@media screen and (max-width: 768px){
+    padding-top :1vh;
+}
 .body {
     display: grid;
     grid-template-rows: min-content auto min-content;
@@ -22,7 +30,6 @@ const PhotoGalleryStyling = styled.div`
     padding: 10px;
     flex: 1 auto;
     border: 2px solid wheat;
-    /* border: 1px black solid */
  }
   
  .div-container{
@@ -31,8 +38,6 @@ const PhotoGalleryStyling = styled.div`
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
-    padding: 10px;
-    padding-bottom: 10vh;
  }
 
  .photo-container{
@@ -44,15 +49,16 @@ const PhotoGalleryStyling = styled.div`
     font-family: 'Fancy';
     font-size:60px;
     line-height: 1.5;
-    margin-top: -10px;
+ @media screen and (max-width:1073px) {
+    font-size:40px;
+ }
  }
 
  @media screen and (max-width:768px) {
    .div-container{
     display: inline-flex;
     flex-direction: column-reverse;
-    height:100vh;
-    margin-top: -40px;
+    height:80vh;
    }
    .fit {
       height: auto;
@@ -71,7 +77,7 @@ const PhotoGalleryStyling = styled.div`
       align-items: center;
       justify-content: center;
       padding: 10px;
-      height: 100vh;
+      height: 80vh;
    }
    .fit {
       height: auto;
