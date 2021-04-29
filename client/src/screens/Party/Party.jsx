@@ -56,7 +56,6 @@ margin-left:65%;
     font-size: 15px;
 }
 }
-
 `
 const PartyContent = styled.div`
 #PartyImg{
@@ -76,8 +75,6 @@ const PartyContent = styled.div`
     height: 130vh;
 }
 }
-
-
 `
 const Button = styled.div`
     display: flex;

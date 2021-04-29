@@ -74,10 +74,12 @@ text-decoration: none;
 height:100%;
 cursor: pointer;
 color: inherit;
+/* transition: transform 330ms ease-in-out; */
 &:hover{
+transition: transform 150ms ease-in-out;
     transform: scale(1.1);
     /* background-color:hotpink; */
-    font-weight:700;
+    /* font-weight:700; */
 }
 #home{
     font-size: 60px;
