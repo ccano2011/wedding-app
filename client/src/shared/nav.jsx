@@ -3,12 +3,13 @@ import { Link as LinkScroll } from 'react-router-dom' //This is an alias to work
 import styled from 'styled-components';
 // import { FaBars } from 'react-icons/fa'
 import Burger from './Burger'
-// import { useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 
 const NavComponent = styled.nav`
-    background: ${({ scrollNav }) => (scrollNav ? '#ffffff' : 'transparent')};
-    box-shadow: ${({ scrollNav }) => (scrollNav ? '0 2px 4px 0 rgb(0 0 0 / 7%)' : 'none')};
+    /* background: ${({ scrollNav }) => (scrollNav ? '#ffff' : 'transparent')}; */
+    /* background: #ffff; */
+    /* box-shadow: ${({ scrollNav }) => (scrollNav ? '0 2px 4px 0 rgb(0 0 0 / 7%)' : 'none')}; */
     padding-bottom:0px;
     position:fixed;
     top: 0;
@@ -24,12 +25,16 @@ const NavComponent = styled.nav`
 
 `;
 const NavbarContainer = styled.div`
+    background: ${(props) => props.pathname.match(/^\/party/) ? '#000' : 'transparent'};
+    height:90px;
     display: flex;
+    color: ${(props) => props.pathname.match(/^\/party/) ? '#ffff' : '#000'};
     margin: auto;
     justify-content: space-around;
     z-index:1;
     padding-top: 0px;
     margin-left: -1vw;
+    /* transition:0.4s all ease; */
 `;
 // const MobileIcon = styled.div`
 // display:none;
@@ -95,11 +100,12 @@ function Layout({ children, toggle }) {
     const [scrollNav, setScrollNav] = useState(false)
     const [open, setOpen] = useState(false);
     const [isBurgerClick] = useState(false);
+    const { pathname } = useLocation()
 
     const handleClick = () => {
         setOpen(!open)
     }
-
+    console.log(pathname)
     const handleBodyClickClose = () => {
         open && setOpen(false)
     }
@@ -116,7 +122,7 @@ function Layout({ children, toggle }) {
     return (
         <>
             <NavComponent className="layout" scrollNav={scrollNav} onClick={toggle}>
-                <NavbarContainer >
+                <NavbarContainer pathname={pathname}>
                     {/* <MobileIcon>
                         <FaBars />
                     </MobileIcon> */}

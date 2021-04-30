@@ -25,7 +25,7 @@ function App() {
   const toggle = () => {
     setIsOpen(!isOpen)
   }
-  isOpen ? console.log('its open') : console.log('its closed');
+  // isOpen ? console.log('its open') : console.log('its closed');
   useEffect(() => {
     const handleVerify = async () => {
       const userData = await verifyUser();
