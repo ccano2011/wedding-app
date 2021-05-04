@@ -11,12 +11,13 @@ import styled from 'styled-components'
 const PhotoGalleryStyling = styled.div`
 /* https://medium.com/better-programming/how-to-use-css-grid-and-flexbox-to-create-an-image-gallery-924f7896d142 */
 height:100vh;
-padding-top:5vh;
-@media screen and (max-height: 868px){
-    padding-top:10vh;
-}
+margin-top:90px;
+/* @media screen and (max-height: 868px){
+    padding-top:90px;
+} */
 @media screen and (max-width: 768px){
     padding-top :1vh;
+    height: fit-content;
 }
 .body {
     display: grid;
@@ -49,9 +50,13 @@ padding-top:5vh;
     font-family: 'Fancy';
     font-size:60px;
     line-height: 1.5;
- @media screen and (max-width:1073px) {
-    font-size:40px;
- }
+    display:none;
+ @media screen and (max-width: 768px){
+    display: block;
+    padding-top: 0vh;
+    font-size: 40px;
+
+}
  }
 
  @media screen and (max-width:768px) {

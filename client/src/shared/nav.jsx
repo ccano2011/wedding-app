@@ -3,10 +3,13 @@ import { Link as LinkScroll } from 'react-router-dom' //This is an alias to work
 import styled from 'styled-components';
 // import { FaBars } from 'react-icons/fa'
 import Burger from './Burger'
+import { useLocation } from 'react-router-dom';
+
 
 const NavComponent = styled.nav`
-    background: ${({ scrollNav }) => (scrollNav ? '#ffffff' : 'transparent')};
-    box-shadow: ${({ scrollNav }) => (scrollNav ? '0 2px 4px 0 rgb(0 0 0 / 7%)' : 'none')};
+    /* background: ${({ scrollNav }) => (scrollNav ? '#ffff' : 'transparent')}; */
+    /* background: #ffff; */
+    /* box-shadow: ${({ scrollNav }) => (scrollNav ? '0 2px 4px 0 rgb(0 0 0 / 7%)' : 'none')}; */
     padding-bottom:0px;
     position:fixed;
     top: 0;
@@ -22,12 +25,16 @@ const NavComponent = styled.nav`
 
 `;
 const NavbarContainer = styled.div`
+    background: ${(props) => props.pathname.match(/^\/party/) ? '#000' : 'transparent'};
+    height:90px;
     display: flex;
+    color: ${(props) => props.pathname.match(/^\/party/) ? '#ffff' : '#000'};
     margin: auto;
     justify-content: space-around;
     z-index:1;
     padding-top: 0px;
     margin-left: -1vw;
+    /* transition:0.4s all ease; */
 `;
 // const MobileIcon = styled.div`
 // display:none;
@@ -72,10 +79,12 @@ text-decoration: none;
 height:100%;
 cursor: pointer;
 color: inherit;
+/* transition: transform 330ms ease-in-out; */
 &:hover{
+transition: transform 150ms ease-in-out;
     transform: scale(1.1);
     /* background-color:hotpink; */
-    font-weight:700;
+    /* font-weight:700; */
 }
 #home{
     font-size: 60px;
@@ -91,11 +100,12 @@ function Layout({ children, toggle }) {
     const [scrollNav, setScrollNav] = useState(false)
     const [open, setOpen] = useState(false);
     const [isBurgerClick] = useState(false);
+    const { pathname } = useLocation()
 
     const handleClick = () => {
         setOpen(!open)
     }
-
+    console.log(pathname)
     const handleBodyClickClose = () => {
         open && setOpen(false)
     }
@@ -112,7 +122,7 @@ function Layout({ children, toggle }) {
     return (
         <>
             <NavComponent className="layout" scrollNav={scrollNav} onClick={toggle}>
-                <NavbarContainer >
+                <NavbarContainer pathname={pathname}>
                     {/* <MobileIcon>
                         <FaBars />
                     </MobileIcon> */}
@@ -120,27 +130,26 @@ function Layout({ children, toggle }) {
                         setOpen={setOpen}
                         isBurgerClick={isBurgerClick} />
                     <NavMenu>
-
                         <NavItem>
-                            <NavLinks to='/ourstory' spy={true}>Our Story</NavLinks>
+                            <NavLinks to='/ourstory' >Our Story</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to='/travel' spy={true}>Travel</NavLinks>
+                            <NavLinks to='/travel' >Travel</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to='/party' spy={true}>Meet the Party</NavLinks>
+                            <NavLinks to='/party' >Meet the Party</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to='/' spy={true}><p id="home">W & C</p></NavLinks>
+                            <NavLinks to='/' ><p id="home">W & C</p></NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to='/photos' spy={true}>Pictures</NavLinks>
+                            <NavLinks to='/photos' >Pictures</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to='/registry' spy={true}>Registry</NavLinks>
+                            <NavLinks to='/registry' >Registry</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to='/corkboard' spy={true}>Corkboard</NavLinks>
+                            <NavLinks to='/corkboard' >Corkboard</NavLinks>
                         </NavItem>
 
                     </NavMenu>
