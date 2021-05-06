@@ -71,16 +71,18 @@ font-family: 'Rouge Script', cursive;
 font-weight:100;
 color: white;
 text-shadow: 2px 2px 3px #807777;
-position: relative;
+/* position: relative; */
 background:none;
-/* margin-top:5vh; */
-font-size:120px;
+/* margin-top:-100px; */
+font-size:70px;
 transform: translateZ(0);
-@media screen and (max-width:820px) {
+/* @media screen and (max-width:820px) {
     font-size:100px;
-}
-@media screen and (max-width:768px) {
+} */
+@media screen and (max-width:475px) {
     display:none;
+font-size:60px;
+
 }
 @media screen and (max-height: 594px){
     padding-top: 7vh;
@@ -89,7 +91,7 @@ transform: translateZ(0);
 `
 const MobileHeroTitle = styled.h1`
 display:none;
-@media screen and (max-width:768px) {
+@media screen and (max-width:475px) {
     display:flex;
     text-align:center;
     justify-content:center;
@@ -100,9 +102,9 @@ display:none;
     text-shadow: 2px 2px 3px #807777;
     position: relative;
     background:none;
-    margin-top:0;
+    margin-top:-80px;
     font-size:80px;
-    line-height:1.4;
+    line-height:0.9;
     transform: translateZ(0);
     @media only screen 
   and (min-device-width: 375px) 
@@ -115,10 +117,11 @@ display:none;
 }  }
 `
 const HeroSubtitle = styled.p`
-font-family: 'Josefin Sans', sans-serif;
-font-weight: 800;
+/* font-family: 'Josefin Sans', sans-serif; */
+font-family: 'Rouge Script', cursive;
+font-weight: 100;
 text-align: center;
-font-size:26px;
+font-size:36px;
 letter-spacing: 2px;
 color: white;
 text-shadow: 2px 2px 3px #807777;
@@ -159,7 +162,9 @@ function Hero() {
                     William<br />&<br /> Clarissa
                 </MobileHeroTitle>
                 <HeroSubtitle>
-                    ARE GETTING MARRIED
+                    We're getting married! <br /> <br />
+                    When: 03/10/2022 at 00:00 <br /> <br />
+                    Where: 1234 Wedding Ave.
                 </HeroSubtitle>
             </div>
         </HeroStyle >

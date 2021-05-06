@@ -10,7 +10,7 @@ import styled from 'styled-components'
 
 const PhotoGalleryStyling = styled.div`
 /* https://medium.com/better-programming/how-to-use-css-grid-and-flexbox-to-create-an-image-gallery-924f7896d142 */
-height:100vh;
+height:fit-content;
 margin-top:90px;
 /* @media screen and (max-height: 868px){
     padding-top:90px;
@@ -47,7 +47,8 @@ margin-top:90px;
 
  .photoTitle{
     padding-top: 8vh;
-    font-family: 'Fancy';
+    /* font-family: 'Fancy'; */
+    font-family: 'Rouge Script', cursive;
     font-size:60px;
     line-height: 1.5;
     display:none;

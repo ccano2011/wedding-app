@@ -25,16 +25,20 @@ const NavComponent = styled.nav`
 
 `;
 const NavbarContainer = styled.div`
-    background: ${(props) => props.pathname.match(/^\/party/) ? '#000' : 'transparent'};
+    /* background: ${(props) => props.pathname.match(/^\/party/) ? '#000' : 'transparent'}; */
+    background-image: ${(props) => props.pathname.match(/^\/home/) ? 'linear-gradient(to bottom, rgba(0,0,0,0.7), transparent);' : 'transparent'};
     height:90px;
     display: flex;
-    color: ${(props) => props.pathname.match(/^\/party/) ? '#ffff' : '#000'};
+    color: ${(props) => props.pathname.match(/^\/home/) ? '#ffff' : '#000'};
     margin: auto;
     justify-content: space-around;
     z-index:1;
     padding-top: 0px;
     margin-left: -1vw;
-    /* transition:0.4s all ease; */
+    transition:0.4s all ease;
+    @media screen and (max-width:768px){
+        background-image:none;
+    }
 `;
 // const MobileIcon = styled.div`
 // display:none;

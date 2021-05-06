@@ -12,6 +12,15 @@ const CorkboardStyling = styled.div`
 background-color: #d0c5b3;
 max-width: 1672px;
 margin: auto;
+min-height:100vh;
+max-height: fit-content;
+padding-top:5vh;
+@media screen and (max-height: 868px){
+    padding-top:10vh;
+}
+@media screen and (max-width: 768px){
+    padding-top :1vh;
+}
 .map {
     display: flex;
     overflow: auto;
@@ -50,9 +59,16 @@ margin: auto;
   .currentUserGreeting {
     font-family: 'Fancy';
     font-size: 40px;
-    padding-top:3vh;
+    padding-top:5vh;
     margin-bottom: 25px;
     text-align: center;
+    @media screen and (max-height: 568px){
+    font-size: 30px;
+    padding-top:10vh;
+}
+@media screen and (max-height: 386px){
+    padding-top:15vh;
+}
     /* margin-left: 100px; */
   }
 

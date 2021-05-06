@@ -9,7 +9,7 @@ flex-direction: row;
 justify-content: space-around;
 max-width:1672px;
 margin:auto;
-background-color: #d0c5b3;
+background-color: #d9c8b9;
 /* margin-bottom:40px; */
 @media screen and (max-width: 844px){
 flex-direction: column;
@@ -19,10 +19,13 @@ width:100vw;
 `
 
 const TravelInfo = styled.div`
-font-family: 'Fancy';
-padding-top:30vh;
+/* font-family: 'Fancy'; */
+/* font-family: 'Rouge Script', cursive; */
+font-family: 'Pinyon Script', cursive;
 font-size:60px;
-background-color: #d0c5b3;
+padding-top:30vh;
+/* margin-left: 3vw; */
+background-color: #d9c8b9;
 @media screen and (max-width: 844px){
     padding-top:0vh;
     font-size:40px;
@@ -41,7 +44,7 @@ width:100vw;
     padding-bottom: 5vh;
     padding-left:1vw;
     padding-right:3vw;
-    background-color: #d0c5b3;
+    background-color: #d9c8b9;
     @media screen and (max-width:844px) {
     font-size:15px;
     padding-bottom: 0vh;
@@ -53,9 +56,11 @@ width:100vw;
 }
 }
 .travelTitle{
-background-color: #d0c5b3;
+background-color: #d9c8b9;
+padding-bottom: 30px;
+margin-left: 10px;
 @media screen and (max-width: 844px){
-    margin-top: -170px;
+    margin-top: -150px;
     text-align: center;
 }
 @media screen and (max-height: 656px){
@@ -64,7 +69,7 @@ background-color: #d0c5b3;
 }
 `
 const TravelPicture = styled.div`
-background-color: #d0c5b3;
+background-color: #d9c8b9;
 @media screen and (max-width: 844px){
 width:100vw;
 }
@@ -81,7 +86,7 @@ width:100vw;
     @media screen and (max-width: 844px){
     top:0;
     height: 48vh;
-    margin-top: 5vh;
+    margin-top: 0vh;
     margin-bottom: 0vh;
     width: auto;
     display: flex;
