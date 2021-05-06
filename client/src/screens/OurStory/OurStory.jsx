@@ -1,15 +1,26 @@
 import React, { useRef, useEffect } from 'react';
-import image from "../../Assets/jordanandrewourstory.jpg"
+import pic1 from "../../Assets/slidepic1.PNG"
+import pic2 from "../../Assets/slidepic2.jpg"
+import pic3 from "../../Assets/slidepic4.JPG"
+import pic4 from "../../Assets/slidepic5.JPG"
 import styled from 'styled-components';
 
 const OurStoryWrapper = styled.div`
 /* max-height: auto; */
+/* background-color:rgba(255,250,240, 0.9);
 display:flex;
 flex-direction: row-reverse;
 justify-content: space-around;
 max-width:1672px;
 height:100vh;
-margin:auto;
+margin:auto; */
+background-color: rgba(255,250,240,0.9);
+    display: flex;
+    /* flex-direction: row-reverse; */
+    /* -webkit-justify-content: space-around; */
+    /* justify-content: space-around; */
+    /* max-width: 1672px; */
+    height: 100vh;
 @media (max-aspect-ratio: 0.79/1){
     flex-direction: column;
     height: auto;
@@ -20,10 +31,7 @@ height: auto;
 }
 `
 const OurStoryTitle = styled.div`
-/* font-family: 'Fancy'; */
-/* font-family: 'Rouge Script', cursive; */
 font-family: 'Pinyon Script', cursive;
-
 font-size:60px;
 padding-top:30vh;
 margin-left: 3vw;
@@ -42,7 +50,6 @@ margin-left: 3vw;
     margin: auto;
     line-height: 1.6;
     padding-bottom: 5vh;
-    padding-right:3vw;
     @media screen and (max-width: 828px){
     font-size:16px;
     }
@@ -61,11 +68,12 @@ margin-left: 3vw;
 }}
 `
 const OurStoryContent = styled.div`
-#ourStoryImg{
+.photos{
     margin-bottom: 10vh;
     height: 70vh;
-    margin-top:20vh;
+    margin-top: 40vh;
     max-height: 698px;
+    /* margin-left: -108px; */
     transition: opacity 550ms ease-in, -webkit-transform 400ms ease-in;
     transition: opacity 550ms ease-in, transform 400ms ease-in;
     transition: opacity 550ms ease-in, transform 400ms ease-in;
@@ -82,9 +90,46 @@ const OurStoryContent = styled.div`
     margin-right: auto;
     opacity: 0;
 }}
-#ourStoryImg.appear{
+#stage {
+    margin-left: 9.5%;
+    margin-top: -180px;
+    width: 300px;
+    height:400px;
+  }
+  #stage img {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5%;
+    background: whitesmoke;
+    animation-name: fade; 
+    animation-duration: 40s; 
+    animation-iteration-count: infinite; 
+    position:absolute;
+    opacity:0; 
+  }
+#stage img:nth-of-type(1) {
+    animation-delay: 0s;
+  }
+  #stage img:nth-of-type(2) {
+    animation-delay: 10s;
+  }
+  #stage img:nth-of-type(3) {
+    animation-delay: 20s;
+  }
+  #stage img:nth-of-type(4) {
+    animation-delay: 30s;
+  }
+  @keyframes fade {
+    0%   { opacity: 0; }
+    11.11%   { opacity: 1; }
+    33.33%  { opacity: 1; }
+    44.44%  { opacity: 0; }
+    100% { opacity: 0; }
+  }
+.photos.appear{
     opacity: 1;
 }
+
 `
 function OurStory() {
     const elemRef = useRef();
@@ -107,8 +152,14 @@ function OurStory() {
     }, [elemRef]);
     return (
         <OurStoryWrapper id='our-story'>
-            <OurStoryContent>
-                <img id="ourStoryImg" src={image} alt="Bride & Groom" ref={elemRef} />
+            <OurStoryContent ref={elemRef} >
+                <div id="stage">
+                    {/* <img id="photos" src={image} alt="Bride & Groom" ref={elemRef} /> */}
+                    <img className="photos" src={pic1} alt='' />
+                    <img className="photos" src={pic2} alt='' />
+                    <img className="photos" src={pic3} alt='' />
+                    <img className="photos" src={pic4} alt='' />
+                </div>
             </OurStoryContent>
             <OurStoryTitle>
                 <p className='title'>Our Story...</p>

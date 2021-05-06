@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
-import backgroundImg from '../../Assets/placeholder-home.jpeg';
+import backgroundImg from '../../Assets/home.jpeg';
 import Rellax from "rellax";
 
 const HeroStyle = styled.div`
