@@ -12,11 +12,6 @@ const OurStoryWrapper = styled.div`
     flex-direction: row-reverse;
     justify-content: flex-end;
     background-color: rgba(255,250,240,0.9);
-
-/* @media screen and (max-width: 768px){
-    flex-direction: column;
-    height: auto;
-} */
 `
 const OurStoryTitle = styled.div`
     padding-left: 5vw;
@@ -29,21 +24,23 @@ const OurStoryTitle = styled.div`
         padding-right: 35vw;
     }
     @media screen and (min-width: 1650px){
-    /* margin-right:12vw; */
-    padding-left: 8vw;
+        padding-left: 8vw;
 
     }
     @media screen and (min-width: 1800px){
-    /* margin-right:14vw; */
-    padding-left: 10vw;
+        padding-left: 10vw;
 
     }
-    /* @media screen and (max-width: 998px){
-        padding-right: 40vw;
-        font-size:40px;
-    } */
-@media screen and (max-width: 808px){
-    padding-top:0vh;
+    @media screen and (max-width: 814px){
+        text-align: center;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        padding-top: 660px;
+        padding-top: 660px;
+    }
+@media screen and (max-width: 767px){
+    padding-top: 520px;
+    background-color: rgba(255,250,240,0.9);
 }
 .ourStoryTitle{
     font-family: Arial, Helvetica, sans-serif;
@@ -55,14 +52,22 @@ const OurStoryTitle = styled.div`
     @media screen and (max-width: 998px){
     font-size:16px;
     padding-right: 14vw;
-    /* max-width: 520px; */
     }
     @media screen and (max-height: 760px){
     font-size:15px;
-}   }
+}   
+@media screen and (max-width: 814px){
+        padding-right:0;
+        padding-left:0;
+        text-align: start;
+    }
+}
+
 .title{
     padding-bottom: 30px;
-}
+@media screen and (max-width: 313px){
+font-size:40px;
+}}
 `
 
 const OurStoryContent = styled.div`
@@ -76,18 +81,16 @@ const OurStoryContent = styled.div`
     margin-right: 2vw; 
     padding: 10px;
     border: 2px solid #000;
-    @media screen and (max-width: 986px){
-    font-size:16px;
-    }
 }
 #stage {
-    /* padding-left: 7.5%; */
-    /* margin-left:-7vw; */
-  }
+    @media screen and (max-width: 814px){
+    position: relative;
+    }
+}
+  
   #stage img {
     padding: 5px;
     border: 1px solid #ccc;
-    background: whitesmoke;
     animation-name: fade; 
     animation-duration: 40s; 
     animation-iteration-count: infinite; 
@@ -106,6 +109,20 @@ const OurStoryContent = styled.div`
     }
     @media screen and (min-width: 1800px){
     margin-right:14vw;
+    }
+    @media screen and (max-width: 814px){
+        display: flex;
+        position: absolute;
+        left: 50%;
+        margin-left: -179.422px;
+        top: 50%;
+        margin-top:90px;
+    }
+    @media screen and (max-width: 767px){
+    top: 50%;
+    height: 392px;
+    left: 50%;
+    margin-left:-131.7265px;;
     }
   }
 #stage img:nth-of-type(1) {
