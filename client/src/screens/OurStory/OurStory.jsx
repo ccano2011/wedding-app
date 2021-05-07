@@ -21,20 +21,29 @@ const OurStoryWrapper = styled.div`
 const OurStoryTitle = styled.div`
     padding-left: 5vw;
     width: 100%;
-    padding-right: 45vw;
+    padding-right: 40vw;
     font-family: 'Pinyon Script', cursive;
     font-size:60px;
     padding-top:30vh;
     @media screen and (min-width: 1400px){
         padding-right: 35vw;
     }
-    @media screen and (min-width: 1500px){
-        padding-left:10vw
-    }
+    @media screen and (min-width: 1650px){
+    /* margin-right:12vw; */
+    padding-left: 8vw;
 
+    }
+    @media screen and (min-width: 1800px){
+    /* margin-right:14vw; */
+    padding-left: 10vw;
+
+    }
+    /* @media screen and (max-width: 998px){
+        padding-right: 40vw;
+        font-size:40px;
+    } */
 @media screen and (max-width: 808px){
     padding-top:0vh;
-    font-size:40px;
 }
 .ourStoryTitle{
     font-family: Arial, Helvetica, sans-serif;
@@ -43,9 +52,10 @@ const OurStoryTitle = styled.div`
     line-height: 1.6;
     padding-right: 10vw;
     padding-bottom: 5vh;
-    @media screen and (max-width: 828px){
+    @media screen and (max-width: 998px){
     font-size:16px;
-    max-width: 420px;
+    padding-right: 14vw;
+    /* max-width: 520px; */
     }
     @media screen and (max-height: 760px){
     font-size:15px;
@@ -91,7 +101,12 @@ const OurStoryContent = styled.div`
     @media screen and (min-width: 1500px){
     margin-right:10vw;
     }
-    
+    @media screen and (min-width: 1650px){
+    margin-right:12vw;
+    }
+    @media screen and (min-width: 1800px){
+    margin-right:14vw;
+    }
   }
 #stage img:nth-of-type(1) {
     animation-delay: 0s;
