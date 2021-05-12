@@ -18,19 +18,16 @@ padding-top:90px;
 }
 h1{
     padding-top: 4vh;
-    /* font-family: 'Fancy'; */
-    /* font-family: 'Rouge Script', cursive; */
     font-family: 'Pinyon Script', cursive;
     font-size:60px;
     font-weight:100;
     line-height: 1.5;
     text-align:center;
-    /* display:none; */
  @media screen and (max-width: 768px){
     display: block;
     padding-top: 0vh;
     font-size: 40px;
-
+    margin-top:60px;
 }
 }
 .section-title{
@@ -49,6 +46,9 @@ h1{
   max-width: 40vw;
   margin-right: 0 ;
   margin-left:0;
+  @media screen and (max-width:980px) {
+    max-width: 80vw;
+  }
   }
   .projects-box{
     display: flex;
@@ -56,6 +56,11 @@ h1{
     /* text-align: center; */
     justify-content: space-around;
     -webkit-overflow-scrolling: touch;
+  @media screen and (max-width:980px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   }
   .projects-box {
   &::-webkit-scrollbar {
@@ -122,8 +127,13 @@ a{
     /* border: 1px solid black; */
     display:flex;
     width: 40vw;
+  @media screen and (max-width:980px) {
+    width: 80vw;
   }
-  
+  @media screen and (max-width:497px) {
+    display:block;
+  }
+  }
   .text-content {
     padding-left: 15px;
     padding-right: 15px;
@@ -344,9 +354,7 @@ function Party() {
                                     <p className="projects-description">Pokedex leverages the <a href="https://pokeapi.co/" target="_blank" rel="noopener noreferrer">PokeAPI</a> to let you search and find each and every Pokemon discovered thus far from every region to help you Catch 'em All!</p>
                                 </div>
                             </div>
-
                         </div>
-
                     </div>
                 </div>
             </div >

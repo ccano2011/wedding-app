@@ -12,19 +12,15 @@ const PhotoGalleryStyling = styled.div`
 /* https://medium.com/better-programming/how-to-use-css-grid-and-flexbox-to-create-an-image-gallery-924f7896d142 */
 height:fit-content;
 margin-top:90px;
-/* @media screen and (max-height: 868px){
-    padding-top:90px;
-} */
 @media screen and (max-width: 768px){
-    padding-top :1vh;
     height: fit-content;
+    margin-top: 25px;
 }
 .body {
     display: grid;
     grid-template-rows: min-content auto min-content;
     text-align: center;
  }
-
 .fit {
     height: 300px;
     max-width: 450px;
@@ -32,13 +28,31 @@ margin-top:90px;
     flex: 1 auto;
     border: 2px solid wheat;
  }
-  
  .div-container{
     display: flex;
     overflow: auto;
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
+    @media screen and (max-width: 768px){
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: auto;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    }
  }
 
  .photo-container{
@@ -47,7 +61,6 @@ margin-top:90px;
 
  .photoTitle{
     padding-top: 8vh;
-    /* font-family: 'Fancy'; */
     font-family: 'Rouge Script', cursive;
     font-size:60px;
     line-height: 1.5;
@@ -56,16 +69,9 @@ margin-top:90px;
     display: block;
     padding-top: 0vh;
     font-size: 40px;
-
 }
  }
-
  @media screen and (max-width:768px) {
-   .div-container{
-    display: inline-flex;
-    flex-direction: column-reverse;
-    height:80vh;
-   }
    .fit {
       height: auto;
       max-width: 260px;
@@ -75,16 +81,6 @@ margin-top:90px;
 }
  }
  @media screen and (max-width:404px) {
-   .div-container{
-      display: flex;
-      overflow: scroll;
-      flex-direction: column;
-      flex-flow: none;
-      align-items: center;
-      justify-content: center;
-      padding: 10px;
-      height: 80vh;
-   }
    .fit {
       height: auto;
       max-width: 290px;
