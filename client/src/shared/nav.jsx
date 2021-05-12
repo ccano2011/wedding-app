@@ -7,9 +7,10 @@ import { useLocation } from 'react-router-dom';
 
 
 const NavComponent = styled.nav`
-    /* background: ${({ scrollNav }) => (scrollNav ? '#ffff' : 'transparent')}; */
     /* background: #ffff; */
     /* box-shadow: ${({ scrollNav }) => (scrollNav ? '0 2px 4px 0 rgb(0 0 0 / 7%)' : 'none')}; */
+    background-image: ${(props) => props.pathname.match(/^\/home/) ? 'linear-gradient(to bottom, rgba(0,0,0,0.7), transparent);' : 'transparent'};
+    color: ${(props) => props.pathname.match(/^\/home/) ? '#ffff' : '#000'};
     padding-bottom:0px;
     position:fixed;
     top: 0;
@@ -17,7 +18,7 @@ const NavComponent = styled.nav`
     font-size:1rem;
     top:0;
     z-index:10;
-    transition:0.8s all ease;
+    transition:0.1s all ease;
     @media screen and (max-width:768px) {
         height: 70px;
         /* width: 100vw; */
@@ -25,11 +26,9 @@ const NavComponent = styled.nav`
 
 `;
 const NavbarContainer = styled.div`
-    /* background: ${(props) => props.pathname.match(/^\/party/) ? '#000' : 'transparent'}; */
-    background-image: ${(props) => props.pathname.match(/^\/home/) ? 'linear-gradient(to bottom, rgba(0,0,0,0.7), transparent);' : 'transparent'};
+    background: ${({ scrollNav }) => (scrollNav ? 'rgba(255,250,240, 0.9)' : 'transparent')};
     height:90px;
     display: flex;
-    color: ${(props) => props.pathname.match(/^\/home/) ? '#ffff' : '#000'};
     margin: auto;
     justify-content: space-around;
     z-index:1;
@@ -125,8 +124,8 @@ function Layout({ children, toggle }) {
     }, [])
     return (
         <>
-            <NavComponent className="layout" scrollNav={scrollNav} onClick={toggle}>
-                <NavbarContainer pathname={pathname}>
+            <NavComponent className="layout" onClick={toggle} pathname={pathname}>
+                <NavbarContainer scrollNav={scrollNav}>
                     {/* <MobileIcon>
                         <FaBars />
                     </MobileIcon> */}

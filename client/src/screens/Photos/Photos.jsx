@@ -12,6 +12,7 @@ const PhotoGalleryStyling = styled.div`
 /* https://medium.com/better-programming/how-to-use-css-grid-and-flexbox-to-create-an-image-gallery-924f7896d142 */
 height:fit-content;
 margin-top:90px;
+/* background-color: rgba(255,250,240, 0.9); */
 @media screen and (max-width: 768px){
     height: fit-content;
     margin-top: 25px;

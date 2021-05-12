@@ -37,13 +37,7 @@ transform-style: preserve-3d;
 @media screen and (max-width: 768px){
 height: 100vh;
 }
-/* @media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 900px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: landscape) { 
-  height: 140vh;
-  } */
+
 `
 const HeroBackground = styled.div`
     :before{
@@ -63,6 +57,7 @@ const ImgBg = styled.img`
         right:0;
         bottom:0;
         left:0;
+        filter: brightness(80%);
 `
 const HeroTitle = styled.h1`
 /* font-family: 'Fancy'; */
@@ -163,7 +158,7 @@ function Hero() {
                 </MobileHeroTitle>
                 <HeroSubtitle>
                     We're getting married! <br /> <br />
-                    When: 03/10/2022 at 00:00 <br /> <br />
+                    When: 03/04/2022 at 00:00 <br /> <br />
                     Where: 1234 Wedding Ave.
                 </HeroSubtitle>
             </div>
