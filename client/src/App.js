@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 // import { BrowserRouter as Router, Switch, Route, useHistory } from 'react-router-dom'
-import { Switch, Route, useHistory } from 'react-router-dom';
+import { Switch, Route, useHistory, Redirect } from 'react-router-dom';
 import Hero from './screens/Hero/Hero'
 import Login from './screens/Corkboard/Login';
 import Registration from './screens/Corkboard/Registration';
@@ -55,7 +55,10 @@ function App() {
     <MobileNav isOpen={isOpen} toggle={toggle}>
       <Layout toggle={toggle}>
         <Switch>
-          <Route exact path='/'>
+          <Route exact path="/">
+            <Redirect to="/home" />
+          </Route>
+          <Route path='/home'>
             <Hero />
           </Route>
           <Route path='/ourstory'>

@@ -172,19 +172,20 @@ src
 | Create the Cork board component with the initial CRUD logic |    H     |     4 hrs      |     9 hrs     |     TBD     |
 | Build out the controllers to connect the frontend to the backend |    H     |     4 hrs      |     30 min     |     TBD     |
 | Implemment authentication for the Cork board components on frontend |    L     |     3 hrs      |     3 hrs     |     TBD     |
-| Create the Navbar component w/ styling |    H     |     2hrs      |     2 hrs     |     TBD     |
-| Create the homepage screen w/ styling |    H     |     2hrs      |     20 min     |     TBD     |
+| Create the Navbar component w/ styling |    H     |     2 hrs      |     2 hrs     |     TBD     |
+| Create the homepage screen w/ styling |    H     |     2 hrs      |     20 min     |     TBD     |
 | Build out the RSVP component with the appropriate CRUD logic & association (REMOVED)|    H     |     3 hrs      |     30 min     |     TBD     |
 | Build out the remaining components |    H     |     4 hrs      |     2 hrs     |     TBD     |
 | Style those components |    L     |     6 hrs      |     10 hrs     |     TBD     |
 | Create MVP media queries |    H     |     3 hrs      |     6 hrs     |     TBD     |
 | POST-MVP EventListener w/ mobile refactor |    H     |     3 hrs      |     13hrs     |     TBD     |
 | POST-MVP Refactor the application using Styled-Components to improve code legibility & maintainance|    H     |     3 hrs      |     10 hrs     |     TBD     |
-| POST-MVP Add Animations to the styled components (i.e. Fade-ins, photo gallery, etc.)|    H     |     10 hrs      |     10 hrs     |     TBD     |
+| POST-MVP Add Animations to the styled components (i.e. Fade-ins, photo gallery, etc.)|    H     |     10 hrs      |     12 hrs     |     TBD     |
 | POST-MVP Add Admin privileges w/ proper associations to the rails back-end |    H     |     10 hrs      |     TBD     |     TBD     |
+| Create the Party screen w/ styling |    H     |     2 hrs      |     3 hrs    |     TBD     |
 | Deploy & Test |    H     |     3 hrs      |     1 hrs     |     TBD     |
 
-| TOTAL               |          |     51.5 hrs      |     79.33 hrs     |     TBD     |
+| TOTAL               |          |     51.5 hrs      |     84.33 hrs     |     TBD     |
 
 <!-- > _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._ -->
 
@@ -272,13 +273,20 @@ Major issue with CORs on the deployed site resolved by doing the following:
 
        - Updated the README & added new MVP goals for refactoring and better code management
 
-03/28/2021:
+04/28/2021:
 
        - Completely refactored 'nav.jsx' & rearranged the layout of 'MobileNav' with added opacity
        - Updated the codebase for all the static components to reflect the structure of my projects since GA
        - Added a new component: Party.jsx & PartyData.js to pass in the data for DRY coding practice
        - Updated Figma & Whimsical
        - Completely refactored all styling across every component
+
+05/08/2021:
+
+       - Completed the initial site styling for desktop using the new refactored codebase
+       - Finished 'OurStory.jsx' w/ all new media-queries for all devices on 'clarissa-wedding' branch with changing photo gallery
+       - Added 'Party.jsx' component for the wedding party w/ initial column layout for both the bride & groom's side
+
        
 
 ## Special Thanks:
