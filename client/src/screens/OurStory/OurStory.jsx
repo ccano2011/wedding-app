@@ -3,12 +3,11 @@ import image from "../../Assets/jordanandrewourstory.jpg"
 import styled from 'styled-components';
 
 const OurStoryWrapper = styled.div`
-/* max-height: auto; */
+max-height: auto;
 display:flex;
 flex-direction: row-reverse;
 justify-content: space-around;
 max-width:1672px;
-height:100vh;
 margin:auto;
 @media (max-aspect-ratio: 0.79/1){
     flex-direction: column;
@@ -22,13 +21,16 @@ height: auto;
 const OurStoryTitle = styled.div`
 font-family: 'Fancy';
 font-size:60px;
-padding-top:30vh;
+padding-top:15vh;
 margin-left: 3vw;
-@media screen and (max-width: 768px){
-    padding-top:0vh;
+@media screen and (max-width: 844px){
     font-size:40px;
 }
+@media screen and (max-width: 768px){
+    padding-top:0vh;
+}
 @media screen and (max-height: 594px){
+    padding-top: 10vh;
     font-size:40px;
 }
 
@@ -40,11 +42,11 @@ margin-left: 3vw;
     line-height: 1.6;
     padding-bottom: 5vh;
     padding-right:3vw;
-    @media screen and (max-width: 594px){
+    @media screen and (max-width: 944px){
     font-size:16px;
     }
     @media screen and (max-height: 594px){
-    /* padding-top: 10vh; */
+    padding-top: 10vh;
     font-size:15px;
 }}
 .title{
@@ -58,9 +60,9 @@ margin-left: 3vw;
 `
 const OurStoryContent = styled.div`
 #ourStoryImg{
+    margin-top: 10vh;
     margin-bottom: 10vh;
     height: 70vh;
-    margin-top:20vh;
     max-height: 698px;
     transition: opacity 550ms ease-in, -webkit-transform 400ms ease-in;
     transition: opacity 550ms ease-in, transform 400ms ease-in;

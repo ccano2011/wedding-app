@@ -1,137 +1,281 @@
-import React, { useRef, useEffect } from 'react';
-import image2 from "../../Assets/party.jpg"
-import styled from 'styled-components';
+import React from 'react';
+import styled from 'styled-components'
+import image4 from '../../Assets/placeholder_img4.jpg'
+import image5 from '../../Assets/placeholder_img3.jpg'
+import image6 from '../../Assets/placeholder_img2.jpg'
+import image7 from '../../Assets/party.jpg'
 
-const PartyWrapper = styled.div`
-#Party{
-transition: opacity 250ms ease-in, -webkit-transform 400ms ease-in;
-    transition: opacity 250ms ease-in, transform 400ms ease-in;
-    transition: opacity 250ms ease-in, transform 400ms ease-in,
-    -webkit-transform 400ms ease-in;
-    opacity: 0;
-    height:100vh;
+const ProjectsStyling = styled.div`
+height:fit-content;
+background-color:rgba(255,250,240, 0.9);
+padding-top:90px;
+@media screen and (max-width: 768px){
+    padding-top :1vh;
+    height: fit-content;
 }
-#Party.appear{
-    opacity: 1;
+h1{
+    padding-top: 4vh;
+    font-family: 'Pinyon Script', cursive;
+    font-size:60px;
+    font-weight:100;
+    line-height: 1.5;
+    text-align:center;
+ @media screen and (max-width: 768px){
+    display: block;
+    padding-top: 0vh;
+    font-size: 40px;
+    margin-top:60px;
 }
-`
-const PartyTitle = styled.div`
-font-family: 'Fancy';
-font-size:60px;
-padding-top:25vh;
-z-index:3;
-position:absolute;
-align-items: center;
-color: white;
-margin-left:65%;
-
-@media screen and (max-width:768px) {
-    font-size:40px;
-    padding-top:20vh;
-    margin-left: 0%;
-    width: 100%;
-    margin-left:3vw;
-
-
 }
-@media screen and (max-height: 790px){
-    padding-top: 15vh;
-    font-size:40px;
-    width:auto;
+.section-title{
+    text-align: center;
+    padding: 2vh;
+    font-family: 'Pinyon Script';
+    font-weight: 100;
+    font-size: 40px;
 }
 
-.PartyDescription{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    line-height: 1.6;
-    max-width: 550px;
-
-    @media screen and (max-width:768px) {
-        line-height: 1.6;
-        padding-right:3vw;
-        font-size:15px;
-}
-@media screen and (max-height: 594px){
-    padding-top: 1vh;
-    font-size: 15px;
-}
-}
-`
-const PartyContent = styled.div`
-#PartyImg{
-    -o-object-fit: cover;
-    object-fit: cover;
-    width:100%;
-    height: 100vh;
-    @media screen and (max-width:768px) {
-    height:93vh;
-    filter: brightness(0.5);
-}
-    @media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 900px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: landscape) { 
-    height: 130vh;
-}
-}
-`
-const Button = styled.div`
+.projects {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  max-width: 40vw;
+  margin-right: 0 ;
+  margin-left:0;
+  @media screen and (max-width:980px) {
+    max-width: 80vw;
+  }
+  }
+  .projects-box{
     display: flex;
-    padding-top: 30px;
-  .ls-buttons:hover {
-    background-color:#DCDCDC;
+    grid-template-rows: min-content auto min-content;
+    /* text-align: center; */
+    justify-content: space-around;
+    -webkit-overflow-scrolling: touch;
+  @media screen and (max-width:980px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  }
+  .projects-box {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  @media screen and (max-width:768px) {
+   .div-container{
+    display: inline-flex;
+    flex-direction: column-reverse;
+    height:80vh;
+   }
+   .fit {
+      height: auto;
+      max-width: 260px;
+      padding: 10px;
+      flex: 1 auto;
+      border: 2px solid wheat;
+}
+ }
+ @media screen and (max-width:404px) {
+   .div-container{
+      display: flex;
+      overflow: scroll;
+      flex-direction: column;
+      flex-flow: none;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      height: 80vh;
+   }
+   .fit {
+      height: auto;
+      max-width: 290px;
+      padding: 10px;
+      flex: 1 auto;
+      border: 2px solid wheat;
+}
+ }
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    font-weight:bolder;
+    transition: all .2s ease-in-out; 
+}
+
+.project-imgs {
+    height: 250px;
+    max-width: 300px;
+    /* padding: 10px; */
+    flex: 1 auto;
+    border: 2px solid wheat;
+  }
+  
+  .project-content {
+    text-align: center;
+    padding-bottom: 5vh;
+    max-width: fit-content;
+    display:flex;
   }
 
-a:hover{
-    transform: scale(1.09);
-}
-  .ls-buttons {
-    height: 30px;
-    font-family: 'Jost', sans-serif;
-    width: 100px;
-    border: 2px solid wheat;
-    border-radius: 2px;
-    font-weight: bold;
-    font-size: 15px;
-    outline: none;
-    background-color: aliceblue; 
+  .card-content {
+    /* border: 1px solid black; */
+    display:flex;
+    width: 40vw;
+  @media screen and (max-width:980px) {
+    width: 80vw;
   }
+  @media screen and (max-width:497px) {
+    display:block;
+  }
+  }
+  .text-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    max-width:fit-content;
+  }
+  
+  .projects-name {
+    font-family: 'Jost', sans-serif;
+    font-weight:200;
+    text-align: left;
+    padding-top: 30px;
+  }
+  
+  .projects-description {
+      padding-top: 10px;
+    text-align: start;
+    font-size: 12px;
+    line-height: 2.1;
+  }
+
 `
+
 function Party() {
-    const elemRef = useRef();
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("appear");
-                }
-            },
-            {
-                root: null,
-                rootMargin: "0px",
-                threshold: 0.2
-            }
-        );
-        if (elemRef.current) {
-            observer.observe(elemRef.current);
-        }
-    }, [elemRef]);
     return (
-        <PartyWrapper ref={elemRef} id='Party'>
-            <PartyTitle>
-                Party...
-            <div className='PartyDescription'>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    <Button>
-                        <a href="https://youtu.be/oHg5SJYRHA0" target="_blank" rel="noopener noreferrer" ><button className="ls-buttons">Visit Site</button></a>
-                    </Button>
+        <ProjectsStyling>
+            <div id='Party'>
+                <h1 className="section-title">Meet the Wedding Party</h1>
+                <div className="projects-box">
+                    {/* <div ref={elemRef} className="container"> */}
+                    <div className="container">
+                        <div className="projects">
+                            <h3 className="section-title">On the Bride's side...</h3>
+                            <div className="project-content">
+                                <div className="card-content">
+                                    <img
+                                        className="project-imgs"
+                                        src={image4}
+                                        alt="project png"
+                                    />
+                                    <div className="text-content">
+                                        <h2 className="projects-name">Bob</h2>
+                                        <p className="projects-description">A cool guy </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="project-content">
+                                <div className="card-content">
+                                    <img
+                                        className="project-imgs"
+                                        src={image7}
+                                        alt="project png"
+                                    />
+                                    <div className="text-content">
+                                        <h2 className="projects-name">Tom</h2>
+                                        <p className="projects-description">Not as cool as Bob</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="project-content">
+                                <div className="card-content">
+                                    <img
+                                        className="project-imgs"
+                                        src={image6}
+                                        alt="project png"
+                                    />
+                                    <div className="text-content">
+                                        <h2 className="projects-name">Kristi</h2>
+                                        <p className="projects-description">Cooler than both Bob & Tom</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="project-content">
+                                <div className="card-content">
+                                    <img
+                                        className="project-imgs"
+                                        src={image5}
+                                        alt="project png"
+                                    />
+                                    <div className="text-content">
+                                        <h2 className="projects-name">Chick</h2>
+                                        <p className="projects-description">Very into sports</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="projects">
+                        <h3 className="section-title">On the Groom's side...</h3>
+                        <div className="project-content">
+                            <div className="card-content">
+                                <img
+                                    className="project-imgs"
+                                    src={image4}
+                                    alt="project png"
+                                />
+                                <div className="text-content">
+                                    <h2 className="projects-name">Bob</h2>
+                                    <p className="projects-description">A cool guy </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="project-content">
+                            <div className="card-content">
+                                <img
+                                    className="project-imgs"
+                                    src={image7}
+                                    alt="project png"
+                                />
+                                <div className="text-content">
+                                    <h2 className="projects-name">Tom</h2>
+                                    <p className="projects-description">Not as cool as Bob</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="project-content">
+                            <div className="card-content">
+                                <img
+                                    className="project-imgs"
+                                    src={image6}
+                                    alt="project png"
+                                />
+                                <div className="text-content">
+                                    <h2 className="projects-name">Kristi</h2>
+                                    <p className="projects-description">Cooler than both Bob & Tom</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="project-content">
+                            <div className="card-content">
+                                <img
+                                    className="project-imgs"
+                                    src={image5}
+                                    alt="project png"
+                                />
+                                <div className="text-content">
+                                    <h2 className="projects-name">Chick</h2>
+                                    <p className="projects-description">Very into sports</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </PartyTitle>
-            <PartyContent>
-                <img id="PartyImg" src={image2} alt="backdrop" />
-            </PartyContent>
-        </PartyWrapper>
+            </div >
+        </ProjectsStyling >
     );
 }
 

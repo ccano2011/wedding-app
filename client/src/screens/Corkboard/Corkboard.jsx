@@ -5,6 +5,7 @@ import Button from '@material-ui/core/Button'
 import Create from '@material-ui/icons/Create'
 import Assignment from '@material-ui/icons/Assignment'
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+// import imageblog from '../../Assets/under-construction.png'
 import styled from 'styled-components';
 
 
@@ -33,13 +34,13 @@ padding-top:5vh;
     text-align: center;
     position: relative;
   }
- 
+
   .currentUserDiv{
     display: flex;
     justify-content: center;
     position: relative;
   }
-  
+
   .mappedContent {
     justify-content: space-evenly;
     padding: 25px;
@@ -97,6 +98,12 @@ padding-top:5vh;
 }
 
 `
+// const Placeholder = styled.div`
+//     font-family: 'Rouge Script', cursive;
+//     font-size: 60px;
+//     margin-top:40vh;
+//     text-align:center;
+//     `
 function Corkboard(props) {
     const [posts, setPosts] = useState([]);
     useEffect(() => {
@@ -108,6 +115,10 @@ function Corkboard(props) {
     }, [])
 
     return (
+        // <Placeholder id='blog'>
+        //     <p className="blog">Coming Soon...</p>
+        //     {/* <img className='imageblog' src={imageblog} alt="coming soon"></img> */}
+        // </Placeholder>
         <CorkboardStyling id='cork-board'>
             <div className="currentUserDiv">
                 {
@@ -142,7 +153,6 @@ function Corkboard(props) {
                             null
                         )
                 }
-                {/* Following ternary was from https://stackoverflow.com/questions/60575870/how-to-change-login-Button-to-logout-Button-in-react */}
                 {
                     props.currentUser
                         ? (
