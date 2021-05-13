@@ -49,7 +49,7 @@ function App() {
     setCurrentUser(null);
     localStorage.removeItem('authToken');
     removeToken();
-    history.push('/');
+    history.push('/corkboard');
   }
   return (
     <MobileNav isOpen={isOpen} toggle={toggle}>

@@ -113,7 +113,7 @@ function Layout({ children, toggle }) {
         open && setOpen(false)
     }
     const changeNav = () => {
-        if (window.scrollY >= 80) {
+        if (window.scrollY >= 20) {
             setScrollNav(true)
         } else {
             setScrollNav(false)

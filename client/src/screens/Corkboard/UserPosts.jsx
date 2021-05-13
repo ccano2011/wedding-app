@@ -18,7 +18,6 @@ function UserPosts(props) {
             if (props.currentUser.admin === true) {
                 setUserPosts(posts)
             } else {
-                console.log(filteredPosts)
                 setUserPosts(filteredPosts)
             }
         }
@@ -60,7 +59,7 @@ function UserPosts(props) {
                     )).reverse()
                 }
             </div >
-            <Link to={`/`}><button className='edit-btn'>Head Back</button></Link>
+            <Link to={`/corkboard`}><button className='edit-btn'>Head Back</button></Link>
         </>
     )
 }
