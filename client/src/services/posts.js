@@ -2,6 +2,11 @@ import api from './apiConfig';
 
 //  REFERENCE CODE FROM TASTEVILLE
 
+export const getAllUsers = async () => {
+    const resp = await api.get('/users');
+    return resp.data;
+}
+
 export const getAllPosts = async () => {
     const resp = await api.get('/posts');
     return resp.data;

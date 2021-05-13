@@ -15,8 +15,12 @@ function UserPosts(props) {
             const filteredPosts = posts.filter(post =>
                 post.user_id === props.currentUser?.id
             )
-            console.log(filteredPosts)
-            setUserPosts(filteredPosts)
+            if (props.currentUser.admin === true) {
+                setUserPosts(posts)
+            } else {
+                console.log(filteredPosts)
+                setUserPosts(filteredPosts)
+            }
         }
         fetchUserPosts();
     }, [props.currentUser, isLoaded]);

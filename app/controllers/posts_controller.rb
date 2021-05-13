@@ -28,6 +28,11 @@ class PostsController < ApplicationController
 
   # PATCH/PUT /posts/1
   def update
+    if current_user.present? && current_user.admin?
+      @post = Post.find(params[:id])
+    else
+      @post = current_user.posts.find(params[:id])
+    end
     if @post.update(post_params)
       render json: @post
     else

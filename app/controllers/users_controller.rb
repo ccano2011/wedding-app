@@ -1,6 +1,9 @@
 class UsersController < ApplicationController
   # before_action :authorize_request, except: :create,
   before_action :set_user, only: [:show, :update, :destroy]
+  before_action :set_user, except: [:create, :index]
+  before_action :authenticate_request, except: [:create, :index, :show]
+  before_action :can_modify?, only:[:update, :destroy]
 
   # GET /users
   def index
@@ -39,6 +42,11 @@ class UsersController < ApplicationController
   # DELETE /users/1
   def destroy
     @user.destroy
+  end
+
+  # MODIFY Admin
+  def can_modify?
+    current_user.id.to_i == params[:id].to_i || current_user.admin?
   end
 
   private

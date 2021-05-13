@@ -9,6 +9,7 @@ User.destroy_all
 Post.destroy_all
 
 
-@admin = User.create(name: 'admin', email: 'admin@email.com', password: '1234')
-
-@post = Post.create(name: 'Chris', content: "Lorem Ipsum", user: @admin)
+@admin = User.create(name: 'Admin', email: 'admin@email.com', password: '1234', admin: true)
+@user = User.create(name: 'User', email: 'user@email.com', password: '1234', admin: false)
+@post = Post.create(name: 'Chris', content: "Admin post", user: @admin)
+@post = Post.create(name: 'Chris', content: "User post", user: @user)
