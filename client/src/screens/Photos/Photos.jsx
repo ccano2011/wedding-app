@@ -10,12 +10,13 @@ import styled from 'styled-components'
 
 const PhotoGalleryStyling = styled.div`
 /* https://medium.com/better-programming/how-to-use-css-grid-and-flexbox-to-create-an-image-gallery-924f7896d142 */
-height:fit-content;
-margin-top:90px;
-/* background-color: rgba(255,250,240, 0.9); */
+height:100vh;
+/* margin-top:90px; */
+background-color: rgba(255,250,240, 0.9);
+
 @media screen and (max-width: 768px){
     height: fit-content;
-    margin-top: 25px;
+    padding-top: 25px;
 }
 .body {
     display: grid;
@@ -35,6 +36,7 @@ margin-top:90px;
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
+    padding-top: 90px;
     @media screen and (max-width: 768px){
     display: -webkit-box;
     display: -webkit-flex;

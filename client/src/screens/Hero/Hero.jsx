@@ -124,6 +124,7 @@ text-shadow: 2px 2px 3px #807777;
 position: relative;
 background:none;
 z-index: 3px;
+padding-top: 3vh;
 @media screen and (max-width:768px) {
     margin-top:0px;
 }

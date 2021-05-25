@@ -46,7 +46,15 @@ const NavMenu = styled.ul`
     display:none;
 }
 `;
-
+const SecondaryContainer = styled.div`
+   display: flex;
+    background: ${(props) => props.pathname.match(/^\/photos/) ? 'rgba(255,250,240, 0.9)' : 'transparent'};
+    width: 100vw;
+    justify-content: space-around;
+    @media screen and (max-width:768px){
+    display:none;
+}
+`
 const NavItem = styled.li`
     text-decoration: none;
     transition: all .1s ease-in-out;
@@ -110,30 +118,32 @@ function Layout({ children, toggle }) {
                     <Burger handleClick={handleClick} open={open}
                         setOpen={setOpen}
                         isBurgerClick={isBurgerClick} />
-                    <NavMenu>
-                        <NavItem>
-                            <NavLinks to='/ourstory' >Our Story</NavLinks>
-                        </NavItem>
-                        <NavItem>
-                            <NavLinks to='/travel' >Travel</NavLinks>
-                        </NavItem>
-                        <NavItem>
-                            <NavLinks to='/party' >Meet the Party</NavLinks>
-                        </NavItem>
-                        <NavItem>
-                            <NavLinks to='/' ><p id="home">W & C</p></NavLinks>
-                        </NavItem>
-                        <NavItem>
-                            <NavLinks to='/photos' >Pictures</NavLinks>
-                        </NavItem>
-                        <NavItem>
-                            <NavLinks to='/registry' >Registry</NavLinks>
-                        </NavItem>
-                        <NavItem>
-                            <NavLinks to='/corkboard' >Corkboard</NavLinks>
-                        </NavItem>
+                    <SecondaryContainer pathname={pathname}>
+                        <NavMenu >
+                            <NavItem>
+                                <NavLinks to='/ourstory' >Our Story</NavLinks>
+                            </NavItem>
+                            <NavItem>
+                                <NavLinks to='/travel' >Travel</NavLinks>
+                            </NavItem>
+                            <NavItem>
+                                <NavLinks to='/party' >Meet the Party</NavLinks>
+                            </NavItem>
+                            <NavItem>
+                                <NavLinks to='/' ><p id="home">W & C</p></NavLinks>
+                            </NavItem>
+                            <NavItem>
+                                <NavLinks to='/photos' >Pictures</NavLinks>
+                            </NavItem>
+                            <NavItem>
+                                <NavLinks to='/registry' >Registry</NavLinks>
+                            </NavItem>
+                            <NavItem>
+                                <NavLinks to='/corkboard' >Corkboard</NavLinks>
+                            </NavItem>
 
-                    </NavMenu>
+                        </NavMenu>
+                    </SecondaryContainer>
                 </NavbarContainer>
             </NavComponent>
             <div onClick={handleBodyClickClose}
