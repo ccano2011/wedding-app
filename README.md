@@ -183,6 +183,7 @@ src
 | POST-MVP Add Animations to the styled components (i.e. Fade-ins, photo gallery, etc.)|    H     |     10 hrs      |     12 hrs     |     TBD     |
 | POST-MVP Add Admin privileges w/ proper associations to the rails back-end |    H     |     10 hrs      |     TBD     |     TBD     |
 | Create the Party screen w/ styling |    H     |     2 hrs      |     3 hrs    |     TBD     |
+| POST-MVP Firefox Styling Fixes |    H     |     3 hrs      |     13hrs     |     TBD     |
 | Deploy & Test |    H     |     3 hrs      |     1 hrs     |     TBD     |
 
 | TOTAL               |          |     51.5 hrs      |     84.33 hrs     |     TBD     |
@@ -290,6 +291,10 @@ Major issue with CORs on the deployed site resolved by doing the following:
 05/12/2021:
 
        - Admin privileges added to Rails backend
+
+05/12/2021:
+
+       - Update MVP to include Firefox fixes
 ## Special Thanks:
 
 A BIG thank you to <a href="https://github.com/DannyMichaels" target="_blank">Daniel Micheal</a> for taking the time to help me debug, explain Rails and introducing me to Styled Components! Also another shout-out to <a href="https://github.com/laport14" target="_blank">Geoff LaPorte</a> for remininding me about try/catch errors that helped me add alerts for login/registration errors.
