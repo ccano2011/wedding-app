@@ -75,8 +75,9 @@ transform: translateZ(0);
     font-size:100px;
 } */
 @media screen and (max-width:475px) {
-    display:none;
-font-size:60px;
+    /* display:none; */
+/* font-size:40px; */
+text-align: center;
 
 }
 @media screen and (max-height: 594px){
@@ -84,33 +85,33 @@ font-size:60px;
     font-size:60px;
 }    
 `
-const MobileHeroTitle = styled.h1`
-display:none;
-@media screen and (max-width:475px) {
-    display:flex;
-    text-align:center;
-    justify-content:center;
-    /* font-family: 'Fancy'; */
-    font-family: 'Rouge Script', cursive;
-    font-weight:100;
-    color: white;
-    text-shadow: 2px 2px 3px #807777;
-    position: relative;
-    background:none;
-    margin-top:-80px;
-    font-size:80px;
-    line-height:0.9;
-    transform: translateZ(0);
-    @media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 900px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: landscape) { 
-    font-size: 60px;
-    margin-top:-20vh;
-    transform-style:none;
-}  }
-`
+// const MobileHeroTitle = styled.h1`
+// display:none;
+// @media screen and (max-width:475px) {
+//     display:flex;
+//     text-align:center;
+//     justify-content:center;
+//     /* font-family: 'Fancy'; */
+//     font-family: 'Rouge Script', cursive;
+//     font-weight:100;
+//     color: white;
+//     text-shadow: 2px 2px 3px #807777;
+//     position: relative;
+//     background:none;
+//     margin-top:-80px;
+//     font-size:80px;
+//     line-height:0.9;
+//     transform: translateZ(0);
+//     @media only screen 
+//   and (min-device-width: 375px) 
+//   and (max-device-width: 900px) 
+//   and (-webkit-min-device-pixel-ratio: 3)
+//   and (orientation: landscape) { 
+//     font-size: 60px;
+//     margin-top:-20vh;
+//     transform-style:none;
+// }  }
+// `
 const HeroSubtitle = styled.p`
 /* font-family: 'Josefin Sans', sans-serif; */
 font-family: 'Rouge Script', cursive;
@@ -153,11 +154,11 @@ function Hero() {
                 <HeroTitle>
                     William & Clarissa
                 </HeroTitle>
-                <MobileHeroTitle>
+                {/* <MobileHeroTitle>
                     William<br />&<br /> Clarissa
-                </MobileHeroTitle>
+                </MobileHeroTitle> */}
                 <HeroSubtitle>
-                    We're getting married! <br /> <br />
+                    {/* We're getting married! <br /> <br /> */}
                     When: 03/04/2022 at 00:00 <br /> <br />
                     Where: 1234 Wedding Ave.
                 </HeroSubtitle>

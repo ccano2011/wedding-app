@@ -287,8 +287,9 @@ Major issue with CORs on the deployed site resolved by doing the following:
        - Finished 'OurStory.jsx' w/ all new media-queries for all devices on 'clarissa-wedding' branch with changing photo gallery
        - Added 'Party.jsx' component for the wedding party w/ initial column layout for both the bride & groom's side
 
-       
+05/12/2021:
 
+       - Admin privileges added to Rails backend
 ## Special Thanks:
 
-A BIG thank you to <a href="https://github.com/DannyMichaels" target="_blank">Daniel Micheal</a> for taking the time to help me debug and introducing me to Styled Components! Also another shout-out to <a href="https://github.com/laport14" target="_blank">Geoff LaPorte</a> for remininding me about try/catch errors that helped me add alerts for login/registration errors.
+A BIG thank you to <a href="https://github.com/DannyMichaels" target="_blank">Daniel Micheal</a> for taking the time to help me debug, explain Rails and introducing me to Styled Components! Also another shout-out to <a href="https://github.com/laport14" target="_blank">Geoff LaPorte</a> for remininding me about try/catch errors that helped me add alerts for login/registration errors.

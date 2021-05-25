@@ -7,7 +7,7 @@ import styled from 'styled-components';
 
 const OurStoryWrapper = styled.div`
     display: flex;
-    height: 100vh;
+    height: 93vh;
     width:fit-content;
     flex-direction: row-reverse;
     justify-content: flex-end;

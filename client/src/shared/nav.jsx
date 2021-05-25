@@ -26,7 +26,7 @@ const NavComponent = styled.nav`
 
 `;
 const NavbarContainer = styled.div`
-    background: ${({ scrollNav }) => (scrollNav ? 'rgba(255,250,240, 0.9)' : 'transparent')};
+    background: ${(props) => props.pathname.match(/^\/party/) ? 'rgba(255,250,240, 0.9)' : 'transparent'};
     height:90px;
     display: flex;
     margin: auto;
@@ -39,19 +39,6 @@ const NavbarContainer = styled.div`
         background-image:none;
     }
 `;
-// const MobileIcon = styled.div`
-// display:none;
-// @media screen and (max-width:768px){
-//     display:block;
-//     position:absolute;
-//     top:0;
-//     right:0;
-//     transform: translate(-100%,60%);
-//     font-size: 1.8rem;
-//     cursor:pointer;
-//     color:black;
-// }
-// `;
 const NavMenu = styled.ul`
     display: contents;
     list-style: none;
@@ -63,8 +50,6 @@ const NavMenu = styled.ul`
 const NavItem = styled.li`
     text-decoration: none;
     transition: all .1s ease-in-out;
-    /* color: inherit; */
-    /* font-family: 'Josefin Sans', sans-serif; */
     font-family: 'Pinyon Script', cursive;
     font-size: x-large;
     height:80px;
@@ -78,16 +63,13 @@ display: flex;
 justify-content: space-evenly;
 align-items: center;
 text-decoration: none;
-/* padding: 0 1rem; */
 height:100%;
 cursor: pointer;
 color: inherit;
-/* transition: transform 330ms ease-in-out; */
+
 &:hover{
 transition: transform 150ms ease-in-out;
     transform: scale(1.1);
-    /* background-color:hotpink; */
-    /* font-weight:700; */
 }
 #home{
     font-size: 60px;
@@ -96,7 +78,6 @@ transition: transform 150ms ease-in-out;
     @media screen and (max-width:1072px){
     font-size: 40px;
 }
-    /* background-color:pink; */
 }
 `;
 function Layout({ children, toggle }) {
@@ -113,7 +94,7 @@ function Layout({ children, toggle }) {
         open && setOpen(false)
     }
     const changeNav = () => {
-        if (window.scrollY >= 20) {
+        if (window.scrollY >= 60) {
             setScrollNav(true)
         } else {
             setScrollNav(false)
@@ -125,10 +106,7 @@ function Layout({ children, toggle }) {
     return (
         <>
             <NavComponent className="layout" onClick={toggle} pathname={pathname}>
-                <NavbarContainer scrollNav={scrollNav}>
-                    {/* <MobileIcon>
-                        <FaBars />
-                    </MobileIcon> */}
+                <NavbarContainer scrollNav={scrollNav} pathname={pathname}>
                     <Burger handleClick={handleClick} open={open}
                         setOpen={setOpen}
                         isBurgerClick={isBurgerClick} />
