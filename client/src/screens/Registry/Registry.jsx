@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
-import image from "../../Assets/honeymoon.jpeg"
+import image from "../../Assets/travel.jpeg"
 import photo1 from '../../Assets/amazon_wedding.jpg'
 import photo2 from '../../Assets/potterybarn_wedding.png'
 

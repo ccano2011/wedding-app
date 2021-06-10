@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import image from "../../Assets/honeymoon.jpeg"
+import image from "../../Assets/travel.jpeg"
 import styled from 'styled-components';
 
 
@@ -10,8 +10,6 @@ transition: opacity 250ms ease-in, -webkit-transform 400ms ease-in;
     transition: opacity 250ms ease-in, transform 400ms ease-in,
     -webkit-transform 400ms ease-in;
     opacity: 0;
-    height:100vh;
-/* padding-top:10vh; */
 }
 #Travel.appear{
     opacity: 1;
@@ -22,12 +20,13 @@ const TextWrapper = styled.div`
     z-index:2;
 `
 const TravelDiv = styled.div`
-border: 8px solid #c5b18c;
+border: 8px solid rgba(250, 222, 167,0.6);
     padding: 3vh;
     backdrop-filter: brightness(0.5);
 `
 const TravelTitle = styled.div`
-font-family: 'Fancy';
+/* font-family: 'Fancy'; */
+font-family: 'Pinyon Script', cursive;
 font-size:60px;
 padding-top:25vh;
 z-index:3;
@@ -42,7 +41,7 @@ margin-left:25%;
     margin-left: 5%;
 }
 @media screen and (max-height: 594px){
-    padding-top: 15vh;
+    padding-top: 20vh;
     font-size:40px;
 }
 .TravelDescription{
@@ -50,6 +49,7 @@ margin-left:25%;
     font-size: 20px;
     line-height: 1.6;
     max-width: 550px;
+    padding-top:15px;
 
     @media screen and (max-width:768px) {
         line-height: 1.6;
@@ -69,7 +69,7 @@ const TravelContent = styled.div`
     -o-object-fit: cover;
     object-fit: cover;
     width:100%;
-    height: 100vh;
+    height: 99.7vh;
     @media screen and (max-width:768px) {
     /* height:93vh; */
 

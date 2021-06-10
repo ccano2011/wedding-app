@@ -42,6 +42,7 @@ const NavbarContainer = styled.div`
 const NavMenu = styled.ul`
     display: contents;
     list-style: none;
+    
     @media screen and (max-width:768px){
     display:none;
 }
@@ -49,6 +50,15 @@ const NavMenu = styled.ul`
 const SecondaryContainer = styled.div`
    display: flex;
     background: ${(props) => props.pathname.match(/^\/photos/) ? 'rgba(255,250,240, 0.9)' : 'transparent'};
+    width: 100vw;
+    justify-content: space-around;
+    @media screen and (max-width:768px){
+    display:none;
+}
+`
+const TertiaryContainer = styled.div`
+   display: flex;
+   background-image: ${(props) => props.pathname.match(/^\/travel/) ? 'linear-gradient(to bottom, rgba(250, 222, 167,0.7), transparent);' : 'transparent'};
     width: 100vw;
     justify-content: space-around;
     @media screen and (max-width:768px){
@@ -119,30 +129,32 @@ function Layout({ children, toggle }) {
                         setOpen={setOpen}
                         isBurgerClick={isBurgerClick} />
                     <SecondaryContainer pathname={pathname}>
-                        <NavMenu >
-                            <NavItem>
-                                <NavLinks to='/ourstory' >Our Story</NavLinks>
-                            </NavItem>
-                            <NavItem>
-                                <NavLinks to='/travel' >Travel</NavLinks>
-                            </NavItem>
-                            <NavItem>
-                                <NavLinks to='/party' >Meet the Party</NavLinks>
-                            </NavItem>
-                            <NavItem>
-                                <NavLinks to='/' ><p id="home">W & C</p></NavLinks>
-                            </NavItem>
-                            <NavItem>
-                                <NavLinks to='/photos' >Pictures</NavLinks>
-                            </NavItem>
-                            <NavItem>
-                                <NavLinks to='/registry' >Registry</NavLinks>
-                            </NavItem>
-                            <NavItem>
-                                <NavLinks to='/corkboard' >Corkboard</NavLinks>
-                            </NavItem>
+                        <TertiaryContainer pathname={pathname}>
+                            <NavMenu >
+                                <NavItem>
+                                    <NavLinks to='/ourstory' >Our Story</NavLinks>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLinks to='/travel' >Travel</NavLinks>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLinks to='/party' >Meet the Party</NavLinks>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLinks to='/' ><p id="home">W & C</p></NavLinks>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLinks to='/photos' >Pictures</NavLinks>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLinks to='/registry' >Registry</NavLinks>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLinks to='/corkboard' >Corkboard</NavLinks>
+                                </NavItem>
 
-                        </NavMenu>
+                            </NavMenu>
+                        </TertiaryContainer>
                     </SecondaryContainer>
                 </NavbarContainer>
             </NavComponent>
