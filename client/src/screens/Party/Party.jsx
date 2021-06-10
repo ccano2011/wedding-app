@@ -1,12 +1,23 @@
 import React from 'react';
 import styled from 'styled-components'
-import image from '../../Assets/placeholder_img1.jpg'
-import image2 from '../../Assets/travel.jpeg'
-import image3 from '../../Assets/placeholder_img6.jpg'
-import image4 from '../../Assets/placeholder_img4.jpg'
-import image5 from '../../Assets/placeholder_img3.jpg'
-import image6 from '../../Assets/placeholder_img2.jpg'
-import image7 from '../../Assets/party.jpg'
+import aweex from '../../Assets/aweex.jpg'
+import caliegh from '../../Assets/caliegh.jpg'
+import chris from '../../Assets/chris.jpg'
+import fuckyomom from '../../Assets/fuckyomom.jpg'
+import jason from '../../Assets/jason.jpg'
+import jordan from '../../Assets/jordan.jpg'
+import julia from '../../Assets/julia.jpg'
+import karly from '../../Assets/karly.jpg'
+import kristen from '../../Assets/kristen.jpg'
+import maddie from '../../Assets/maddie.jpg'
+import marie from '../../Assets/marie.jpg'
+import miamarieta from '../../Assets/miamarieta.jpg'
+import prettyboy from '../../Assets/prettyboy.jpg'
+import ryan from '../../Assets/ryan.jpg'
+import sexyblackboy from '../../Assets/sexyblackboy.jpg'
+import tabs from '../../Assets/tabs.jpg'
+import traci from '../../Assets/traci.jpg'
+import thebetterchris from '../../Assets/thebetterchris.jpg'
 
 const PartyStyling = styled.div`
 height:fit-content;
@@ -110,7 +121,8 @@ a{
 
 .party-imgs {
     height: 250px;
-    max-width: 300px;
+    /* width: auto; */
+    max-width: max-content;
     /* padding: 10px; */
     flex: 1 auto;
     border: 2px solid wheat;
@@ -171,12 +183,12 @@ function Party() {
                                 <div className="card-content">
                                     <img
                                         className="party-imgs"
-                                        src={image4}
+                                        src={julia}
                                         alt="party png"
                                     />
                                     <div className="text-content">
-                                        <h2 className="Party-name">Happily Ever After v2.0</h2>
-                                        <p className="Party-description">With a completely new frontend, this is more than just a regular wedding site, this application incorporates features found on many popular social media sites that allow for guests to sign up with full authentication and make posts on the site's 'Corkboard' component. </p>
+                                        <h2 className="Party-name">Julia Otero</h2>
+                                        <p className="Party-description">Maid of Honor. Cousin of the bride. </p>
                                     </div>
                                 </div>
                             </div>
@@ -184,12 +196,12 @@ function Party() {
                                 <div className="card-content">
                                     <img
                                         className="party-imgs"
-                                        src={image7}
+                                        src={karly}
                                         alt="party png"
                                     />
                                     <div className="text-content">
-                                        <h2 className="Party-name">e-Commerce</h2>
-                                        <p className="Party-description">A multi-component single-page React application made as a template for any commerse/front-end party</p>
+                                        <h2 className="Party-name">Karly Briard</h2>
+                                        <p className="Party-description">Bridesmaid. Future sister-in-law.</p>
                                     </div>
                                 </div>
                             </div>
@@ -197,12 +209,12 @@ function Party() {
                                 <div className="card-content">
                                     <img
                                         className="party-imgs"
-                                        src={image6}
+                                        src={jordan}
                                         alt="party png"
                                     />
                                     <div className="text-content">
-                                        <h2 className="Party-name">Another Netflix Clone</h2>
-                                        <p className="Party-description">This single-page app was made to look and feel like the homepage of Netflix complete with pop-up trailers utilizing <a href="https://www.npmjs.com/package/react-youtube" target="_blank" rel="noreferrer" alt="link to npm youtube react">React-YouTube</a> to handle embedded videos.</p>
+                                        <h2 className="Party-name">Jordan Beaubrin</h2>
+                                        <p className="Party-description">Bridesmaid. Friend of the bride.</p>
                                     </div>
                                 </div>
                             </div>
@@ -210,12 +222,12 @@ function Party() {
                                 <div className="card-content">
                                     <img
                                         className="party-imgs"
-                                        src={image5}
+                                        src={kristen}
                                         alt="party png"
                                     />
                                     <div className="text-content">
-                                        <h2 className="Party-name">loopstudios</h2>
-                                        <p className="Party-description">This party is a simple front-end landing site built as a coding challenge from <a href="https://www.frontendmentor.io/challenges" alt="link to frontend mentor .io" target="_blank" rel="noreferrer">Frontend Mentor</a> for the purpose of learning Styled Components & improve coding habits.</p>
+                                        <h2 className="Party-name">Kristen Haas</h2>
+                                        <p className="Party-description">Bridesmaid. Friend of the bride.</p>
                                     </div>
                                 </div>
                             </div>
@@ -223,12 +235,12 @@ function Party() {
                                 <div className="card-content">
                                     <img
                                         className="party-imgs"
-                                        src={image2}
+                                        src={maddie}
                                         alt="party png"
                                     />
                                     <div className="text-content">
-                                        <h2 className="Party-name">Movie Quest</h2>
-                                        <p className="Party-description">Movie Quest is a web application that allows users to see what movies are popular right now, find a movie to watch by checking out what what's popular, and find recommendations based on genre & user rating. </p>
+                                        <h2 className="Party-name">Madison Lindquist</h2>
+                                        <p className="Party-description">Bridesmaid. Friend of the bride.</p>
                                     </div>
                                 </div>
 
@@ -237,12 +249,12 @@ function Party() {
                                 <div className="card-content">
                                     <img
                                         className="party-imgs"
-                                        src={image3}
+                                        src={marie}
                                         alt="party png"
                                     />
                                     <div className="text-content">
-                                        <h2 className="Party-name">Elections App</h2>
-                                        <p className="Party-description">This proof-of-concept party was a collaborative effort involving several developers and a professional UX design team. The purpose of this Full-Stack app was to show how one could request an absentee ballot & check the delivery status of their ballot request for their home state during an election.</p>
+                                        <h2 className="Party-name">Marie Riera</h2>
+                                        <p className="Party-description">Bridesmaid. Cousin of the bride.</p>
                                     </div>
                                 </div>
                             </div>
@@ -250,12 +262,51 @@ function Party() {
                                 <div className="card-content">
                                     <img
                                         className="party-imgs"
-                                        src={image}
+                                        src={caliegh}
                                         alt="party png"
                                     />
                                     <div className="text-content">
-                                        <h2 className="Party-name">Pokedex</h2>
-                                        <p className="Party-description">Pokedex leverages the <a href="https://pokeapi.co/" target="_blank" rel="noopener noreferrer">PokeAPI</a> to let you search and find each and every Pokemon discovered thus far from every region to help you Catch 'em All!</p>
+                                        <h2 className="Party-name">Caleigh Michelle</h2>
+                                        <p className="Party-description">Bridesmaid. Friend of the bride.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="party-content">
+                                <div className="card-content">
+                                    <img
+                                        className="party-imgs"
+                                        src={tabs}
+                                        alt="party png"
+                                    />
+                                    <div className="text-content">
+                                        <h2 className="Party-name">Tabatha Tarrafa</h2>
+                                        <p className="Party-description">Bridesmaid. Cousin of the bride.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="party-content">
+                                <div className="card-content">
+                                    <img
+                                        className="party-imgs"
+                                        src={traci}
+                                        alt="party png"
+                                    />
+                                    <div className="text-content">
+                                        <h2 className="Party-name">Traci Bloch</h2>
+                                        <p className="Party-description">Bridesmaid. Cousin of the bride.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="party-content">
+                                <div className="card-content">
+                                    <img
+                                        className="party-imgs"
+                                        src={miamarieta}
+                                        alt="party png"
+                                    />
+                                    <div className="text-content">
+                                        <h2 className="Party-name">Mia & Marieta Riera</h2>
+                                        <p className="Party-description">Junior Bridesmaids. Cousin of the bride.</p>
                                     </div>
                                 </div>
                             </div>
@@ -267,12 +318,12 @@ function Party() {
                             <div className="card-content">
                                 <img
                                     className="party-imgs"
-                                    src={image4}
+                                    src={fuckyomom}
                                     alt="party png"
                                 />
                                 <div className="text-content">
-                                    <h2 className="Party-name">Happily Ever After v2.0</h2>
-                                    <p className="Party-description">With a completely new frontend, this is more than just a regular wedding site, this application incorporates features found on many popular social media sites that allow for guests to sign up with full authentication and make posts on the site's 'Corkboard' component. </p>
+                                    <h2 className="Party-name">Jonathan Tellex</h2>
+                                    <p className="Party-description">Best Man. Friend of the groom. </p>
                                 </div>
                             </div>
                         </div>
@@ -280,12 +331,12 @@ function Party() {
                             <div className="card-content">
                                 <img
                                     className="party-imgs"
-                                    src={image7}
+                                    src={jason}
                                     alt="party png"
                                 />
                                 <div className="text-content">
-                                    <h2 className="Party-name">e-Commerce</h2>
-                                    <p className="Party-description">A multi-component single-page React application made as a template for any commerse/front-end party</p>
+                                    <h2 className="Party-name">Jason Seefeldt</h2>
+                                    <p className="Party-description">Groomsman. Brother of the groom.</p>
                                 </div>
                             </div>
                         </div>
@@ -293,12 +344,12 @@ function Party() {
                             <div className="card-content">
                                 <img
                                     className="party-imgs"
-                                    src={image6}
+                                    src={ryan}
                                     alt="party png"
                                 />
                                 <div className="text-content">
-                                    <h2 className="Party-name">Another Netflix Clone</h2>
-                                    <p className="Party-description">This single-page app was made to look and feel like the homepage of Netflix complete with pop-up trailers utilizing <a href="https://www.npmjs.com/package/react-youtube" target="_blank" rel="noreferrer" alt="link to npm youtube react">React-YouTube</a> to handle embedded videos.</p>
+                                    <h2 className="Party-name">Ryan Seefeldt</h2>
+                                    <p className="Party-description">Groomsman. Brother of the groom.</p>
                                 </div>
                             </div>
                         </div>
@@ -306,12 +357,12 @@ function Party() {
                             <div className="card-content">
                                 <img
                                     className="party-imgs"
-                                    src={image5}
+                                    src={aweex}
                                     alt="party png"
                                 />
                                 <div className="text-content">
-                                    <h2 className="Party-name">loopstudios</h2>
-                                    <p className="Party-description">This party is a simple front-end landing site built as a coding challenge from <a href="https://www.frontendmentor.io/challenges" alt="link to frontend mentor .io" target="_blank" rel="noreferrer">Frontend Mentor</a> for the purpose of learning Styled Components & improve coding habits.</p>
+                                    <h2 className="Party-name">Alex Bloch</h2>
+                                    <p className="Party-description">Groomsman. Friend of the groom.</p>
                                 </div>
                             </div>
                         </div>
@@ -319,26 +370,12 @@ function Party() {
                             <div className="card-content">
                                 <img
                                     className="party-imgs"
-                                    src={image2}
+                                    src={chris}
                                     alt="party png"
                                 />
                                 <div className="text-content">
-                                    <h2 className="Party-name">Movie Quest</h2>
-                                    <p className="Party-description">Movie Quest is a web application that allows users to see what movies are popular right now, find a movie to watch by checking out what what's popular, and find recommendations based on genre & user rating. </p>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div className="party-content">
-                            <div className="card-content">
-                                <img
-                                    className="party-imgs"
-                                    src={image3}
-                                    alt="party png"
-                                />
-                                <div className="text-content">
-                                    <h2 className="Party-name">Elections App</h2>
-                                    <p className="Party-description">This proof-of-concept party was a collaborative effort involving several developers and a professional UX design team. The purpose of this Full-Stack app was to show how one could request an absentee ballot & check the delivery status of their ballot request for their home state during an election.</p>
+                                    <h2 className="Party-name">Chris Jansen</h2>
+                                    <p className="Party-description">Groomsman. Friend of the groom.</p>
                                 </div>
                             </div>
                         </div>
@@ -346,12 +383,52 @@ function Party() {
                             <div className="card-content">
                                 <img
                                     className="party-imgs"
-                                    src={image}
+                                    src={thebetterchris}
                                     alt="party png"
                                 />
                                 <div className="text-content">
-                                    <h2 className="Party-name">Pokedex</h2>
-                                    <p className="Party-description">Pokedex leverages the <a href="https://pokeapi.co/" target="_blank" rel="noopener noreferrer">PokeAPI</a> to let you search and find each and every Pokemon discovered thus far from every region to help you Catch 'em All!</p>
+                                    <h2 className="Party-name">Chris Cano</h2>
+                                    <p className="Party-description">Groomsman. Future brother-in-law.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="party-content">
+                            <div className="card-content">
+                                <img
+                                    className="party-imgs"
+                                    src={prettyboy}
+                                    alt="party png"
+                                />
+                                <div className="text-content">
+                                    <h2 className="Party-name">Jacob Paigo</h2>
+                                    <p className="Party-description">Groomsman. Friend of the groom.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="party-content">
+                            <div className="card-content">
+                                <img
+                                    className="party-imgs"
+                                    src={sexyblackboy}
+                                    alt="party png"
+                                />
+                                <div className="text-content">
+                                    <h2 className="Party-name">
+                                        Jean Laine </h2>
+                                    <p className="Party-description">Groomsman. Friend of the groom.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="party-content">
+                            <div className="card-content">
+                                <img
+                                    className="party-imgs"
+                                    src={sexyblackboy}
+                                    alt="party png"
+                                />
+                                <div className="text-content">
+                                    <h2 className="Party-name">Brandon O'Driscoll</h2>
+                                    <p className="Party-description">Groomsman. Friend of the groom.</p>
                                 </div>
                             </div>
                         </div>
