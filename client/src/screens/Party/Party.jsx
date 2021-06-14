@@ -18,6 +18,7 @@ import sexyblackboy from '../../Assets/sexyblackboy.jpg'
 import tabs from '../../Assets/tabs.jpg'
 import traci from '../../Assets/traci.jpg'
 import thebetterchris from '../../Assets/thebetterchris.jpg'
+import brandon from '../../Assets/brandon.jpg'
 
 const PartyStyling = styled.div`
 height:fit-content;
@@ -209,65 +210,12 @@ function Party() {
                                 <div className="card-content">
                                     <img
                                         className="party-imgs"
-                                        src={jordan}
-                                        alt="party png"
-                                    />
-                                    <div className="text-content">
-                                        <h2 className="Party-name">Jordan Beaubrin</h2>
-                                        <p className="Party-description">Bridesmaid. Friend of the bride.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="party-content">
-                                <div className="card-content">
-                                    <img
-                                        className="party-imgs"
-                                        src={kristen}
-                                        alt="party png"
-                                    />
-                                    <div className="text-content">
-                                        <h2 className="Party-name">Kristen Haas</h2>
-                                        <p className="Party-description">Bridesmaid. Friend of the bride.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="party-content">
-                                <div className="card-content">
-                                    <img
-                                        className="party-imgs"
-                                        src={maddie}
-                                        alt="party png"
-                                    />
-                                    <div className="text-content">
-                                        <h2 className="Party-name">Madison Lindquist</h2>
-                                        <p className="Party-description">Bridesmaid. Friend of the bride.</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div className="party-content">
-                                <div className="card-content">
-                                    <img
-                                        className="party-imgs"
                                         src={marie}
                                         alt="party png"
                                     />
                                     <div className="text-content">
                                         <h2 className="Party-name">Marie Riera</h2>
                                         <p className="Party-description">Bridesmaid. Cousin of the bride.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="party-content">
-                                <div className="card-content">
-                                    <img
-                                        className="party-imgs"
-                                        src={caliegh}
-                                        alt="party png"
-                                    />
-                                    <div className="text-content">
-                                        <h2 className="Party-name">Caleigh Michelle</h2>
-                                        <p className="Party-description">Bridesmaid. Friend of the bride.</p>
                                     </div>
                                 </div>
                             </div>
@@ -288,12 +236,64 @@ function Party() {
                                 <div className="card-content">
                                     <img
                                         className="party-imgs"
+                                        src={kristen}
+                                        alt="party png"
+                                    />
+                                    <div className="text-content">
+                                        <h2 className="Party-name">Kristen Haas</h2>
+                                        <p className="Party-description">Bridesmaid. Cousin of the bride.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="party-content">
+                                <div className="card-content">
+                                    <img
+                                        className="party-imgs"
                                         src={traci}
                                         alt="party png"
                                     />
                                     <div className="text-content">
                                         <h2 className="Party-name">Traci Bloch</h2>
                                         <p className="Party-description">Bridesmaid. Cousin of the bride.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="party-content">
+                                <div className="card-content">
+                                    <img
+                                        className="party-imgs"
+                                        src={jordan}
+                                        alt="party png"
+                                    />
+                                    <div className="text-content">
+                                        <h2 className="Party-name">Jordan Beaubrin</h2>
+                                        <p className="Party-description">Bridesmaid. Friend of the bride.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="party-content">
+                                <div className="card-content">
+                                    <img
+                                        className="party-imgs"
+                                        src={caliegh}
+                                        alt="party png"
+                                    />
+                                    <div className="text-content">
+                                        <h2 className="Party-name">Caleigh Michelle</h2>
+                                        <p className="Party-description">Bridesmaid. Friend of the bride.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="party-content">
+                                <div className="card-content">
+                                    <img
+                                        className="party-imgs"
+                                        src={maddie}
+                                        alt="party png"
+                                    />
+                                    <div className="text-content">
+                                        <h2 className="Party-name">Madison Lindquist</h2>
+                                        <p className="Party-description">Bridesmaid. Friend of the bride.</p>
                                     </div>
                                 </div>
                             </div>
@@ -370,12 +370,12 @@ function Party() {
                             <div className="card-content">
                                 <img
                                     className="party-imgs"
-                                    src={chris}
+                                    src={thebetterchris}
                                     alt="party png"
                                 />
                                 <div className="text-content">
-                                    <h2 className="Party-name">Chris Jansen</h2>
-                                    <p className="Party-description">Groomsman. Friend of the groom.</p>
+                                    <h2 className="Party-name">Chris Cano</h2>
+                                    <p className="Party-description">Groomsman. Future brother-in-law.</p>
                                 </div>
                             </div>
                         </div>
@@ -383,12 +383,12 @@ function Party() {
                             <div className="card-content">
                                 <img
                                     className="party-imgs"
-                                    src={thebetterchris}
+                                    src={chris}
                                     alt="party png"
                                 />
                                 <div className="text-content">
-                                    <h2 className="Party-name">Chris Cano</h2>
-                                    <p className="Party-description">Groomsman. Future brother-in-law.</p>
+                                    <h2 className="Party-name">Chris Jansen</h2>
+                                    <p className="Party-description">Groomsman. Friend of the groom.</p>
                                 </div>
                             </div>
                         </div>
@@ -423,7 +423,7 @@ function Party() {
                             <div className="card-content">
                                 <img
                                     className="party-imgs"
-                                    src={sexyblackboy}
+                                    src={brandon}
                                     alt="party png"
                                 />
                                 <div className="text-content">

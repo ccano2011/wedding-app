@@ -6,6 +6,15 @@ import photo4 from '../../Assets/placeholder_img4.jpg'
 import photo5 from '../../Assets/placeholder_img5.jpg'
 import photo6 from '../../Assets/placeholder_img6.jpg'
 import photo7 from '../../Assets/placeholder_img7.jpg'
+import photo8 from '../../Assets/photo8.jpg'
+import photo9 from '../../Assets/photo9.jpg'
+import photo10 from '../../Assets/photo10.jpg'
+import photo11 from '../../Assets/photo11.jpg'
+import photo12 from '../../Assets/photo12.jpg'
+import photo13 from '../../Assets/photo13.jpg'
+import photo14 from '../../Assets/photo14.jpg'
+import photo15 from '../../Assets/photo15.jpg'
+import photo16 from '../../Assets/photo16.jpg'
 import styled from 'styled-components'
 
 const PhotoGalleryStyling = styled.div`
@@ -100,14 +109,17 @@ function Photos() {
             <div className='body'>
                 <p className="photoTitle">Photos</p>
                 <div className="div-container">
-                    <div className="photo-container" id='photo1'>
-                        <img className='fit' src={photo1} alt="Placeholder 1" />
+                    <div className="photo-container" id='photo7'>
+                        <img className='fit' src={photo7} alt="Placeholder 7" />
                     </div>
                     <div className="photo-container" id='photo2'>
                         <img className='fit' src={photo2} alt="Placeholder 2" />
                     </div>
-                    <div className="photo-container" id='photo3'>
-                        <img className='fit' src={photo3} alt="Placeholder 3" />
+                    <div className="photo-container" id='photo1'>
+                        <img className='fit' src={photo1} alt="Placeholder 1" />
+                    </div>
+                    <div className="photo-container" id='photo6'>
+                        <img className='fit' src={photo6} alt="Placeholder 6" />
                     </div>
                     <div className="photo-container" id='photo4'>
                         <img className='fit' src={photo4} alt="Placeholder 4" />
@@ -115,11 +127,35 @@ function Photos() {
                     <div className="photo-container" id='photo5'>
                         <img className='fit' src={photo5} alt="Placeholder 5" />
                     </div>
-                    <div className="photo-container" id='photo6'>
-                        <img className='fit' src={photo6} alt="Placeholder 6" />
+                    <div className="photo-container" id='photo3'>
+                        <img className='fit' src={photo3} alt="Placeholder 3" />
                     </div>
-                    <div className="photo-container" id='photo7'>
-                        <img className='fit' src={photo7} alt="Placeholder 7" />
+                    <div className="photo-container" id='photo3'>
+                        <img className='fit' src={photo8} alt="Placeholder 3" />
+                    </div>
+                    <div className="photo-container" id='photo3'>
+                        <img className='fit' src={photo9} alt="Placeholder 3" />
+                    </div>
+                    <div className="photo-container" id='photo3'>
+                        <img className='fit' src={photo10} alt="Placeholder 3" />
+                    </div>
+                    <div className="photo-container" id='photo3'>
+                        <img className='fit' src={photo11} alt="Placeholder 3" />
+                    </div>
+                    <div className="photo-container" id='photo3'>
+                        <img className='fit' src={photo12} alt="Placeholder 3" />
+                    </div>
+                    <div className="photo-container" id='photo3'>
+                        <img className='fit' src={photo13} alt="Placeholder 3" />
+                    </div>
+                    <div className="photo-container" id='photo3'>
+                        <img className='fit' src={photo14} alt="Placeholder 3" />
+                    </div>
+                    <div className="photo-container" id='photo3'>
+                        <img className='fit' src={photo15} alt="Placeholder 3" />
+                    </div>
+                    <div className="photo-container" id='photo3'>
+                        <img className='fit' src={photo16} alt="Placeholder 3" />
                     </div>
                 </div>
             </div>

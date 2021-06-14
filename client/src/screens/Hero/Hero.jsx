@@ -70,14 +70,15 @@ text-shadow: 2px 2px 3px #807777;
 background:none;
 /* margin-top:-100px; */
 font-size:70px;
+text-align: center;
 transform: translateZ(0);
 /* @media screen and (max-width:820px) {
     font-size:100px;
 } */
 @media screen and (max-width:475px) {
     /* display:none; */
-/* font-size:40px; */
 text-align: center;
+/* font-size:40px; */
 
 }
 @media screen and (max-height: 594px){
@@ -125,12 +126,17 @@ position: relative;
 background:none;
 z-index: 3px;
 padding-top: 3vh;
+max-width: 550px;
 @media screen and (max-width:768px) {
     margin-top:0px;
 }
 @media screen and (max-height: 594px){
     font-size:18px;
 }    
+#location{
+    text-decoration: none;
+    color: inherit;
+}
 `
 
 function Hero() {
@@ -160,8 +166,8 @@ function Hero() {
                 </MobileHeroTitle> */}
                 <HeroSubtitle>
                     {/* We're getting married! <br /> <br /> */}
-                    When: 03/04/2022 at 00:00 <br /> <br />
-                    Where: 1234 Wedding Ave.
+                    When: 03/05/2022 at 01:00 <br /> <br />
+                    Where: <a href='https://www.google.com/maps/place/Corpus+Christi+Catholic+Church/@28.3124578,-81.5501206,17z/data=!3m1!4b1!4m5!3m4!1s0x88dd78cdfd8a686d:0x9ae3bc1506df9708!8m2!3d28.3124578!4d-81.5479319' target="_blank" rel="noopener noreferrer" id="location">1050 Celebration Ave, Celebration, FL 34747</a>
                 </HeroSubtitle>
             </div>
         </HeroStyle >
